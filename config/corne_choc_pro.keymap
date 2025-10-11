@@ -32,8 +32,6 @@
 &kp LCTRL  &kp X  &kp K  &kp J     &kp G        &kp W                            &kp Z    &kp H  &kp COMMA  &kp DOT  &kp SEMI  &kp ESC
                          &kp LGUI  &lt 1 SPACE  &kp SPACE                        &kp RET  &mo 2  &kp RALT
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
 
         NAVLayer {
