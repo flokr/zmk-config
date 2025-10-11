@@ -17,7 +17,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        BaseLayer {
             display-name = "MagicSturdy";
 
             // --------------------------------------------------------------------------------
@@ -27,17 +27,17 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp V  &kp M  &kp L     &kp C  &kp P      &kp C_MUTE  &kp C_PP  &kp B    &none  &kp U      &kp O    &kp Q     &kp BSPC
-&kp LSHFT  &kp S  &kp T  &kp R     &kp D  &kp Y      &kp LALT    &kp RALT  &kp F    &kp N  &kp E      &kp A    &kp I     &kp RSHFT
-&kp LCTRL  &kp X  &kp K  &kp J     &kp G  &kp W                            &kp Z    &kp H  &kp COMMA  &kp DOT  &kp SEMI  &kp ESC
-                         &kp LGUI  &mo 1  &kp SPACE                        &kp RET  &mo 2  &kp RALT
+&kp TAB    &kp V  &kp M  &kp L     &kp C        &kp P      &kp C_MUTE  &kp C_PP  &kp B    &none  &kp U      &kp O    &kp Q     &kp BSPC
+&kp LSHFT  &kp S  &kp T  &kp R     &kp D        &kp Y      &kp LALT    &kp RALT  &kp F    &kp N  &kp E      &kp A    &kp I     &kp RSHFT
+&kp LCTRL  &kp X  &kp K  &kp J     &kp G        &kp W                            &kp Z    &kp H  &kp COMMA  &kp DOT  &kp SEMI  &kp ESC
+                         &kp LGUI  &lt 1 SPACE  &kp SPACE                        &kp RET  &mo 2  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
 
-        lower_layer {
-            display-name = "NUMBER";
+        NAVLayer {
+            display-name = "NAV";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5    |  LCTRL | RCTRL |  6  |  7  |  8  |  9  |  0  | BSPC |
