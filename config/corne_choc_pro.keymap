@@ -15,12 +15,14 @@
 
 / {
     behaviors {
-        test_behavior: test_behavior {
-            compatible = "zmk,behavior-sticky-key";
-            label = "TEST_BEHAVIOR";
-            bindings = <&kp>;
-            #binding-cells = <1>;
-            release-after-ms = <300>;
+        mag: magic {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp H>;
+
+            magkt_a { trigger-keys = <A>; max-prior-idle-ms = <300>; bindings = <&kp O>; };
+            magkt_c { trigger-keys = <C>; max-prior-idle-ms = <300>; bindings = <&kp Y>; };
+            magkt_d { trigger-keys = <D>; max-prior-idle-ms = <300>; bindings = <&kp Y>; };
         };
     };
 
