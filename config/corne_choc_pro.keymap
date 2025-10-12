@@ -14,6 +14,16 @@
 };
 
 / {
+    behaviors {
+        test_behavior: test_behavior {
+            compatible = "zmk,behavior-sticky-key";
+            label = "TEST_BEHAVIOR";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <300>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
