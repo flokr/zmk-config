@@ -33,9 +33,9 @@
             display-name = "MagicSturdy";
 
             // --------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |  MUTE |  PP   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |  LALT |  RALT |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |               |  N  |  M   |  ,  |  .  |  /  | ESC  |
+            // |  TAB |  V  |  M  |  L  |  C  |  P  |  MUTE |  PP   |  B  |  *   |  U  |  O  |  Q  | BSPC |
+            // | SHFT |  S  |  T  |  R  |  D  |  Y  |  LALT |  RALT |  F  |  N   |  E  |  A  |  I  | SHFT |
+            // | CTRL |  X  |  K  |  J  |  G  |  W  |               |  Z  |  H   |  ,  |  .  |  ;  | ESC  |
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
