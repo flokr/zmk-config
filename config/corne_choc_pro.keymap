@@ -18,7 +18,7 @@
         mag: magic {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = &kp H;
+            bindings = <&kp H>;
 
             magkt_a {
                 trigger-keys = <A>;
