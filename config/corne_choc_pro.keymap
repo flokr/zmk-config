@@ -47,14 +47,14 @@
             display-name = "MagicSturdy";
 
             // --------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |  MUTE |  PP   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |  LALT |  RALT |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |               |  N  |  M   |  ,  |  .  |  /  | ESC  |
+            // |  TAB |  V  |  M  |  L  |  C  |  P  |  MUTE |  PP   |  B  |  *   |  U  |  O  |  Q  | BSPC |
+            // | SHFT |  S  |  T  |  R  |  D  |  Y  |  LALT |  RALT |  F  |  N   |  E  |  A  |  I  | SHFT |
+            // | CTRL |  X  |  K  |  J  |  G  |  W  |               |  Z  |  H   |  ,  |  .  |  ;  | ESC  |
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
 &kp TAB    &kp V  &kp M  &kp L     &kp C        &kp P      &kp C_MUTE  &kp C_PP  &kp B    &mag   &kp U      &kp O    &kp Q     &kp BSPC
-&kp LSHFT  &kp S  &kp T  &kp R     &kp D        &kp Y      &kp LALT    &kp RALT  &kp F    &kp N  &kp E      &kp A    &kp I     &kp RSHFT
+&kp LSHFT  &kp S  &kp T  &kp R     &kp D        &kp Y      &kp LALT    &kp RALT  &kp F    &kp N  &kp A      &kp E    &kp I     &kp RSHFT
 &kp LCTRL  &kp X  &kp K  &kp J     &kp G        &kp W                            &kp Z    &kp H  &kp COMMA  &kp DOT  &kp SEMI  &kp ESC
                          &kp LGUI  &lt 1 SPACE  &kp SPACE                        &kp RET  &mo 2  &kp RALT
             >;
