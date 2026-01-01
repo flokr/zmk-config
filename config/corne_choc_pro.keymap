@@ -45,18 +45,16 @@
 
         BaseLayer {
             display-name = "MagicSturdy";
-
-            // --------------------------------------------------------------------------------
-            // |  TAB |  V  |  M  |  L  |  C  |  P  |  MUTE |  PP   |  B  |  *   |  U  |  O  |  Q  | BSPC |
-            // | SHFT |  S  |  T  |  R  |  D  |  Y  |  LALT |  RALT |  F  |  N   |  E  |  A  |  I  | SHFT |
-            // | CTRL |  X  |  K  |  J  |  G  |  W  |               |  Z  |  H   |  ,  |  .  |  ;  | ESC  |
-            //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
-
             bindings = <
-&kp TAB    &kp V  &kp M  &kp L     &kp C        &kp P      &kp C_MUTE  &kp C_PP  &kp Q    &mag           &kp U       &kp O    &kp J     &kp BSPC
-&kp LSHFT  &kp S  &kp T  &kp R     &kp D        &kp Z      &kp LALT    &kp RALT  &kp F    &kp N          &kp E       &kp I    &kp A     &kp RSHFT
-&kp LCTRL  &kp Y  &kp K  &kp X     &kp G        &kp W                            &kp B    &kp H          &kp COMMA   &kp DOT  &kp SEMI  &kp ESC
-                         &kp LGUI  &lt 1 SPACE  &kp SPACE                        &kp RET  &kp BACKSPACE  &kp DELETE
+//╭──────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────╮ ╭─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬──────────╮
+    &kp TAB    &kp V     &kp M     &kp L     &kp C     &kp P     &kp C_MUTE   &kp C_PP  &kp Q     &mag      &kp U     &kp O     &kp J     &kp BSPC
+//├──────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼──────────┤
+    &kp LSHFT  &kp S     &kp T     &kp R     &kp D     &kp Z     &kp LALT     &kp RALT  &kp F     &kp N     &kp E     &kp I     &kp A     &kp RSHFT
+//├──────────┼─────────┼─────────┼─────────┼─────────┼─────────┤          │          ├─────────┼─────────┼─────────┼─────────┼─────────┼──────────┤
+    &kp LCTRL  &kp Y     &kp K     &kp X     &kp G     &kp W                            &kp B     &kp H     &kp COMMA &kp DOT   &kp SEMI  &kp ESC
+//╰──────────┴─────────┴─────────┼─────────┼─────────┼─────────┤          │          ├─────────┼─────────┼─────────┼─────────┴─────────┴──────────╯
+                                   &kp LGUI  &lt 1 SPACE &kp SPACE                     &kp RET   &kp BSPC  &kp DEL
+//                               ╰─────────┴─────────┴─────────╯          │          ╰─────────┴─────────┴─────────╯
             >;
         };
 
