@@ -1,0 +1,427 @@
+layout:
+  qmk_info_json: /Users/florian.kren/code/flokr/flokr/zmk-config/config/corne_choc_pro.json
+  layout_name: default_layout
+layers:
+  MagicSturdy:
+  - Tab
+  - V
+  - M
+  - L
+  - C
+  - P
+  - $$mdi:volume-off$$
+  - $$mdi:play-pause$$
+  - Q
+  - Adaptive
+  - U
+  - O
+  - J
+  - Bspc
+  - Shift
+  - S
+  - T
+  - R
+  - D
+  - Z
+  - Alt
+  - Alt
+  - F
+  - N
+  - E
+  - I
+  - A
+  - Shift
+  - Ctrl
+  - Y
+  - K
+  - X
+  - G
+  - W
+  - B
+  - H
+  - ','
+  - .
+  - ;
+  - Esc
+  - Gui
+  - {t: Spc, h: NAV}
+  - Spc
+  - Enter
+  - Bspc
+  - Del
+  NAV:
+  - Tab
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ↑
+  - ''
+  - ''
+  - Bspc
+  - Ctrl
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - {t: BT, h: '4'}
+  - Alt
+  - Alt
+  - ''
+  - LEFT ARROW
+  - ↓
+  - →
+  - {type: trans}
+  - {type: trans}
+  - Shift
+  - BT Clear
+  - RGB TOG
+  - Reset
+  - Boot
+  - '&studio_unlock'
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Gui
+  - {type: held}
+  - Spc
+  - Gui
+  - {type: trans}
+  - Spc
+  SYMBOL:
+  - Tab
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - Ctrl
+  - Ctrl
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - Bspc
+  - Ctrl
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Alt
+  - Alt
+  - '-'
+  - '='
+  - '['
+  - ']'
+  - \
+  - '`'
+  - Shift
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - _
+  - +
+  - '{'
+  - '}'
+  - '|'
+  - '~'
+  - Gui
+  - {type: trans}
+  - Spc
+  - Enter
+  - {type: trans}
+  - Alt
+  EXTRA 1:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  EXTRA 2:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  EXTRA 3:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  EXTRA 4:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  EXTRA 5:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  EXTRA 6:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
