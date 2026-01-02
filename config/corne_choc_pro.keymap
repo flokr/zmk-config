@@ -87,7 +87,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 //╭──────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────╮ ╭─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬──────────╮
     &kp TAB    &kp V     &kp M     &kp L     &kp C     &kp P     &kp C_MUTE   &kp C_PP  &kp Q     &mag      &kp U     &kp O     &kp J     &kp BSPC
 //├──────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼──────────┤
-    &kp LSHFT  &hml LSHFT S &hml LCTRL T &hml LALT R &hml LGUI D &kp Z  &kp LALT  &kp RALT &hmr LGUI F &hmr LALT N &hmr LCTRL E &hmr RSHFT I &kp A  &kp RSHFT
+    &kp LSHFT  &hml LSHFT S &hml LCTRL T &hml LALT R &hml LGUI D &kp Z  &kp LALT  &kp RALT  &kp F     &hmr LCTRL N &hmr RSHFT E &hmr LALT I &hmr RGUI A  &kp RSHFT
 //├──────────┼─────────┼─────────┼─────────┼─────────┼─────────┤          │          ├─────────┼─────────┼─────────┼─────────┼─────────┼──────────┤
     &kp LCTRL  &kp Y     &kp K     &kp X     &kp G     &kp W                            &kp B     &kp H     &kp COMMA &kp DOT   &kp SEMI  &kp ESC
 //╰──────────┴─────────┴─────────┼─────────┼─────────┼─────────┤          │          ├─────────┼─────────┼─────────┼─────────┴─────────┴──────────╯
