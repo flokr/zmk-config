@@ -24,11 +24,19 @@ jobs:
       - name: Install keymap-drawer
         run: |
           pip install keymap-drawer
+          sudo apt-get update
+          sudo apt-get install -y librsvg2-bin  # For SVG to PNG conversion
 
       - name: Generate keymap visualization
         run: |
+          # Parse full keymap
           keymap -c draw/config.yaml parse -z config/corne_choc_pro.keymap > draw/keymap.yaml
+          # Fix layout reference for custom board
+          sed -i 's/layout: {zmk_keyboard: corne_choc_pro, layout_name: default_layout}/layout:\n  qmk_info_json: config\/corne_choc_pro.json\n  layout_name: default_layout/' draw/keymap.yaml
+          # Generate full SVG with all layers
           keymap -c draw/config.yaml draw draw/keymap.yaml > draw/keymap.svg
+          # Generate summary PNG (convert SVG to PNG)
+          rsvg-convert draw/keymap.svg -o draw/keymap.png -w 1400
 
       - name: Commit and push if changed
         run: |

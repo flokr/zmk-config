@@ -21,7 +21,8 @@ parse_config:
     "&kp LC(X)": Cut
     "&kp LC(V)": Paste
 
-    "&mag": Adaptive
+    "&mag": ⭐
+    "&studio_unlock": Studio 🔓
 
   trans_legend: { "t": "", "type": "trans" }
 
@@ -55,6 +56,10 @@ parse_config:
     DOWN: ↓
     LEFT: ←
     RIGHT: →
+    LEFT_ARROW: ←
+    RIGHT_ARROW: →
+    UP_ARROW: ↑
+    DOWN_ARROW: ↓
 
     # media
     C_MUTE: $$mdi:volume-off$$
@@ -132,6 +137,46 @@ parse_config:
 
 draw_config:
   append_colon_to_layer_header: false
-  dark_mode: auto
+  dark_mode: false  # Light mode with Solarized theme
   footer_text: "flokr/zmk-config"
   use_local_cache: true  # Avoid SSL issues with QMK API
+  
+  # Styling
+  key_h: 60
+  key_w: 60
+  split_gap: 40
+  
+  # Custom CSS with GitHub Light color scheme
+  svg_extra_style: |
+    /* GitHub Light colors */
+    svg.keymap {
+      font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+      font-size: 14px;
+      fill: #24292e !important;  /* dark gray text */
+      background: #ffffff;  /* pure white background */
+    }
+    
+    /* Light key background */
+    rect.key {
+      fill: #f6f8fa !important;  /* ghost white */
+    }
+    
+    rect.key, rect.combo {
+      stroke: #d1d5da !important;  /* light gray border */
+      stroke-width: 1;
+    }
+    
+    /* Combo styling - blue accent */
+    rect.combo, rect.combo-separate {
+      fill: #0366d6 !important;  /* GitHub blue */
+    }
+    
+    /* Layer activator styling - red accent */
+    rect.held, rect.combo.held {
+      fill: #d73a49 !important;  /* GitHub red */
+    }
+    
+    /* Ghost keys more subtle */
+    rect.ghost, rect.combo.ghost {
+      opacity: 0.25 !important;
+    }

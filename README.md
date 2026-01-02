@@ -5,13 +5,14 @@ Personal ZMK firmware configuration for the Corne Choc Pro (46-key) split keyboa
 ## Hardware
 
 - **Keyboard**: Corne Choc Pro by Keebart
-- **Keys**: 46 keys (3×7 + 3 thumbs per side)
+- **Keys**: 46 keys (3×6+2 + 3 thumbs per side)
 - **Layout**: MagicSturdy (custom Sturdy variant)
-- **Features**: nice!view displays, ZMK Studio support
 
 ## Keymap
 
 ![Keymap](draw/keymap.svg)
+
+([View full keymap breakdown](draw/keymap.svg) - powered by [keymap-drawer](https://github.com/caksoylar/keymap-drawer))
 
 ## Building
 

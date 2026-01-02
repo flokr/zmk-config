@@ -12,7 +12,7 @@ layers:
   - $$mdi:volume-off$$
   - $$mdi:play-pause$$
   - Q
-  - Adaptive
+  - ⭐
   - U
   - O
   - J
@@ -73,7 +73,7 @@ layers:
   - Alt
   - Alt
   - ''
-  - LEFT ARROW
+  - ←
   - ↓
   - →
   - {type: trans}
@@ -83,7 +83,7 @@ layers:
   - RGB TOG
   - Reset
   - Boot
-  - '&studio_unlock'
+  - Studio 🔓
   - {type: trans}
   - {type: trans}
   - {type: trans}
