@@ -77,3 +77,4 @@ jobs:
           else
             git commit -m "docs: update keymap visualization [skip ci]"
             git push
+          fi
