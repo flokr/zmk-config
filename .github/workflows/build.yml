@@ -54,8 +54,13 @@ jobs:
       - name: Generate keymap visualization
         if: steps.check.outputs.changed == 'true'
         run: |
-          keymap -c draw/config.yaml parse -z config/corne_choc_pro.keymap > draw/keymap.yaml
+          # Install C preprocessor
+          sudo apt-get install -y gcc
+          # Parse keymap with preprocessing
+          cpp -nostdinc -I modules/zmk/app/include -I modules/zmk/helpers -I modules/zmk/adaptive-key/include -I config -P -undef -x c config/corne_choc_pro.keymap | keymap -c draw/config.yaml parse -z - > draw/keymap.yaml
+          # Fix layout reference
           sed -i 's/layout: {zmk_keyboard: corne_choc_pro, layout_name: default_layout}/layout:\n  qmk_info_json: config\/corne_choc_pro.json\n  layout_name: default_layout/' draw/keymap.yaml
+          # Generate SVG and PNG
           keymap -c draw/config.yaml draw draw/keymap.yaml > draw/keymap.svg
           rsvg-convert draw/keymap.svg -o draw/keymap.png -w 1400
 
