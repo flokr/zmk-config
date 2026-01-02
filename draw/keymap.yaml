@@ -25,11 +25,11 @@ layers:
   - Z
   - Alt
   - Alt
-  - {t: F, h: Gui}
-  - {t: N, h: Alt}
-  - {t: E, h: Ctrl}
-  - {t: I, h: Shift}
-  - A
+  - F
+  - {t: N, h: Ctrl}
+  - {t: E, h: Shift}
+  - {t: I, h: Alt}
+  - {t: A, h: Gui}
   - Shift
   - Ctrl
   - Y
