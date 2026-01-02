@@ -4,3 +4,53 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+
+  draw:
+    needs: build
+    if: always() && (needs.build.result == 'success' || needs.build.result == 'skipped')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check for keymap changes
+        id: check
+        run: |
+          if git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -qE '^config/.*\.(keymap|dtsi)$|^draw/config\.yaml$'; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Set up Python
+        if: steps.check.outputs.changed == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install keymap-drawer
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          pip install keymap-drawer
+          sudo apt-get update
+          sudo apt-get install -y librsvg2-bin
+
+      - name: Generate keymap visualization
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          keymap -c draw/config.yaml parse -z config/corne_choc_pro.keymap > draw/keymap.yaml
+          sed -i 's/layout: {zmk_keyboard: corne_choc_pro, layout_name: default_layout}/layout:\n  qmk_info_json: config\/corne_choc_pro.json\n  layout_name: default_layout/' draw/keymap.yaml
+          keymap -c draw/config.yaml draw draw/keymap.yaml > draw/keymap.svg
+          rsvg-convert draw/keymap.svg -o draw/keymap.png -w 1400
+
+      - name: Commit and push if changed
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add draw/keymap.svg draw/keymap.yaml draw/keymap.png
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "docs: update keymap visualization [skip ci]"
+            git push
