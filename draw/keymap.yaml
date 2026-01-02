@@ -1,5 +1,5 @@
 layout:
-  qmk_info_json: /Users/florian.kren/code/flokr/flokr/zmk-config/config/corne_choc_pro.json
+  qmk_info_json: config/corne_choc_pro.json
   layout_name: default_layout
 layers:
   MagicSturdy:
@@ -18,17 +18,17 @@ layers:
   - J
   - Bspc
   - Shift
-  - S
-  - T
-  - R
-  - D
+  - {t: S, h: Shift}
+  - {t: T, h: Ctrl}
+  - {t: R, h: Alt}
+  - {t: D, h: Gui}
   - Z
   - Alt
   - Alt
-  - F
-  - N
-  - E
-  - I
+  - {t: F, h: Gui}
+  - {t: N, h: Alt}
+  - {t: E, h: Ctrl}
+  - {t: I, h: Shift}
   - A
   - Shift
   - Ctrl
