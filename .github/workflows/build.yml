@@ -15,6 +15,14 @@ jobs:
         with:
           fetch-depth: 2
 
+      - name: Install west
+        run: pip install west
+
+      - name: West init and update
+        run: |
+          west init -l config
+          west update
+
       - name: Check for keymap changes
         id: check
         run: |
