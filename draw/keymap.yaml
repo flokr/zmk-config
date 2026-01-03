@@ -108,7 +108,7 @@ layers:
   - {type: trans}
   - PgUp
   - Home
-  - {t: ↑, h: '0'}
+  - {t: ↑, h: ^Home}
   - End
   - {type: trans}
   - {type: trans}
@@ -121,9 +121,9 @@ layers:
   - {type: trans}
   - {type: trans}
   - PgDn
-  - {t: ←, h: '0'}
-  - {t: ↓, h: '0'}
-  - {t: →, h: '0'}
+  - {t: ←, h: Home}
+  - {t: ↓, h: ^End}
+  - {t: →, h: End}
   - Enter
   - {type: trans}
   - BT 1
@@ -134,8 +134,8 @@ layers:
   - {type: trans}
   - Ins
   - Tab
-  - {t: Bspc, h: '0'}
-  - {t: Del, h: '0'}
+  - {t: Bspc, h: ^Bspc}
+  - {t: Del, h: ^Del}
   - {type: trans}
   - {type: trans}
   - {type: trans}
@@ -475,55 +475,55 @@ layers:
 combos:
 - p: [1, 2]
   k: '@'
-  l: [MagicSturdy, NAV, NUM]
+  l: [MagicSturdy]
 - p: [17, 18]
-  k: Gui+Z
-  l: [MagicSturdy, NAV, NUM]
+  k: Undo
+  l: [MagicSturdy]
 - p: [18, 19]
-  k: Gui+Sft+Z
-  l: [MagicSturdy, NAV, NUM]
+  k: Redo
+  l: [MagicSturdy]
 - p: [29, 30]
-  k: Gui+C
-  l: [MagicSturdy, NAV, NUM]
-- p: [29, 31]
-  k: Gui+X
-  l: [MagicSturdy, NAV, NUM]
+  k: Copy
+  l: [MagicSturdy]
 - p: [30, 31]
-  k: Gui+V
-  l: [MagicSturdy, NAV, NUM]
+  k: Cut
+  l: [MagicSturdy]
+- p: [31, 32]
+  k: Paste
+  l: [MagicSturdy]
 - p: [22, 23]
   k: {t: (, s: <}
-  l: [MagicSturdy, NAV, NUM]
+  l: [MagicSturdy]
 - p: [23, 24]
   k: {t: ), s: '>'}
-  l: [MagicSturdy, NAV, NUM]
+  l: [MagicSturdy]
 - p: [24, 25]
   k: {t: '-', s: _}
-  l: [MagicSturdy, NAV, NUM]
+  l: [MagicSturdy]
 - p: [25, 26]
   k: {t: +, s: '='}
-  l: [MagicSturdy, NAV, NUM]
+  l: [MagicSturdy]
 - p: [34, 35]
   k: {t: '[', s: '{'}
-  l: [MagicSturdy, NAV, NUM]
+  l: [MagicSturdy]
 - p: [35, 36]
   k: {t: ']', s: '}'}
-  l: [MagicSturdy, NAV, NUM]
+  l: [MagicSturdy]
 - p: [36, 37]
   k: {t: '''', s: '"'}
-  l: [MagicSturdy, NAV, NUM]
+  l: [MagicSturdy]
 - p: [8, 9]
   k: {t: /, s: \}
-  l: [MagicSturdy, NAV, NUM]
+  l: [MagicSturdy]
 - p: [9, 23]
   k: '|'
-  l: [MagicSturdy, NAV, NUM]
+  l: [MagicSturdy]
 - p: [9, 10]
   k: {t: '*', s: ^}
-  l: [MagicSturdy, NAV, NUM]
+  l: [MagicSturdy]
 - p: [10, 24]
   k: '#'
-  l: [MagicSturdy, NAV, NUM]
+  l: [MagicSturdy]
 - p: [11, 25]
   k: '&'
-  l: [MagicSturdy, NAV, NUM]
+  l: [MagicSturdy]
