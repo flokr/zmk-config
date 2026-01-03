@@ -45,8 +45,7 @@ ZMK_COMBO(lpar,  &lpar_lt,     RM1 RM2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_
 ZMK_COMBO(rpar,  &rpar_gt,     RM2 RM3,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 // Home row combos - minus/underscore, plus/equals
-ZMK_COMBO(minus, &minus_under, RM3 RM4,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(plus,  &plus_equal,  RM4 RM5,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(plus,  &plus_equal,  RM3 RM4,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 // Bottom row combos - brackets/braces
 ZMK_COMBO(lbkt,  &lbkt_lbrc,   RB0 RB1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
