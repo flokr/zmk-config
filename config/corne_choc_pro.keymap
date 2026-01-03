@@ -195,6 +195,32 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        /* ================== GERMAN UMLAUT MOD-MORPHS ================== */
+        
+        // ä/Ä: tap lowercase, shift uppercase
+        ae_umlaut: ae_umlaut {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&umlaut_a>, <&umlaut_A>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // ö/Ö: tap lowercase, shift uppercase
+        oe_umlaut: oe_umlaut {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&umlaut_o>, <&umlaut_O>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // ü/Ü: tap lowercase, shift uppercase
+        ue_umlaut: ue_umlaut {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&umlaut_u>, <&umlaut_U>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         // Combo: tap asterisk, shift caret
         astrk_caret: asterisk_caret {
             compatible = "zmk,behavior-mod-morph";
@@ -282,6 +308,93 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             bindings = <&kp>, <&kp>;
         };
     };
+
+    /* ================== MACROS FOR GERMAN UMLAUTS ================== */
+    
+    macros {
+        // ä: Option+u, then a (works on macOS and Windows with US-International)
+        umlaut_a: umlaut_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_press &kp LALT>
+                     , <&macro_tap &kp U>
+                     , <&macro_release &kp LALT>
+                     , <&macro_tap &kp A>;
+        };
+
+        // ö: Option+u, then o
+        umlaut_o: umlaut_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_press &kp LALT>
+                     , <&macro_tap &kp U>
+                     , <&macro_release &kp LALT>
+                     , <&macro_tap &kp O>;
+        };
+
+        // ü: Option+u, then u
+        umlaut_u: umlaut_u {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_press &kp LALT>
+                     , <&macro_tap &kp U>
+                     , <&macro_release &kp LALT>
+                     , <&macro_tap &kp U>;
+        };
+
+        // Ä: Option+u, Shift+a
+        umlaut_A: umlaut_A {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_press &kp LALT>
+                     , <&macro_tap &kp U>
+                     , <&macro_release &kp LALT>
+                     , <&macro_tap &kp LS(A)>;
+        };
+
+        // Ö: Option+u, Shift+o
+        umlaut_O: umlaut_O {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_press &kp LALT>
+                     , <&macro_tap &kp U>
+                     , <&macro_release &kp LALT>
+                     , <&macro_tap &kp LS(O)>;
+        };
+
+        // Ü: Option+u, Shift+u
+        umlaut_U: umlaut_U {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_press &kp LALT>
+                     , <&macro_tap &kp U>
+                     , <&macro_release &kp LALT>
+                     , <&macro_tap &kp LS(U)>;
+        };
+
+        // ß: Option+s (no uppercase variant)
+        eszett: eszett {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_press &kp LALT>
+                     , <&macro_tap &kp S>
+                     , <&macro_release &kp LALT>;
+        };
+    };
 };
 
 /* ╭──────────────────────────────────────────────────────────────────────────╮
@@ -307,15 +420,15 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
   ╰───────────────╮ 40  41  42 | 43  44  45 ╭──────────────────╯ ╰───────────────╮ LH2 LH1 LH0 | RH0 RH1 RH2 ╭───────────────╯
                   ╰────────────┴────────────╯                                    ╰─────────────┴─────────────╯              */
 
-// ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-     &kp TAB     &kp V      &kp M      &kp L      &kp C      &kp P    &kp C_MUTE       &kp C_PP    &kp Q      &mag       &kp U      &kp O      &kp J      &kp BSPC
-// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-     &kp LSHFT &hml LSHFT S &hml LCTRL T &hml LALT R &hml LGUI D  &kp Z   &kp LALT      &kp RALT    &kp F   &hmr LGUI N &hmr LALT E &hmr LCTRL I &hmr RSHFT A &kp RSHFT
-// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-     &kp LCTRL   &kp Y      &kp K      &kp X      &kp G      &kp W                                &kp B      &kp H   &comma_semi &dot_colon   &trans     &kp ESC
-// ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                       &kp LGUI &lt_spc 1 SPACE &key_repeat                    &bspc_del &lt_ent 2 RET  &trans
-//                                   ╰──────────┴──────────┴──────────╯                         ╰──────────┴──────────┴──────────╯
+// ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+       &kp TAB         &kp V          &kp M          &kp L          &kp C          &kp P        &kp C_MUTE          &kp C_PP        &kp Q          &mag           &kp U          &kp O          &kp J         &kp BSPC
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+      &kp LSHFT     &hml LSHFT S   &hml LCTRL T   &hml LALT R     &hml LGUI D      &kp Z         &kp LALT           &kp RALT        &kp F       &hmr LGUI N    &hmr LALT E    &hmr LCTRL I   &hmr RSHFT A     &kp RSHFT
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+      &kp LCTRL        &kp Y          &kp K          &kp X          &kp G          &kp W                                            &kp B          &kp H       &comma_semi    &dot_colon     &minus_under     &kp ESC
+// ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
+                                                    &mo 3      &lt_spc 2 SPACE  &key_repeat                                       &bspc_del       &kp RET     &lt_spc 1 SPACE
+//                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
             >;
         };
 
@@ -328,16 +441,15 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     │  Right hand: Numpad layout with home row mods                │
     ╰──────────────────────────────────────────────────────────────╯  */
 
-// ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-     &trans     &trans     &trans     &trans     &trans     &trans     &trans           &trans     &trans      &kp N7     &kp N8     &kp N9  &multiply_slash &kp EQUAL
-// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-     &trans     &trans     &trans     &trans     &trans     &trans     &trans           &trans  &hmr LGUI N0 &hmr LALT N4 &hmr LSHFT N5 &hmr LCTRL N6 &plus_minus &trans
-// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-     &trans     &trans     &trans     &trans     &trans     &trans                                &trans     &kp N1     &kp N2     &kp N3  &num_comma_dot &trans
-// ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                       &trans     &trans     &trans                               &trans     &trans     &trans
-//                                   ╰──────────┴──────────┴──────────╯                         ╰──────────┴──────────┴──────────╯
-            >;
+// ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+        &trans         &trans         &trans         &trans         &trans         &trans         &trans             &trans         &trans         &kp N7        &kp N8          &kp N9    &multiply_slash    &kp EQUAL
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+        &trans         &trans         &trans         &trans         &trans         &trans         &trans             &trans      &hmr LGUI N0   &hmr LALT N4   &hmr LSHFT N5  &hmr LCTRL N6  &plus_minus       &trans
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+        &trans         &trans         &trans         &trans         &trans         &trans                                           &trans         &kp N1        &kp N2          &kp N3     &num_comma_dot     &trans
+// ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
+                                                     &trans         &trans         &trans                                           &trans         &trans         &trans
+//                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
         };
 
         NAVLayer {
@@ -357,92 +469,47 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     Word deletion:    BSPC:  tap Bspc, hold Ctrl+Bspc (word back)
                       DEL:   tap Del,  hold Ctrl+Del (word fwd)     */
 
-// ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-     &trans     &trans     &trans    &kp TAB  &kp LS(TAB)  &trans     &trans           &trans     &trans   &kp PG_UP   &kp HOME &mt_doc_start 0 UP  &kp END   &trans
-// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-     &trans   &sk LGUI   &sk LALT   &sk LSHFT  &sk LCTRL    &trans     &trans           &trans     &trans   &kp PG_DN &mt_home 0 LEFT &mt_doc_end 0 DOWN &mt_end 0 RIGHT &kp RET
-// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-     &trans  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR                      &trans    &kp INS    &kp TAB &mt_word_bspc 0 BSPC &mt_word_del 0 DEL &trans
-// ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                       &trans     &trans     &trans                               &trans     &trans     &trans
-//                                   ╰──────────┴──────────┴──────────╯                         ╰──────────┴──────────┴──────────╯
+// ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+        &trans         &trans        &trans         &kp TAB       &kp LS(TAB)      &trans         &trans             &trans         &trans       &kp PG_UP       &kp HOME  &mt_doc_start 0 UP  &kp END         &trans
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+        &trans        &sk LGUI      &sk LALT       &sk LSHFT      &sk LCTRL        &trans         &trans             &trans         &trans       &kp PG_DN   &mt_home 0 LEFT &mt_doc_end 0 DOWN &mt_end 0 RIGHT &kp RET
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+        &trans      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_CLR                                         &trans         &kp INS      &kp TAB  &mt_word_bspc 0 BSPC &mt_word_del 0 DEL &trans
+// ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
+                                                     &trans         &trans         &trans                                           &trans          &trans         &trans
+//                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
             >;
         };
 
         raise_layer {
             display-name = "SYMBOL";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  | LCTRL | RCTRL |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |  LALT | RALT  |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |               |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |               | ENT |     | ALT |
-
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp LCTRL  &kp RCTRL  &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans     &kp LALT   &kp RALT   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans                           &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE                        &kp RET    &trans     &kp RALT
-            >;
-        };
+/*  SYMBOL LAYER - Programming Symbols & German Umlauts
+    ╭──────────────────────────────────────────────────────────────╮
+    │  Left hand: Common programming symbols                       │
+    │  Right hand: Brackets (same as combos) & German umlauts      │
+    ╰──────────────────────────────────────────────────────────────╯
+    
+    German Umlauts (Option-key method, works on macOS & Windows):
+    - ä/Ä at A position (RM5) - tap lowercase, shift uppercase
+    - ö/Ö at O position (RT4) - tap lowercase, shift uppercase  
+    - ü/Ü at U position (RT3) - tap lowercase, shift uppercase
+    - ß at S position (LM5) - eszett, no uppercase variant
+    
+    Brackets mirror combo positions:
+    - ()/<> at RM1/RM2 (same fingers as RM1+RM2 combo)
+    - []/{} at RB1/RB2 (same fingers as RB0+RB1/RB1+RB2 combos)
+    - '/" at RB3 (same finger as RB2+RB3 combo)               */
 
-        extra_layer_1 {
-            display-name = "EXTRA 1";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
-            >;
-        };
-
-        extra_layer_2 {
-            display-name = "EXTRA 2";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
-            >;
-        };
-
-        extra_layer_3 {
-            display-name = "EXTRA 3";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
-            >;
-        };
-
-        extra_layer_4 {
-            display-name = "EXTRA 4";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
-            >;
-        };
-
-        extra_layer_5 {
-            display-name = "EXTRA 5";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
-            >;
-        };
-
-        extra_layer_6 {
-            display-name = "EXTRA 6";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
+// ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+      &kp TAB       &kp EXCL       &kp AT        &kp ASTRK       &kp AT        &kp CARET      &kp C_MUTE         &kp C_PP        &trans         &trans       &ue_umlaut     &oe_umlaut       &trans         &kp BSPC
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+      &kp LSHFT     &kp TILDE      &kp GRAVE      &kp DLLR       &kp HASH       &eszett        &kp LALT           &kp RALT        &trans       &lpar_lt       &rpar_gt     &minus_under    &plus_equal    &ae_umlaut
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+      &kp LCTRL     &kp PRCNT      &kp PIPE       &kp BSLH       &kp EQUAL      &kp PLUS                                          &trans       &lbkt_lbrc     &rbkt_rbrc      &sqt_dqt        &trans         &kp ESC
+// ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
+                                                    &trans         &trans         &trans                                           &trans          &trans         &trans
+//                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
             >;
         };
     };
