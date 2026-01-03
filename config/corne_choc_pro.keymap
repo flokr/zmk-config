@@ -53,6 +53,8 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 
 / {
     behaviors {
+        /* ================== ADAPTIVE KEY ================== */
+        
         mag: magic {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
@@ -76,7 +78,217 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
                 bindings = <&kp Y>;
             };
         };
+
+        /* ================== MOD-MORPHS ================== */
+        
+        // Base layer punctuation: tap comma, shift semicolon
+        comma_semi: comma_semicolon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Base layer punctuation: tap dot, shift colon
+        dot_colon: dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Thumb key: tap backspace, shift delete
+        bspc_del: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC>, <&kp DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // NUM layer: tap multiply, shift slash
+        multiply_slash: multiply_slash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp STAR>, <&kp FSLH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // NUM layer: tap plus, shift minus
+        plus_minus: plus_minus {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS>, <&kp MINUS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // NUM layer: tap comma, shift dot
+        num_comma_dot: num_comma_dot {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp DOT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /* ================== COMBO MOD-MORPHS ================== */
+        
+        // Combo: tap left paren, shift less-than
+        lpar_lt: lpar_lessthan {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp LT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Combo: tap right paren, shift greater-than
+        rpar_gt: rpar_greaterthan {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RPAR>, <&kp GT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Combo: tap left bracket, shift left brace
+        lbkt_lbrc: lbkt_lbrace {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT>, <&kp LBRC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Combo: tap right bracket, shift right brace
+        rbkt_rbrc: rbkt_rbrace {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RBKT>, <&kp RBRC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Combo: tap single quote, shift double quote
+        sqt_dqt: sqt_dquote {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>, <&kp DQT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Combo: tap minus, shift underscore
+        minus_under: minus_underscore {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp UNDER>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Combo: tap plus, shift equals
+        plus_equal: plus_equals {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS>, <&kp EQUAL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Combo: tap forward slash, shift backslash
+        fslh_bslh: fslash_bslash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp FSLH>, <&kp BSLH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Combo: tap asterisk, shift caret
+        astrk_caret: asterisk_caret {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp ASTRK>, <&kp CARET>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /* ================== LAYER BEHAVIORS ================== */
+        
+        // Smart space: tap space, hold NAV layer
+        lt_spc: layer_tap_space {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            bindings = <&mo>, <&kp>;
+        };
+
+        // Smart enter: tap enter, hold FN layer
+        lt_ent: layer_tap_enter {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            bindings = <&mo>, <&kp>;
+        };
+
+        /* ================== ENHANCED NAVIGATION ================== */
+        
+        // Enhanced arrows: hold for special navigation
+        mt_home: hold_tap_home {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        mt_end: hold_tap_end {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        mt_doc_start: hold_tap_doc_start {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        mt_doc_end: hold_tap_doc_end {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        mt_word_bspc: hold_tap_word_bspc {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        mt_word_del: hold_tap_word_del {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            bindings = <&kp>, <&kp>;
+        };
     };
+
+    /* ╭──────────────────────────────────────────────────────────────────────────╮
+       │                              COMBOS                                      │
+       │  Must be sourced after behaviors to access mod-morphs                   │
+       ╰──────────────────────────────────────────────────────────────────────────╯ */
+
+    #include "combos.dtsi"
 
     keymap {
         compatible = "zmk,keymap";
@@ -93,32 +305,65 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
   ╰───────────────╮ 40  41  42 | 43  44  45 ╭──────────────────╯ ╰───────────────╮ LH2 LH1 LH0 | RH0 RH1 RH2 ╭───────────────╯
                   ╰────────────┴────────────╯                                    ╰─────────────┴─────────────╯              */
 
-// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp TAB          &kp V         &kp M         &kp L         &kp C         &kp P       &kp C_MUTE         &kp C_PP       &kp Q         &mag          &kp U         &kp O         &kp J       &kp BSPC
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp LSHFT     &hml LSHFT S  &hml LCTRL T  &hml LALT R   &hml LGUI D      &kp Z        &kp LALT          &kp RALT       &kp F      &hmr LGUI N   &hmr LALT E   &hmr LCTRL I  &hmr RSHFT A   &kp RSHFT
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                               ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp LCTRL        &kp Y         &kp K         &kp X         &kp G         &kp W                                         &kp B         &kp H       &kp COMMA      &kp DOT       &kp SEMI      &kp ESC
-// ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤                               ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                &kp LGUI      &lt 1 SPACE   &kp SPACE                                      &kp RET       &kp BSPC      &kp DEL
-//                                           ╰─────────────┴─────────────┴─────────────╯                               ╰─────────────┴─────────────┴─────────────╯
+// ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+     &kp TAB     &kp V      &kp M      &kp L      &kp C      &kp P    &kp C_MUTE       &kp C_PP    &kp Q      &mag       &kp U      &kp O      &kp J      &kp BSPC
+// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+     &kp LSHFT &hml LSHFT S &hml LCTRL T &hml LALT R &hml LGUI D  &kp Z   &kp LALT      &kp RALT    &kp F   &hmr LGUI N &hmr LALT E &hmr LCTRL I &hmr RSHFT A &kp RSHFT
+// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+     &kp LCTRL   &kp Y      &kp K      &kp X      &kp G      &kp W                                &kp B      &kp H   &comma_semi &dot_colon   &trans     &kp ESC
+// ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
+                                       &kp LGUI &lt_spc 1 SPACE &key_repeat                    &bspc_del &lt_ent 2 RET  &trans
+//                                   ╰──────────┴──────────┴──────────╯                         ╰──────────┴──────────┴──────────╯
+            >;
+        };
+
+        NUMLayer {
+            display-name = "NUM";
+            bindings = <
+/*  NUM LAYER - Right Hand Numpad with HRMs
+    ╭──────────────────────────────────────────────────────────────╮
+    │  Left hand: Transparent (pass through base layer)           │
+    │  Right hand: Numpad layout with home row mods                │
+    ╰──────────────────────────────────────────────────────────────╯  */
+
+// ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+     &trans     &trans     &trans     &trans     &trans     &trans     &trans           &trans     &trans      &kp N7     &kp N8     &kp N9  &multiply_slash &kp EQUAL
+// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+     &trans     &trans     &trans     &trans     &trans     &trans     &trans           &trans  &hmr LGUI N0 &hmr LALT N4 &hmr LSHFT N5 &hmr LCTRL N6 &plus_minus &trans
+// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+     &trans     &trans     &trans     &trans     &trans     &trans                                &trans     &kp N1     &kp N2     &kp N3  &num_comma_dot &trans
+// ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
+                                       &trans     &trans     &trans                               &trans     &trans     &trans
+//                                   ╰──────────┴──────────┴──────────╯                         ╰──────────┴──────────┴──────────╯
             >;
         };
 
         NAVLayer {
             display-name = "NAV";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5    |  LCTRL | RCTRL |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | CTRL | BT1 | BT2 | BT3 | BT4 | BT5   |  LALT  | RALT  | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT | BTCR| RGB | RST | BOOT| Unlock|        |       |     |     |     |     |     |      |
-            //                    | GUI |     | SPC   |        | ENT   |     | ALT |
-
             bindings = <
-&kp TAB    &none         &none            &none         &none         &none           &none     &none     &none     &none           &kp UP     &none      &none   &kp BSPC
-&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LALT  &kp RALT  &none     &kp LEFT_ARROW  &kp DOWN   &kp RIGHT  &trans  &trans
-&kp LSHFT  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                      &trans    &trans          &trans     &trans     &trans  &trans
-                                          &kp LGUI      &trans        &kp SPACE                           &kp LGUI  &trans          &kp SPACE
+/*  NAV LAYER - Navigation & System Controls
+    ╭──────────────────────────────────────────────────────────────╮
+    │  Left:  Sticky modifiers + Bluetooth controls                │
+    │  Right: Enhanced navigation with hold behaviors              │
+    ╰──────────────────────────────────────────────────────────────╯
+    
+    Enhanced arrows:  LEFT:  tap ←, hold Home (line start)
+                      RIGHT: tap →, hold End (line end)
+                      UP:    tap ↑, hold Ctrl+Home (doc start)
+                      DOWN:  tap ↓, hold Ctrl+End (doc end)
+    
+    Word deletion:    BSPC:  tap Bspc, hold Ctrl+Bspc (word back)
+                      DEL:   tap Del,  hold Ctrl+Del (word fwd)     */
+
+// ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+     &trans     &trans     &trans    &kp TAB  &kp LS(TAB)  &trans     &trans           &trans     &trans   &kp PG_UP   &kp HOME &mt_doc_start LC(HOME) UP  &kp END   &trans
+// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+     &trans   &sk LGUI   &sk LALT   &sk LSHFT  &sk LCTRL    &trans     &trans           &trans     &trans   &kp PG_DN &mt_home HOME LEFT &mt_doc_end LC(END) DOWN &mt_end END RIGHT &kp RET &trans
+// ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+     &trans  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR                      &trans    &kp INS    &kp TAB &mt_word_bspc LC(BSPC) BSPC &mt_word_del LC(DEL) DEL &trans
+// ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
+                                       &trans     &trans     &trans                               &trans     &trans     &trans
+//                                   ╰──────────┴──────────┴──────────╯                         ╰──────────┴──────────┴──────────╯
             >;
         };
 
@@ -199,4 +444,10 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             >;
         };
     };
+
+    /* ╭──────────────────────────────────────────────────────────────────────────╮
+       │                              COMBOS                                      │
+       ╰──────────────────────────────────────────────────────────────────────────╯ */
+
+    #include "combos.dtsi"
 };
