@@ -39,63 +39,110 @@ layers:
   - W
   - B
   - H
-  - ','
-  - .
-  - ;
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
+  - {type: trans}
   - Esc
   - Gui
-  - {t: Spc, h: NAV}
-  - Spc
-  - Enter
-  - Bspc
-  - Del
+  - {t: Spc, h: NUM}
+  - '&key_repeat'
+  - {t: Bspc, s: Del}
+  - {t: Enter, h: NAV}
+  - {type: trans}
+  NUM:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - '7'
+  - '8'
+  - '9'
+  - {t: '*', s: /}
+  - '='
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {t: '0', h: Gui}
+  - {t: '4', h: Alt}
+  - {t: '5', h: Shift}
+  - {t: '6', h: Ctrl}
+  - {t: +, s: '-'}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - '1'
+  - '2'
+  - '3'
+  - {t: ',', s: .}
+  - {type: trans}
+  - {type: trans}
+  - {type: held}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
   NAV:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
   - Tab
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ↑
-  - ''
-  - ''
-  - Bspc
-  - Ctrl
+  - Sft+Tab
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - PgUp
+  - Home
+  - {t: ↑, h: '0'}
+  - End
+  - {type: trans}
+  - {type: trans}
+  - {t: Gui, h: sticky}
+  - {t: Alt, h: sticky}
+  - {t: Shift, h: sticky}
+  - {t: Ctrl, h: sticky}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - PgDn
+  - {t: ←, h: '0'}
+  - {t: ↓, h: '0'}
+  - {t: →, h: '0'}
+  - Enter
+  - {type: trans}
   - BT 1
   - BT 2
   - BT 3
   - BT 4
-  - {t: BT, h: '4'}
-  - Alt
-  - Alt
-  - ''
-  - ←
-  - ↓
-  - →
-  - {type: trans}
-  - {type: trans}
-  - Shift
   - BT Clear
-  - RGB TOG
-  - Reset
-  - Boot
-  - Studio 🔓
+  - {type: trans}
+  - Ins
+  - Tab
+  - {t: Bspc, h: '0'}
+  - {t: Del, h: '0'}
   - {type: trans}
   - {type: trans}
   - {type: trans}
   - {type: trans}
   - {type: trans}
-  - {type: trans}
-  - Gui
   - {type: held}
-  - Spc
-  - Gui
   - {type: trans}
-  - Spc
   SYMBOL:
   - Tab
   - '!'
@@ -425,3 +472,58 @@ layers:
   - {type: trans}
   - {type: trans}
   - {type: trans}
+combos:
+- p: [1, 2]
+  k: '@'
+  l: [MagicSturdy, NAV, NUM]
+- p: [17, 18]
+  k: Gui+Z
+  l: [MagicSturdy, NAV, NUM]
+- p: [18, 19]
+  k: Gui+Sft+Z
+  l: [MagicSturdy, NAV, NUM]
+- p: [29, 30]
+  k: Gui+C
+  l: [MagicSturdy, NAV, NUM]
+- p: [29, 31]
+  k: Gui+X
+  l: [MagicSturdy, NAV, NUM]
+- p: [30, 31]
+  k: Gui+V
+  l: [MagicSturdy, NAV, NUM]
+- p: [22, 23]
+  k: {t: (, s: <}
+  l: [MagicSturdy, NAV, NUM]
+- p: [23, 24]
+  k: {t: ), s: '>'}
+  l: [MagicSturdy, NAV, NUM]
+- p: [24, 25]
+  k: {t: '-', s: _}
+  l: [MagicSturdy, NAV, NUM]
+- p: [25, 26]
+  k: {t: +, s: '='}
+  l: [MagicSturdy, NAV, NUM]
+- p: [34, 35]
+  k: {t: '[', s: '{'}
+  l: [MagicSturdy, NAV, NUM]
+- p: [35, 36]
+  k: {t: ']', s: '}'}
+  l: [MagicSturdy, NAV, NUM]
+- p: [36, 37]
+  k: {t: '''', s: '"'}
+  l: [MagicSturdy, NAV, NUM]
+- p: [8, 9]
+  k: {t: /, s: \}
+  l: [MagicSturdy, NAV, NUM]
+- p: [9, 23]
+  k: '|'
+  l: [MagicSturdy, NAV, NUM]
+- p: [9, 10]
+  k: {t: '*', s: ^}
+  l: [MagicSturdy, NAV, NUM]
+- p: [10, 24]
+  k: '#'
+  l: [MagicSturdy, NAV, NUM]
+- p: [11, 25]
+  k: '&'
+  l: [MagicSturdy, NAV, NUM]
