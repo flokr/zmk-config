@@ -201,7 +201,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         ae_umlaut: ae_umlaut {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&umlaut_a>, <&umlaut_A>;
+            bindings = <&de_ae>, <&de_ae_cap>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -209,7 +209,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         oe_umlaut: oe_umlaut {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&umlaut_o>, <&umlaut_O>;
+            bindings = <&de_oe>, <&de_oe_cap>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -217,7 +217,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         ue_umlaut: ue_umlaut {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&umlaut_u>, <&umlaut_U>;
+            bindings = <&de_ue>, <&de_ue_cap>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -313,7 +313,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     
     macros {
         // ä: Option+u, then a (works on macOS and Windows with US-International)
-        umlaut_a: umlaut_a {
+        de_ae: de_ae {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <10>;
@@ -325,7 +325,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         };
 
         // ö: Option+u, then o
-        umlaut_o: umlaut_o {
+        de_oe: de_oe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <10>;
@@ -337,7 +337,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         };
 
         // ü: Option+u, then u
-        umlaut_u: umlaut_u {
+        de_ue: de_ue {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <10>;
@@ -349,7 +349,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         };
 
         // Ä: Option+u, Shift+a
-        umlaut_A: umlaut_A {
+        de_ae_cap: de_ae_cap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <10>;
@@ -361,7 +361,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         };
 
         // Ö: Option+u, Shift+o
-        umlaut_O: umlaut_O {
+        de_oe_cap: de_oe_cap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <10>;
@@ -373,7 +373,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         };
 
         // Ü: Option+u, Shift+u
-        umlaut_U: umlaut_U {
+        de_ue_cap: de_ue_cap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <10>;
