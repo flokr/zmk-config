@@ -58,6 +58,8 @@ jobs:
           sed -i 's|config/zmk-helpers/key-labels|modules/zmk/helpers/include|' draw/config.yaml
           # Parse keymap
           keymap -c draw/config.yaml parse -z config/corne_choc_pro.keymap > draw/keymap.yaml
+          # Show combos only on base layer
+          sed -i 's/l: \[MagicSturdy, NAV, NUM\]/l: [MagicSturdy]/g' draw/keymap.yaml
           # Restore original config
           git checkout draw/config.yaml
           # Fix layout reference

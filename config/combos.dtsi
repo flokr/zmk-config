@@ -32,8 +32,8 @@ ZMK_COMBO(redo,  &kp LG(LS(Z)),LM2 LM1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_
 
 // Bottom row combos - editing
 ZMK_COMBO(copy,  &kp LG(C),    LB4 LB3,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(cut,   &kp LG(X),    LB4 LB2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(paste, &kp LG(V),    LB3 LB2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(cut,   &kp LG(X),    LB3 LB2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(paste, &kp LG(V),    LB2 LB1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* ╭──────────────────────────────────────────────────────────────────────────╮
    │                   HORIZONTAL COMBOS - RIGHT HAND                         │

@@ -20,6 +20,20 @@ parse_config:
     "&kp LC(C)": Copy
     "&kp LC(X)": Cut
     "&kp LC(V)": Paste
+    
+    "&kp LG(C)": Copy
+    "&kp LG(X)": Cut
+    "&kp LG(V)": Paste
+    "&kp LG(Z)": Undo
+    "&kp LG(LS(Z))": Redo
+    
+    # Navigation hold-taps - hide the '0' parameter
+    "&mt_home 0 LEFT": {t: "←", h: "Home"}
+    "&mt_end 0 RIGHT": {t: "→", h: "End"}
+    "&mt_doc_start 0 UP": {t: "↑", h: "^Home"}
+    "&mt_doc_end 0 DOWN": {t: "↓", h: "^End"}
+    "&mt_word_bspc 0 BSPC": {t: "Bspc", h: "^Bspc"}
+    "&mt_word_del 0 DEL": {t: "Del", h: "^Del"}
 
     "&mag": ⭐
     "&studio_unlock": Studio 🔓
@@ -141,10 +155,16 @@ draw_config:
   footer_text: "flokr/zmk-config"
   use_local_cache: true  # Avoid SSL issues with QMK API
   
+  # Show combos only on base layer
+  ghost_keys:
+    combo: [NUM, NAV, SYMBOL, "EXTRA 1", "EXTRA 2", "EXTRA 3", "EXTRA 4", "EXTRA 5", "EXTRA 6"]
+  
   # Styling
   key_h: 60
   key_w: 60
   split_gap: 40
+  combo_w: 36  # Increase combo box width
+  combo_h: 32  # Increase combo box height
   
   # Custom CSS with GitHub Light color scheme
   svg_extra_style: |
@@ -166,9 +186,10 @@ draw_config:
       stroke-width: 1;
     }
     
-    /* Combo styling - blue accent */
+    /* Combo styling - light blue accent */
     rect.combo, rect.combo-separate {
-      fill: #0366d6 !important;  /* GitHub blue */
+      fill: #c8e1ff !important;  /* Light blue */
+      opacity: 0.8;
     }
     
     /* Layer activator styling - red accent */
@@ -179,4 +200,44 @@ draw_config:
     /* Ghost keys more subtle */
     rect.ghost, rect.combo.ghost {
       opacity: 0.25 !important;
+    }
+    
+    /* Combo text styling - make tap/shift labels more balanced */
+    text.combo {
+      font-size: 10px;
+    }
+    
+    /* Single symbol combos - center aligned (when there's no shifted variant) */
+    text.combo.tap:only-child {
+      transform: translateY(0) !important;
+      font-size: 11px !important;
+    }
+    
+    /* Top symbol (shifted) - positioned at top, closer to tap */
+    text.shifted {
+      font-size: 10px !important;
+      font-weight: 400;
+    }
+    
+    /* Bottom symbol (tap) - positioned at bottom */
+    text.tap {
+      font-size: 11px !important;
+      font-weight: 500;
+    }
+    
+    /* Adjust vertical spacing for mod-morph symbols - minimal gap, tap lower */
+    /* Only apply to keys/combos that HAVE a shifted sibling */
+    g.key:has(text.shifted) text.shifted,
+    g.combo:has(text.shifted) text.shifted {
+      transform: translateY(2px);
+    }
+    
+    g.key:has(text.shifted) text.tap,
+    g.combo:has(text.shifted) text.tap {
+      transform: translateY(9px);
+    }
+    
+    /* Override for single-symbol combos - center them */
+    g.combo:not(:has(text.shifted)) text.tap {
+      transform: translateY(0) !important;
     }
