@@ -358,11 +358,11 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
                       DEL:   tap Del,  hold Ctrl+Del (word fwd)     */
 
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-     &trans     &trans     &trans    &kp TAB  &kp LS(TAB)  &trans     &trans           &trans     &trans   &kp PG_UP   &kp HOME &mt_doc_start LC(HOME) UP  &kp END   &trans
+     &trans     &trans     &trans    &kp TAB  &kp LS(TAB)  &trans     &trans           &trans     &trans   &kp PG_UP   &kp HOME &mt_doc_start 0 UP  &kp END   &trans
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-     &trans   &sk LGUI   &sk LALT   &sk LSHFT  &sk LCTRL    &trans     &trans           &trans     &trans   &kp PG_DN &mt_home HOME LEFT &mt_doc_end LC(END) DOWN &mt_end END RIGHT &kp RET &trans
+     &trans   &sk LGUI   &sk LALT   &sk LSHFT  &sk LCTRL    &trans     &trans           &trans     &trans   &kp PG_DN &mt_home 0 LEFT &mt_doc_end 0 DOWN &mt_end 0 RIGHT &kp RET
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-     &trans  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR                      &trans    &kp INS    &kp TAB &mt_word_bspc LC(BSPC) BSPC &mt_word_del LC(DEL) DEL &trans
+     &trans  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR                      &trans    &kp INS    &kp TAB &mt_word_bspc 0 BSPC &mt_word_del 0 DEL &trans
 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                        &trans     &trans     &trans                               &trans     &trans     &trans
 //                                   ╰──────────┴──────────┴──────────╯                         ╰──────────┴──────────┴──────────╯
