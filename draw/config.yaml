@@ -105,8 +105,8 @@ parse_config:
     EQUAL: "="
     EXCL: "!"
     EXCLAMATION: "!"
-    FSLH: /
-    GRAVE: "`"
+    FSLH: "-"          # Austrian: / key = minus
+    GRAVE: "^"         # Austrian: dead key = caret
     GREATER_THAN: ">"
     GT: ">"
     HASH: "#"
@@ -121,7 +121,7 @@ parse_config:
     MINUS: "-"
     NON_US_BACKSLASH: \
     NON_US_BSLH: "|"
-    NON_US_HASH: "#"
+    NON_US_HASH: "#"   # Austrian: # key position
     NUHS: "#"
     PERCENT: "%"
     PERIOD: .
@@ -132,7 +132,7 @@ parse_config:
     PRCNT: "%"
     QMARK: "?"
     QUESTION: "?"
-    RBKT: "]"
+    RBKT: +            # Austrian: + key = plus
     RBRC: "}"
     RIGHT_BRACE: "}"
     RIGHT_BRACKET: "]"
@@ -148,6 +148,34 @@ parse_config:
     TILDE2: "~"
     UNDER: _
     UNDERSCORE: _
+    
+    # Austrian QWERTZ layout - Shift+Number combinations
+    "LS(N1)": "!"      # Shift+1 = exclamation
+    "LS(N2)": '"'      # Shift+2 = double quote
+    "LS(N4)": $        # Shift+4 = dollar
+    "LS(N5)": "%"      # Shift+5 = percent
+    "LS(N6)": "&"      # Shift+6 = ampersand
+    "LS(N7)": /        # Shift+7 = forward slash
+    "LS(N8)": (        # Shift+8 = left paren
+    "LS(N9)": )        # Shift+9 = right paren
+    "LS(N0)": "="      # Shift+0 = equals
+    
+    # Austrian QWERTZ layout - AltGr combinations
+    "RA(Q)": "@"       # AltGr+Q = at sign
+    "RA(N7)": "{"      # AltGr+7 = left brace
+    "RA(N8)": "["      # AltGr+8 = left bracket
+    "RA(N9)": "]"      # AltGr+9 = right bracket
+    "RA(N0)": "}"      # AltGr+0 = right brace
+    "RA(MINUS)": \     # AltGr+ß = backslash
+    "RA(RBKT)": "~"    # AltGr++ = tilde
+    
+    # Austrian QWERTZ layout - Special keys
+    "NUBS": <          # NUBS key = less than
+    "LS(NUBS)": ">"    # Shift+NUBS = greater than
+    "LS(NON_US_HASH)": "'"  # Shift+# = single quote
+    "LS(RBKT)": "*"    # Shift++ = asterisk
+    "LS(FSLH)": _      # Shift+/ = underscore
+    "LS(EQUAL)": "`"   # Shift+dead = backtick
 
 draw_config:
   append_colon_to_layer_header: false
