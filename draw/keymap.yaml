@@ -125,11 +125,11 @@ layers:
   - {t: ↓, h: ^End}
   - {t: →, h: End}
   - Enter
-  - {type: trans}
   - BT 1
   - BT 2
   - BT 3
   - BT 4
+  - {t: BT, h: '4'}
   - BT Clear
   - {type: trans}
   - Ins
