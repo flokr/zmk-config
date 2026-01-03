@@ -446,48 +446,43 @@ g.combo:not(:has(text.shifted)) text.tap {
 </g>
 <g class="combo combopos-8">
 <rect rx="6" ry="6" x="702" y="78" width="36" height="32" class="combo"/>
-<text x="720" y="94" class="combo tap">-</text>
-<text x="720" y="80" class="combo shifted">_</text>
+<text x="720" y="94" class="combo tap">+</text>
+<text x="720" y="80" class="combo shifted">=</text>
 </g>
 <g class="combo combopos-9">
-<rect rx="6" ry="6" x="762" y="89" width="36" height="32" class="combo"/>
-<text x="780" y="105" class="combo tap">+</text>
-<text x="780" y="91" class="combo shifted">=</text>
-</g>
-<g class="combo combopos-10">
 <rect rx="6" ry="6" x="582" y="145" width="36" height="32" class="combo"/>
 <text x="600" y="161" class="combo tap">[</text>
 <text x="600" y="147" class="combo shifted">{</text>
 </g>
-<g class="combo combopos-11">
+<g class="combo combopos-10">
 <rect rx="6" ry="6" x="642" y="138" width="36" height="32" class="combo"/>
 <text x="660" y="154" class="combo tap">]</text>
 <text x="660" y="140" class="combo shifted">}</text>
 </g>
-<g class="combo combopos-12">
+<g class="combo combopos-11">
 <rect rx="6" ry="6" x="702" y="138" width="36" height="32" class="combo"/>
 <text x="720" y="154" class="combo tap">&#x27;</text>
 <text x="720" y="140" class="combo shifted">&quot;</text>
 </g>
-<g class="combo combopos-13">
+<g class="combo combopos-12">
 <rect rx="6" ry="6" x="582" y="25" width="36" height="32" class="combo"/>
 <text x="600" y="41" class="combo tap">/</text>
 <text x="600" y="27" class="combo shifted">\</text>
 </g>
-<g class="combo combopos-14">
+<g class="combo combopos-13">
 <rect rx="6" ry="6" x="612" y="51" width="36" height="32" class="combo"/>
 <text x="630" y="67" class="combo tap">|</text>
 </g>
-<g class="combo combopos-15">
+<g class="combo combopos-14">
 <rect rx="6" ry="6" x="642" y="18" width="36" height="32" class="combo"/>
 <text x="660" y="34" class="combo tap">*</text>
 <text x="660" y="20" class="combo shifted">^</text>
 </g>
-<g class="combo combopos-16">
+<g class="combo combopos-15">
 <rect rx="6" ry="6" x="672" y="44" width="36" height="32" class="combo"/>
 <text x="690" y="60" class="combo tap">#</text>
 </g>
-<g class="combo combopos-17">
+<g class="combo combopos-16">
 <rect rx="6" ry="6" x="732" y="51" width="36" height="32" class="combo"/>
 <text x="750" y="67" class="combo tap">&amp;</text>
 </g>
@@ -700,7 +695,7 @@ g.combo:not(:has(text.shifted)) text.tap {
 <g transform="translate(750, 37)" class="key keypos-11">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">↑</text>
-<text x="0" y="26" class="key hold">^Home</text>
+<text x="0" y="26" class="key hold"><tspan style="font-size: 88%">Ctl+Home</tspan></text>
 </g>
 <g transform="translate(810, 52)" class="key keypos-12">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -756,7 +751,7 @@ g.combo:not(:has(text.shifted)) text.tap {
 <g transform="translate(750, 97)" class="key keypos-25">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">↓</text>
-<text x="0" y="26" class="key hold">^End</text>
+<text x="0" y="26" class="key hold">Ctl+End</text>
 </g>
 <g transform="translate(810, 112)" class="key keypos-26">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -816,12 +811,12 @@ g.combo:not(:has(text.shifted)) text.tap {
 <g transform="translate(750, 157)" class="key keypos-37">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">Bspc</text>
-<text x="0" y="26" class="key hold">^Bspc</text>
+<text x="0" y="26" class="key hold"><tspan style="font-size: 88%">Ctl+Bspc</tspan></text>
 </g>
 <g transform="translate(810, 172)" class="key keypos-38">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">Del</text>
-<text x="0" y="26" class="key hold">^Del</text>
+<text x="0" y="26" class="key hold">Ctl+Del</text>
 </g>
 <g transform="translate(870, 172)" class="key trans keypos-39">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>

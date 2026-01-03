@@ -108,7 +108,7 @@ layers:
   - {type: trans}
   - PgUp
   - Home
-  - {t: ↑, h: ^Home}
+  - {t: ↑, h: Ctl+Home}
   - End
   - {type: trans}
   - {type: trans}
@@ -122,7 +122,7 @@ layers:
   - {type: trans}
   - PgDn
   - {t: ←, h: Home}
-  - {t: ↓, h: ^End}
+  - {t: ↓, h: Ctl+End}
   - {t: →, h: End}
   - Enter
   - BT 1
@@ -134,8 +134,8 @@ layers:
   - {type: trans}
   - Ins
   - Tab
-  - {t: Bspc, h: ^Bspc}
-  - {t: Del, h: ^Del}
+  - {t: Bspc, h: Ctl+Bspc}
+  - {t: Del, h: Ctl+Del}
   - {type: trans}
   - {type: trans}
   - {type: held}
@@ -216,9 +216,6 @@ combos:
   k: {t: ), s: '>'}
   l: [MagicSturdy]
 - p: [24, 25]
-  k: {t: '-', s: _}
-  l: [MagicSturdy]
-- p: [25, 26]
   k: {t: +, s: '='}
   l: [MagicSturdy]
 - p: [34, 35]
