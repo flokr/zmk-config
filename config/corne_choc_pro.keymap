@@ -282,14 +282,16 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             bindings = <&kp>, <&kp>;
         };
     };
+};
 
-    /* ╭──────────────────────────────────────────────────────────────────────────╮
-       │                              COMBOS                                      │
-       │  Must be sourced after behaviors to access mod-morphs                   │
-       ╰──────────────────────────────────────────────────────────────────────────╯ */
+/* ╭──────────────────────────────────────────────────────────────────────────╮
+   │                              COMBOS                                      │
+   │  Must be sourced after behaviors to access mod-morphs                   │
+   ╰──────────────────────────────────────────────────────────────────────────╯ */
 
-    #include "combos.dtsi"
+#include "combos.dtsi"
 
+/ {
     keymap {
         compatible = "zmk,keymap";
 
