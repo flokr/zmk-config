@@ -13,6 +13,9 @@
 #include <zmk-helpers/helper.h>
 #include "zmk-helpers/key-labels/corne_choc_pro.h"
 
+// Auto-layer behavior for num-word
+#include <behaviors/num_word.dtsi>
+
 / {
     chosen { zmk,physical-layout = &default_layout; };
 };
@@ -307,6 +310,25 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             quick-tap-ms = <QUICK_TAP_MS>;
             bindings = <&kp>, <&kp>;
         };
+
+        /* ================== SMART_NUM ================== */
+        
+        // Tap: num-word | Double-tap: sticky NUM layer | Hold: NUM layer
+        smart_num: smart_num {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            bindings = <&mo>, <&num_dance>;
+        };
+
+        num_dance: num_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&num_word 1>, <&sl 1>;
+        };
     };
 
     /* ================== MACROS FOR GERMAN UMLAUTS ================== */
@@ -427,7 +449,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
       &kp LCTRL        &kp Y          &kp K          &kp X          &kp G          &kp W                                            &kp B          &kp H       &comma_semi    &dot_colon     &minus_under     &kp ESC
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
-                                                    &mo 3      &lt_spc 2 SPACE  &key_repeat                                       &bspc_del       &kp RET     &lt_spc 1 SPACE
+                                                    &mo 3      &lt_spc 2 SPACE  &key_repeat                                       &bspc_del       &kp RET   &smart_num 1 0
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
             >;
         };
