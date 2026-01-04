@@ -16,6 +16,12 @@
 // Auto-layer behavior for num-word
 #include <behaviors/num_word.dtsi>
 
+/* Layer definitions */
+#define BASE 0
+#define NAV  1
+#define NUM  2
+#define SYS  3
+
 / {
     chosen { zmk,physical-layout = &default_layout; };
 };
@@ -433,6 +439,15 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 #include "combos.dtsi"
 
 / {
+    /* Conditional layers */
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <NAV NUM>;
+            then-layer = <SYS>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -541,6 +556,26 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
       &kp LSHFT     &kp RA(RBKT)   &kp LS(EQUAL)  &kp LS(N4)    &kp NON_US_HASH   &eszett        &kp LALT           &kp RALT        &trans       &lpar_lt       &rpar_gt     &minus_under    &plus_equal    &ae_umlaut
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
       &kp LCTRL     &kp LS(N5)     &kp RA(N7)    &kp RA(MINUS)   &kp LS(N0)      &kp RBKT                                          &trans       &lbkt_lbrc     &rbkt_rbrc      &sqt_dqt        &trans         &kp ESC
+// ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
+                                                    &trans         &trans         &trans                                           &trans          &trans         &trans
+//                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
+            >;
+        };
+
+        SYSLayer {
+            display-name = "SYS";
+/*  System layer - accessed via NAV + NUM (tri-layer)
+    Left hand: BT profiles and clear
+    Right hand: bootloader, reset, lock screen
+    
+    Lock screen: Cmd+Ctrl+Q on macOS                          */
+
+// ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+      &trans      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_CLR       &trans             &trans         &trans         &trans         &trans         &trans         &trans         &trans
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+      &trans         &trans         &trans         &trans         &trans      &bootloader        &trans             &trans      &bootloader       &trans         &trans         &trans         &trans         &trans
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+      &trans         &trans         &trans         &trans         &trans       &sys_reset                                      &sys_reset  &kp LG(LC(Q))      &trans         &trans         &trans         &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
                                                     &trans         &trans         &trans                                           &trans          &trans         &trans
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯

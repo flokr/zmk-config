@@ -36,8 +36,8 @@ parse_config:
     "&mt_word_bspc 0 BSPC": {t: "Bspc", h: "^Bspc"}
     "&mt_word_del 0 DEL": {t: "Del", h: "^Del"}
     
-    # SMART_NUM - tap: num-word, double-tap: sticky NUM, hold: NUM layer
-    "&smart_num 1 0": {t: "NUM", h: "NUM"}
+    # SMART_NUM - label the tap-dance behavior
+    "&num_dance": {t: "Numword", s: "Sticky NUM"}
 
     "&mag": ⭐
     "&studio_unlock": Studio 🔓
