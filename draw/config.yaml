@@ -193,7 +193,7 @@ draw_config:
   use_local_cache: true  # Avoid SSL issues with QMK API
   
   # Layer order - Combos is virtual layer created via --virtual-layers flag
-  layer_order: ["MagicSturdy", "NUM", "NAV", "FUN", "Combos", "SYMBOL", "SYS"]
+  layer_order: ["MagicSturdy", "Combos", "NUM", "NAV", "FUN", "SYMBOL", "SYS"]
   
   # Layer activation info for tri-layers
   layer_names:

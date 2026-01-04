@@ -93,8 +93,8 @@ jobs:
           # Parse keymap with virtual Combos layer (urob's approach)
           keymap -c draw/config.yaml parse -z config/corne_choc_pro.keymap --virtual-layers Combos > draw/keymap.yaml
           
-          # Move all combos to the Combos layer
-          yq -Yi '.combos.[].l = ["Combos"]' draw/keymap.yaml
+          # Move all combos to the Combos layer (updated yq v4 syntax)
+          yq eval '.combos.[].l = ["Combos"]' -i draw/keymap.yaml
           
           # Fix layout reference
           sed -i 's/layout: {zmk_keyboard: corne_choc_pro, layout_name: default_layout}/layout:\n  qmk_info_json: config\/corne_choc_pro.json\n  layout_name: default_layout/' draw/keymap.yaml
