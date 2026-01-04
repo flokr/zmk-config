@@ -52,6 +52,16 @@ jobs:
           west init -l config
           west update
 
+      - name: Save west modules cache
+        if: steps.check.outputs.changed == 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            modules/
+            .west/
+            zephyr/
+          key: west-modules-${{ hashFiles('config/west.yml') }}
+
       - name: Set up Python
         if: steps.check.outputs.changed == 'true'
         uses: actions/setup-python@v5
