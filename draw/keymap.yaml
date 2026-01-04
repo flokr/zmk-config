@@ -47,7 +47,7 @@ layers:
   - {t: Spc, h: NAV}
   - '&key_repeat'
   - {t: Bspc, s: Del}
-  - Enter
+  - {t: Enter, h: FUN}
   - {t: Numword, h: NUM, s: Sticky NUM}
   NUM:
   - {type: trans}
@@ -143,6 +143,53 @@ layers:
   - {type: trans}
   - {type: trans}
   - {type: trans}
+  FUN:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: held}
+  - {type: trans}
   SYMBOL:
   - Tab
   - '!'
@@ -235,8 +282,8 @@ layers:
   - {type: held}
   - {type: trans}
   - {type: trans}
-  - {type: trans}
   - {type: held}
+  - {type: trans}
 combos:
 - p: [2, 3]
   k: Undo
