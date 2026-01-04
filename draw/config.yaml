@@ -198,11 +198,11 @@ draw_config:
   combos_layer_name: "Combos"
   
   # Move combos to second position (after base layer)
-  layer_order: ["MagicSturdy", "Combos", "NUM", "NAV", "SYMBOL", "SYS"]
+  layer_order: ["MagicSturdy", "Combos", "NUM", "NAV", "FUN", "SYMBOL", "SYS"]
   
   # Layer activation info for tri-layers
   layer_names:
-    SYS: "NAV + NUM"
+    SYS: "NAV + FUN"
   
   # Styling
   key_h: 60

@@ -20,8 +20,9 @@
 #define BASE   0
 #define NUM    1
 #define NAV    2
-#define SYMBOL 3
-#define SYS    4
+#define FUN    3
+#define SYMBOL 4
+#define SYS    5
 
 / {
     chosen { zmk,physical-layout = &default_layout; };
@@ -446,11 +447,11 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         };
     };
 
-    /* Conditional layers - NUM + NAV = SYS */
+    /* Conditional layers - NAV + FUN = SYS */
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <NUM NAV>;
+            if-layers = <NAV FUN>;
             then-layer = <SYS>;
         };
     };
@@ -486,7 +487,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
       &kp LCTRL        &kp Y          &kp K          &kp X          &kp G          &kp W                                            &kp B          &kp H       &comma_semi     &dot_colon    &quest_excla     &kp ESC
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
-                                                    &mo 3      &lt_spc 2 SPACE  &key_repeat                                       &bspc_del       &kp RET      &smart_num 1 0
+                                                    &mo 4      &lt_spc 2 SPACE  &key_repeat                                       &bspc_del    &lt_ent 3 RET  &smart_num 1 0
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
             >;
         };
@@ -541,6 +542,33 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             >;
         };
 
+        FUNLayer {
+            display-name = "FUN";
+            bindings = <
+/*  FUN LAYER - Function Keys & Media Controls
+    ╭──────────────────────────────────────────────────────────────╮
+    │  Accessed by holding ENTER (RH1)                             │
+    │  Placeholder: All keys transparent for now                   │
+    ╰──────────────────────────────────────────────────────────────╯
+    
+    Planned features:
+    - Function keys F1-F12
+    - Media controls (play/pause, volume, etc.)
+    - Desktop/window management
+    - System controls                                              */
+
+// ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+        &trans         &trans         &trans         &trans         &trans         &trans         &trans             &trans         &trans         &trans         &trans         &trans         &trans         &trans
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+        &trans         &trans         &trans         &trans         &trans         &trans         &trans             &trans         &trans         &trans         &trans         &trans         &trans         &trans
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+        &trans         &trans         &trans         &trans         &trans         &trans                                           &trans         &trans         &trans         &trans         &trans         &trans
+// ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
+                                                     &trans         &trans         &trans                                           &trans         &trans         &trans
+//                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
+            >;
+        };
+
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
@@ -581,7 +609,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         SYSLayer {
             display-name = "SYS";
             bindings = <
-/*  System layer - accessed via NAV + NUM (tri-layer)
+/*  System layer - accessed via NAV + FUN (tri-layer)
     Left hand: BT profiles and clear
     Right hand: bootloader, reset, lock screen
     
