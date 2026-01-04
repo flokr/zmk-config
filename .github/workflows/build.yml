@@ -69,7 +69,7 @@ jobs:
         if: steps.check.outputs.changed == 'true'
         run: |
           # Update include paths for CI environment (add modules from west)
-          sed -i 's|zmk_additional_includes:|zmk_additional_includes:\n    - "modules/zmk/app/include"\n    - "modules/zmk/app/dts/bindings"\n    - "modules/zmk/auto-layer/dts"|' draw/config.yaml
+          sed -i 's|zmk_additional_includes:|zmk_additional_includes:\n    - "modules/zmk/app/include"\n    - "modules/zmk/app/dts"\n    - "modules/zmk/app/dts/bindings"\n    - "modules/zmk/auto-layer/dts"|' draw/config.yaml
           sed -i 's|config/zmk-helpers/key-labels|modules/zmk/helpers/include/zmk-helpers/key-labels|' draw/config.yaml
           sed -i 's|config/behaviors|modules/zmk/auto-layer/dts/behaviors|' draw/config.yaml
           # Parse keymap
