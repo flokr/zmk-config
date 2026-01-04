@@ -102,8 +102,8 @@ jobs:
             .layers = {
               "MagicSturdy": $layers.MagicSturdy,
               "Combos": $layers.Combos,
-              "NUM": $layers.NUM,
               "NAV": $layers.NAV,
+              "NUM": $layers.NUM,
               "FUN": $layers.FUN,
               "SYMBOL": $layers.SYMBOL,
               "SYS": $layers.SYS
