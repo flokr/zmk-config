@@ -192,6 +192,10 @@ draw_config:
   ghost_keys:
     combo: [NUM, NAV, SYMBOL, SYS]
   
+  # Layer activation info
+  layer_names:
+    SYS: "NAV + NUM"
+  
   # Styling
   key_h: 60
   key_w: 60
