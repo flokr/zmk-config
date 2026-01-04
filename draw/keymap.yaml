@@ -174,7 +174,7 @@ layers:
   - {t: '&de_ae', s: '&de_ae_cap'}
   - Ctrl
   - '%'
-  - '|'
+  - '{'
   - \
   - '='
   - +
@@ -231,7 +231,7 @@ combos:
   k: {t: /, s: \}
   l: [MagicSturdy]
 - p: [9, 23]
-  k: '|'
+  k: '{'
   l: [MagicSturdy]
 - p: [9, 10]
   k: {t: '*', s: ^}
