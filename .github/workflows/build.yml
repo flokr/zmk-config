@@ -49,7 +49,12 @@ jobs:
       - name: West init and update
         if: steps.check.outputs.changed == 'true'
         run: |
-          # Check if west is already initialized
+          # Remove .west if cache was restored but modules are incomplete
+          if [ -d .west ] && [ ! -d modules/zmk ]; then
+            echo "Cache restored but modules incomplete, re-initializing..."
+            rm -rf .west modules zephyr
+          fi
+          # Initialize if needed
           if [ ! -d .west ]; then
             west init -l config
           fi
