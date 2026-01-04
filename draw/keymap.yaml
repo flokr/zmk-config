@@ -49,6 +49,7 @@ layers:
     - {t: Bspc, s: Del}
     - {t: Enter, h: FUN}
     - {t: Numword, h: NUM, s: Sticky NUM}
+  Combos: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
   NUM:
     - {type: trans}
     - {type: trans}
@@ -145,6 +146,38 @@ layers:
     - {type: trans}
   FUN:
     - {type: trans}
+    - F12
+    - F7
+    - F8
+    - F9
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - $$mdi:skip-backward$$
+    - $$mdi:volume-high$$
+    - $$mdi:skip-forward$$
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - F11
+    - F4
+    - F5
+    - F6
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - $$mdi:volume-medium$$
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - F10
+    - F1
+    - F2
+    - F3
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -155,40 +188,8 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: held}
+    - $$mdi:volume-off$$
+    - {t: '$$mdi:play-pause$$', type: held}
     - {type: trans}
   SYMBOL:
     - Tab
@@ -284,7 +285,6 @@ layers:
     - {type: trans}
     - {type: held}
     - {type: trans}
-  Combos: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
 combos:
   - p: [2, 3]
     k: Undo
