@@ -192,6 +192,14 @@ draw_config:
   footer_text: "flokr/zmk-config"
   use_local_cache: true  # Avoid SSL issues with QMK API
   
+  # Separate combo diagrams - like urob's config
+  separate_combo_diagrams: true
+  combo_diagrams_scale: 1
+  combos_layer_name: "Combos"
+  
+  # Move combos to second position (after base layer)
+  layer_order: ["MagicSturdy", "Combos", "NUM", "NAV", "SYMBOL", "SYS"]
+  
   # Layer activation info for tri-layers
   layer_names:
     SYS: "NAV + NUM"
