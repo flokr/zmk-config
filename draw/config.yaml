@@ -190,7 +190,7 @@ draw_config:
   
   # Show combos only on base layer
   ghost_keys:
-    combo: [NUM, NAV, SYMBOL, "EXTRA 1", "EXTRA 2", "EXTRA 3", "EXTRA 4", "EXTRA 5", "EXTRA 6"]
+    combo: [NAV, NUM, SYS]
   
   # Styling
   key_h: 60
