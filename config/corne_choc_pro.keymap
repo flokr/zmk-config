@@ -80,6 +80,12 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
                 max-prior-idle-ms = <300>;
                 bindings = <&kp Y>;
             };
+
+            magkt_j {
+                trigger-keys = <J>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp A>;
+            };
         };
 
         /* ================== MOD-MORPHS ================== */
