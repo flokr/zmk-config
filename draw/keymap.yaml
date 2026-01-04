@@ -3,317 +3,318 @@ layout:
   layout_name: default_layout
 layers:
   MagicSturdy:
-  - Esc
-  - V
-  - M
-  - L
-  - C
-  - P
-  - $$mdi:volume-off$$
-  - $$mdi:play-pause$$
-  - Q
-  - ⭐
-  - U
-  - O
-  - J
-  - Bspc
-  - Shift
-  - {t: S, h: Shift}
-  - {t: T, h: Ctrl}
-  - {t: R, h: Alt}
-  - {t: D, h: Gui}
-  - Z
-  - Alt
-  - Alt
-  - F
-  - {t: N, h: Gui}
-  - {t: E, h: Alt}
-  - {t: I, h: Ctrl}
-  - {t: A, h: Shift}
-  - Shift
-  - Ctrl
-  - Y
-  - K
-  - X
-  - G
-  - W
-  - B
-  - H
-  - {t: ',', s: ;}
-  - {t: ., s: ':'}
-  - {t: '?', s: '!'}
-  - Esc
-  - SYMBOL
-  - {t: Spc, h: NAV}
-  - '&key_repeat'
-  - {t: Bspc, s: Del}
-  - {t: Enter, h: FUN}
-  - {t: Numword, h: NUM, s: Sticky NUM}
+    - Esc
+    - V
+    - M
+    - L
+    - C
+    - P
+    - $$mdi:volume-off$$
+    - $$mdi:play-pause$$
+    - Q
+    - ⭐
+    - U
+    - O
+    - J
+    - Bspc
+    - Shift
+    - {t: S, h: Shift}
+    - {t: T, h: Ctrl}
+    - {t: R, h: Alt}
+    - {t: D, h: Gui}
+    - Z
+    - Alt
+    - Alt
+    - F
+    - {t: N, h: Gui}
+    - {t: E, h: Alt}
+    - {t: I, h: Ctrl}
+    - {t: A, h: Shift}
+    - Shift
+    - Ctrl
+    - Y
+    - K
+    - X
+    - G
+    - W
+    - B
+    - H
+    - {t: ',', s: ;}
+    - {t: ., s: ':'}
+    - {t: '?', s: '!'}
+    - Esc
+    - SYMBOL
+    - {t: Spc, h: NAV}
+    - '&key_repeat'
+    - {t: Bspc, s: Del}
+    - {t: Enter, h: FUN}
+    - {t: Numword, h: NUM, s: Sticky NUM}
   NUM:
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - '7'
-  - '8'
-  - '9'
-  - {t: '*', s: /}
-  - '='
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {t: '0', h: Gui}
-  - {t: '4', h: Alt}
-  - {t: '5', h: Shift}
-  - {t: '6', h: Ctrl}
-  - {t: +, s: '-'}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - '1'
-  - '2'
-  - '3'
-  - {t: ',', s: .}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: held}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - '7'
+    - '8'
+    - '9'
+    - {t: '*', s: /}
+    - '='
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {t: '0', h: Gui}
+    - {t: '4', h: Alt}
+    - {t: '5', h: Shift}
+    - {t: '6', h: Ctrl}
+    - {t: +, s: '-'}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - '1'
+    - '2'
+    - '3'
+    - {t: ',', s: .}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: held}
   NAV:
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - Tab
-  - Sft+Tab
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - PgUp
-  - Home
-  - {t: ↑, h: Ctl+Home}
-  - End
-  - {type: trans}
-  - {type: trans}
-  - {t: Gui, h: sticky}
-  - {t: Alt, h: sticky}
-  - {t: Shift, h: sticky}
-  - {t: Ctrl, h: sticky}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - PgDn
-  - {t: ←, h: Home}
-  - {t: ↓, h: Ctl+End}
-  - {t: →, h: End}
-  - Enter
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - Ins
-  - Tab
-  - {t: Bspc, h: Ctl+Bspc}
-  - {t: Del, h: Ctl+Del}
-  - {type: trans}
-  - {type: trans}
-  - {type: held}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - Tab
+    - Sft+Tab
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - PgUp
+    - Home
+    - {t: ↑, h: Ctl+Home}
+    - End
+    - {type: trans}
+    - {type: trans}
+    - {t: Gui, h: sticky}
+    - {t: Alt, h: sticky}
+    - {t: Shift, h: sticky}
+    - {t: Ctrl, h: sticky}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - PgDn
+    - {t: ←, h: Home}
+    - {t: ↓, h: Ctl+End}
+    - {t: →, h: End}
+    - Enter
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - Ins
+    - Tab
+    - {t: Bspc, h: Ctl+Bspc}
+    - {t: Del, h: Ctl+Del}
+    - {type: trans}
+    - {type: trans}
+    - {type: held}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
   FUN:
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: held}
-  - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: held}
+    - {type: trans}
   SYMBOL:
-  - Tab
-  - '!'
-  - '@'
-  - '*'
-  - '@'
-  - ^
-  - $$mdi:volume-off$$
-  - $$mdi:play-pause$$
-  - {type: trans}
-  - {type: trans}
-  - {t: '&de_ue', s: '&de_ue_cap'}
-  - {t: '&de_oe', s: '&de_oe_cap'}
-  - {type: trans}
-  - Bspc
-  - Shift
-  - '&eszett'
-  - '`'
-  - $
-  - '#'
-  - '~'
-  - Alt
-  - Alt
-  - {type: trans}
-  - {t: (, s: <}
-  - {t: ), s: '>'}
-  - {t: '-', s: _}
-  - {t: +, s: '='}
-  - {t: '&de_ae', s: '&de_ae_cap'}
-  - Ctrl
-  - '%'
-  - '{'
-  - \
-  - '='
-  - +
-  - {type: trans}
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
-  - {t: '''', s: '"'}
-  - {type: trans}
-  - Esc
-  - {type: held}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
+    - Tab
+    - '!'
+    - '@'
+    - '*'
+    - '@'
+    - ^
+    - $$mdi:volume-off$$
+    - $$mdi:play-pause$$
+    - {type: trans}
+    - {type: trans}
+    - {t: '&de_ue', s: '&de_ue_cap'}
+    - {t: '&de_oe', s: '&de_oe_cap'}
+    - {type: trans}
+    - Bspc
+    - Shift
+    - '&eszett'
+    - '`'
+    - $
+    - '#'
+    - '~'
+    - Alt
+    - Alt
+    - {type: trans}
+    - {t: (, s: <}
+    - {t: ), s: '>'}
+    - {t: '-', s: _}
+    - {t: +, s: '='}
+    - {t: '&de_ae', s: '&de_ae_cap'}
+    - Ctrl
+    - '%'
+    - '{'
+    - \
+    - '='
+    - +
+    - {type: trans}
+    - {t: '[', s: '{'}
+    - {t: ']', s: '}'}
+    - {t: '''', s: '"'}
+    - {type: trans}
+    - Esc
+    - {type: held}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
   SYS:
-  - {type: trans}
-  - BT 1
-  - BT 2
-  - BT 3
-  - BT 4
-  - {t: BT, h: '4'}
-  - BT Clear
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - Boot
-  - {type: trans}
-  - {type: trans}
-  - Boot
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - Reset
-  - Reset
-  - Gui+Ctl+Q
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: held}
-  - {type: trans}
-  - {type: trans}
-  - {type: held}
-  - {type: trans}
+    - {type: trans}
+    - BT 1
+    - BT 2
+    - BT 3
+    - BT 4
+    - {t: BT, h: '4'}
+    - BT Clear
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - Boot
+    - {type: trans}
+    - {type: trans}
+    - Boot
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - Reset
+    - Reset
+    - Gui+Ctl+Q
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: held}
+    - {type: trans}
+    - {type: trans}
+    - {type: held}
+    - {type: trans}
+  Combos: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
 combos:
-- p: [2, 3]
-  k: Undo
-  l: [MagicSturdy]
-- p: [3, 4]
-  k: Redo
-  l: [MagicSturdy]
-- p: [30, 31]
-  k: Copy
-  l: [MagicSturdy]
-- p: [30, 32]
-  k: Cut
-  l: [MagicSturdy]
-  a: bottom
-  o: 0.15
-- p: [31, 32]
-  k: Paste
-  l: [MagicSturdy]
-- p: [2, 16]
-  k: '@'
-  l: [MagicSturdy]
-- p: [23, 24]
-  k: {t: (, s: <}
-  l: [MagicSturdy]
-- p: [24, 25]
-  k: {t: ), s: '>'}
-  l: [MagicSturdy]
-- p: [35, 36]
-  k: {t: '[', s: '{'}
-  l: [MagicSturdy]
-- p: [36, 37]
-  k: {t: ']', s: '}'}
-  l: [MagicSturdy]
+  - p: [2, 3]
+    k: Undo
+    l: [Combos]
+  - p: [3, 4]
+    k: Redo
+    l: [Combos]
+  - p: [30, 31]
+    k: Copy
+    l: [Combos]
+  - p: [30, 32]
+    k: Cut
+    l: [Combos]
+    a: bottom
+    o: 0.15
+  - p: [31, 32]
+    k: Paste
+    l: [Combos]
+  - p: [2, 16]
+    k: '@'
+    l: [Combos]
+  - p: [23, 24]
+    k: {t: (, s: <}
+    l: [Combos]
+  - p: [24, 25]
+    k: {t: ), s: '>'}
+    l: [Combos]
+  - p: [35, 36]
+    k: {t: '[', s: '{'}
+    l: [Combos]
+  - p: [36, 37]
+    k: {t: ']', s: '}'}
+    l: [Combos]
