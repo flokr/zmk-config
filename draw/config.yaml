@@ -1,7 +1,7 @@
 parse_config:
   zmk_additional_includes:
-    - "config/zmk-helpers/key-labels"
-    - "config/behaviors"
+    - "modules/zmk/helpers/include"
+    - "modules/zmk/auto-layer/dts"
 
   zmk_preamble: |
     #include <corne_choc_pro.h>
