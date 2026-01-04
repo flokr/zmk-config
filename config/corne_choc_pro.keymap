@@ -131,7 +131,8 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         //Tap question mark, shift exclamation mark
         quest_excla: question_exclamation {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp LS(MINUS)>, <&kp &kp LS(N1)>;
+            #binding-cells = <0>;
+            bindings = <&kp LS(MINUS)>, <&kp LS(N1)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
