@@ -564,6 +564,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 
         SYSLayer {
             display-name = "SYS";
+            bindings = <
 /*  System layer - accessed via NAV + NUM (tri-layer)
     Left hand: BT profiles and clear
     Right hand: bootloader, reset, lock screen
