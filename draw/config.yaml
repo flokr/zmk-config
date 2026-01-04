@@ -1,6 +1,7 @@
 parse_config:
   zmk_additional_includes:
     - "config/zmk-helpers/key-labels"
+    - "config/behaviors"
 
   zmk_preamble: |
     #include <corne_choc_pro.h>
@@ -36,7 +37,7 @@ parse_config:
     "&mt_word_del 0 DEL": {t: "Del", h: "^Del"}
     
     # SMART_NUM - tap: num-word, double-tap: sticky NUM, hold: NUM layer
-    "&smart_num 1 0": {t: "NUM", h: "NUM", type: "hold"}
+    "&smart_num 1 0": {t: "NUM", h: "NUM"}
 
     "&mag": ⭐
     "&studio_unlock": Studio 🔓

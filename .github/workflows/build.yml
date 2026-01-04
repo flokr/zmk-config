@@ -30,6 +30,28 @@ jobs:
             echo "changed=false" >> $GITHUB_OUTPUT
           fi
 
+      - name: Cache west modules
+        if: steps.check.outputs.changed == 'true'
+        uses: actions/cache@v4
+        with:
+          path: |
+            modules/
+            .west/
+            zephyr/
+          key: west-modules-${{ hashFiles('config/west.yml') }}
+          restore-keys: |
+            west-modules-
+
+      - name: Install west
+        if: steps.check.outputs.changed == 'true'
+        run: pip install west
+
+      - name: West init and update
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          west init -l config
+          west update
+
       - name: Set up Python
         if: steps.check.outputs.changed == 'true'
         uses: actions/setup-python@v5
@@ -46,10 +68,14 @@ jobs:
       - name: Generate keymap visualization
         if: steps.check.outputs.changed == 'true'
         run: |
-          # Parse keymap (using local zmk-helpers in config/)
+          # Update include paths for CI environment (modules downloaded by west)
+          sed -i 's|config/zmk-helpers/key-labels|modules/zmk/helpers/include/zmk-helpers/key-labels|' draw/config.yaml
+          # Parse keymap
           keymap -c draw/config.yaml parse -z config/corne_choc_pro.keymap > draw/keymap.yaml
           # Show combos only on base layer
           sed -i 's/l: \[MagicSturdy, NAV, NUM\]/l: [MagicSturdy]/g' draw/keymap.yaml
+          # Restore original config
+          git checkout draw/config.yaml
           # Fix layout reference
           sed -i 's/layout: {zmk_keyboard: corne_choc_pro, layout_name: default_layout}/layout:\n  qmk_info_json: config\/corne_choc_pro.json\n  layout_name: default_layout/' draw/keymap.yaml
           # Generate SVG and PNG
