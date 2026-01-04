@@ -49,7 +49,10 @@ jobs:
       - name: West init and update
         if: steps.check.outputs.changed == 'true'
         run: |
-          west init -l config
+          # Check if west is already initialized
+          if [ ! -d .west ]; then
+            west init -l config
+          fi
           west update
 
       - name: Save west modules cache
