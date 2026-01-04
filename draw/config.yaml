@@ -188,11 +188,7 @@ draw_config:
   footer_text: "flokr/zmk-config"
   use_local_cache: true  # Avoid SSL issues with QMK API
   
-  # Show combos only on base layer
-  ghost_keys:
-    combo: [NUM, NAV, SYMBOL, SYS]
-  
-  # Layer activation info
+  # Layer activation info for tri-layers
   layer_names:
     SYS: "NAV + NUM"
   

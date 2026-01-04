@@ -17,10 +17,11 @@
 #include <behaviors/num_word.dtsi>
 
 /* Layer definitions */
-#define BASE 0
-#define NAV  1
-#define NUM  2
-#define SYS  3
+#define BASE   0
+#define NUM    1
+#define NAV    2
+#define SYMBOL 3
+#define SYS    4
 
 / {
     chosen { zmk,physical-layout = &default_layout; };
@@ -430,11 +431,11 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         };
     };
 
-    /* Conditional layers - NAV + NUM = SYS */
+    /* Conditional layers - NUM + NAV = SYS */
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <NAV NUM>;
+            if-layers = <NUM NAV>;
             then-layer = <SYS>;
         };
     };
