@@ -78,26 +78,14 @@ jobs:
       - name: Generate keymap visualization
         if: steps.check.outputs.changed == 'true'
         run: |
-          # Update include paths for CI environment (add modules from west)
-          sed -i 's|zmk_additional_includes:|zmk_additional_includes:\n    - "modules/zmk/app/include"\n    - "modules/zmk/app/dts"\n    - "modules/zmk/app/dts/bindings"\n    - "modules/zmk/auto-layer/dts"|' draw/config.yaml
-          sed -i 's|config/zmk-helpers/key-labels|modules/zmk/helpers/include/zmk-helpers/key-labels|' draw/config.yaml
-          sed -i 's|config/behaviors|modules/zmk/auto-layer/dts/behaviors|' draw/config.yaml
-          # Debug: show what directories exist
-          echo "=== Checking modules structure ==="
-          ls -la modules/ || echo "No modules dir"
-          ls -la modules/zmk/app/ || echo "No zmk/app"
-          ls -la modules/zmk/app/dts/ || echo "No zmk/app/dts"
-          # Show the modified config
-          echo "=== Modified draw/config.yaml includes ==="
-          head -10 draw/config.yaml
-          # Parse keymap with verbose error output
-          echo "=== Attempting to parse keymap ==="
-          keymap -c draw/config.yaml parse -z config/corne_choc_pro.keymap > draw/keymap.yaml 2>&1 || {
-            echo "Parse failed, checking preprocessor output..."
-            # Try to see what the preprocessor sees
-            python3 -c "from keymap_drawer.parse.zmk import ZmkKeymapParser; import sys; p = ZmkKeymapParser(); print(p)" || true
-            exit 1
-          }
+          # Debug: Find where ZMK files actually are
+          echo "=== Checking ZMK module structure ==="
+          find modules/zmk -maxdepth 3 -type d | sort
+          echo "=== Looking for dts and include directories ==="
+          find modules/zmk -name "dts" -o -name "include" | head -20
+          echo "=== Looking for behaviors ==="
+          find modules -name "behaviors" -type d | head -10
+          exit 1  # Exit to see structure before attempting parse
           keymap -c draw/config.yaml parse -z config/corne_choc_pro.keymap > draw/keymap.yaml
           # Show combos only on base layer
           sed -i 's/l: \[MagicSturdy, NAV, NUM\]/l: [MagicSturdy]/g' draw/keymap.yaml
