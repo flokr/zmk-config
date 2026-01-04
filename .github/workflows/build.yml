@@ -15,14 +15,6 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Install west
-        run: pip install west
-
-      - name: West init and update
-        run: |
-          west init -l config
-          west update
-
       - name: Check for keymap changes
         id: check
         run: |
@@ -54,14 +46,10 @@ jobs:
       - name: Generate keymap visualization
         if: steps.check.outputs.changed == 'true'
         run: |
-          # Update the additional includes path for CI environment
-          sed -i 's|config/zmk-helpers/key-labels|modules/zmk/helpers/include|' draw/config.yaml
-          # Parse keymap
+          # Parse keymap (using local zmk-helpers in config/)
           keymap -c draw/config.yaml parse -z config/corne_choc_pro.keymap > draw/keymap.yaml
           # Show combos only on base layer
           sed -i 's/l: \[MagicSturdy, NAV, NUM\]/l: [MagicSturdy]/g' draw/keymap.yaml
-          # Restore original config
-          git checkout draw/config.yaml
           # Fix layout reference
           sed -i 's/layout: {zmk_keyboard: corne_choc_pro, layout_name: default_layout}/layout:\n  qmk_info_json: config\/corne_choc_pro.json\n  layout_name: default_layout/' draw/keymap.yaml
           # Generate SVG and PNG
