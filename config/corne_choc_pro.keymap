@@ -545,26 +545,30 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         FUNLayer {
             display-name = "FUN";
             bindings = <
-/*  FUN LAYER - Function Keys & Media Controls
+/*  FUN LAYER - Function Keys & Media Controls (based on urob's layout)
     ╭──────────────────────────────────────────────────────────────╮
-    │  Accessed by holding ENTER (RH1)                             │
-    │  Placeholder: All keys transparent for now                   │
+    │  Left:  F-keys in columns (F12-F1, top to bottom)            │
+    │  Right: Media controls (volume, track nav, play/pause)       │
     ╰──────────────────────────────────────────────────────────────╯
     
-    Planned features:
-    - Function keys F1-F12
-    - Media controls (play/pause, volume, etc.)
-    - Desktop/window management
-    - System controls                                              */
+    Left hand F-keys (urob's order):
+    Top:    F12  F7  F8  F9
+    Home:   F11  F4  F5  F6
+    Bottom: F10  F1  F2  F3
+    
+    Right hand media (urob's layout):
+    Top:    -    C_PREV  C_VOL_UP  C_NEXT  -
+    Home:   -    -       C_VOL_DN  -       -
+    Thumb:  C_MUTE  C_PP                                           */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-        &trans         &trans         &trans         &trans         &trans         &trans         &trans             &trans         &trans         &trans         &trans         &trans         &trans         &trans
+        &trans        &kp F12        &kp F7         &kp F8         &kp F9         &trans         &trans             &trans         &trans        &kp C_PREV    &kp C_VOL_UP    &kp C_NEXT       &trans         &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans         &trans         &trans         &trans         &trans         &trans             &trans         &trans         &trans         &trans         &trans         &trans         &trans
+        &trans        &kp F11        &kp F4         &kp F5         &kp F6         &trans         &trans             &trans         &trans         &trans       &kp C_VOL_DN      &trans         &trans         &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans         &trans         &trans         &trans         &trans                                           &trans         &trans         &trans         &trans         &trans         &trans
+        &trans        &kp F10        &kp F1         &kp F2         &kp F3         &trans                                           &trans         &trans         &trans         &trans         &trans         &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
-                                                     &trans         &trans         &trans                                           &trans         &trans         &trans
+                                                     &trans         &trans         &trans                                         &kp C_MUTE      &kp C_PP       &trans
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
             >;
         };
