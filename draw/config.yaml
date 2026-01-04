@@ -157,6 +157,7 @@ parse_config:
     UNDERSCORE: _
     
     # Austrian QWERTZ layout - Shift+Number combinations
+    "LS(MINUS)": "?"   # Shift+ß = question mark
     "LS(N1)": "!"      # Shift+1 = exclamation
     "LS(N2)": '"'      # Shift+2 = double quote
     "LS(N4)": $        # Shift+4 = dollar
