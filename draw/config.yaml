@@ -171,6 +171,7 @@ parse_config:
     "RA(N0)": "}"      # AltGr+0 = right brace
     "RA(MINUS)": \     # AltGr+ß = backslash
     "RA(RBKT)": "~"    # AltGr++ = tilde
+    "RA(NUBS)": "|"    # AltGr+< = pipe
     
     # Austrian QWERTZ layout - Special keys
     "NUBS": <          # NUBS key = less than
