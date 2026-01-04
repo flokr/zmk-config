@@ -41,7 +41,7 @@ layers:
   - H
   - {t: ',', s: ;}
   - {t: ., s: ':'}
-  - {t: Sft+-, s: '!'}
+  - {t: '?', s: '!'}
   - Esc
   - SYMBOL
   - {t: Spc, h: NAV}
