@@ -429,6 +429,15 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
                      , <&macro_release &kp LALT>;
         };
     };
+
+    /* Conditional layers - NAV + NUM = SYS */
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <NAV NUM>;
+            then-layer = <SYS>;
+        };
+    };
 };
 
 /* ╭──────────────────────────────────────────────────────────────────────────╮
@@ -439,15 +448,6 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 #include "combos.dtsi"
 
 / {
-    /* Conditional layers */
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <NAV NUM>;
-            then-layer = <SYS>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
