@@ -44,6 +44,9 @@ parse_config:
 
   trans_legend: { "t": "", "type": "trans" }
 
+  zmk_combos:
+    combo_cut: { align: bottom, o: 0.15 }
+
   zmk_keycode_map:
     # modifiers
     LALT: Alt
