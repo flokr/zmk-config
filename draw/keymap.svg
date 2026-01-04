@@ -424,10 +424,10 @@ g.combo:not(:has(text.shifted)) text.tap {
 <text x="180" y="154" class="combo tap">Copy</text>
 </g>
 <g class="combo combopos-3">
-<path d="M210,157 l-40,0" class="combo"/>
-<path d="M210,157 l40,0" class="combo"/>
-<rect rx="6" ry="6" x="192" y="141" width="36" height="32" class="combo"/>
-<text x="210" y="157" class="combo tap">Cut</text>
+<path d="M210,197 h-54 a6.0,6.0 0 0 1 -6.0,-6.0 v-14" class="combo"/>
+<path d="M210,197 h54 a6.0,6.0 0 0 0 6.0,-6.0 v-14" class="combo"/>
+<rect rx="6" ry="6" x="192" y="181" width="36" height="32" class="combo"/>
+<text x="210" y="197" class="combo tap">Cut</text>
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="222" y="138" width="36" height="32" class="combo"/>

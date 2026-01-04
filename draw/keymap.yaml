@@ -250,6 +250,8 @@ combos:
 - p: [30, 32]
   k: Cut
   l: [MagicSturdy]
+  a: bottom
+  o: 0.15
 - p: [31, 32]
   k: Paste
   l: [MagicSturdy]
