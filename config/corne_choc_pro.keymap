@@ -61,6 +61,13 @@
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // Left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 
+/* HRM-Combo Compatibility Hack (cf. ZMK issue #544)
+   8-parameter version allows combos overlapping HRMs to have instant chord detection
+   while still supporting modifiers on the opposite hand. */
+#define ZMK_COMBO_8(NAME, TAP, POS, LAYERS, COMBO_MS, IDLE_MS, HOLD, SIDE) \
+  MAKE_HRM(hm_combo_##NAME, &kp, TAP, SIDE THUMBS) \
+  ZMK_COMBO_6(NAME, &hm_combo_##NAME HOLD 0, POS, LAYERS, COMBO_MS, IDLE_MS)
+
 / {
     behaviors {
         /* ================== ADAPTIVE KEY ================== */
@@ -118,6 +125,13 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BSPC>, <&kp DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        //Tap question mark, shift exclamation mark
+        quest_excla: question_exclamation {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp LS(MINUS)>, <&kp &kp LS(N1)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -443,7 +457,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 
 /* ╭──────────────────────────────────────────────────────────────────────────╮
    │                              COMBOS                                      │
-   │  Must be sourced after behaviors to access mod-morphs                   │
+   │  Must be sourced after behaviors to access mod-morphs                    │
    ╰──────────────────────────────────────────────────────────────────────────╯ */
 
 #include "combos.dtsi"
@@ -465,13 +479,13 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
                   ╰────────────┴────────────╯                                    ╰─────────────┴─────────────╯              */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-       &kp TAB         &kp V          &kp M          &kp L          &kp C          &kp P        &kp C_MUTE          &kp C_PP        &kp Q          &mag           &kp U          &kp O          &kp J         &kp BSPC
+       &kp ESC         &kp V          &kp M          &kp L          &kp C          &kp P        &kp C_MUTE          &kp C_PP        &kp Q          &mag           &kp U          &kp O          &kp J         &kp BSPC
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
       &kp LSHFT     &hml LSHFT S   &hml LCTRL T   &hml LALT R     &hml LGUI D      &kp Z         &kp LALT           &kp RALT        &kp F       &hmr LGUI N    &hmr LALT E    &hmr LCTRL I   &hmr RSHFT A     &kp RSHFT
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-      &kp LCTRL        &kp Y          &kp K          &kp X          &kp G          &kp W                                            &kp B          &kp H       &comma_semi    &dot_colon     &minus_under     &kp ESC
+      &kp LCTRL        &kp Y          &kp K          &kp X          &kp G          &kp W                                            &kp B          &kp H       &comma_semi     &dot_colon    &quest_excla     &kp ESC
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
-                                                    &mo 3      &lt_spc 2 SPACE  &key_repeat                                       &bspc_del       &kp RET   &smart_num 1 0
+                                                    &mo 3      &lt_spc 2 SPACE  &key_repeat                                       &bspc_del       &kp RET      &smart_num 1 0
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
             >;
         };
@@ -514,15 +528,15 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     Word deletion:    BSPC:  tap Bspc, hold Ctrl+Bspc (word back)
                       DEL:   tap Del,  hold Ctrl+Del (word fwd)     */
 
-// ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-        &trans         &trans        &trans         &kp TAB       &kp LS(TAB)      &trans         &trans             &trans         &trans       &kp PG_UP       &kp HOME  &mt_doc_start LC(HOME) UP  &kp END         &trans
-// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans        &sk LGUI      &sk LALT       &sk LSHFT      &sk LCTRL        &trans         &trans             &trans         &trans       &kp PG_DN   &mt_home HOME LEFT &mt_doc_end LC(END) DOWN &mt_end END RIGHT &kp RET
-// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-     &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &bt BT_CLR                                         &trans         &kp INS      &kp TAB  &mt_word_bspc LC(BSPC) BSPC &mt_word_del LC(DEL) DEL &trans
-// ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
+// ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────────┬──────────────────────────┬──────────────────────┬──────────────╮
+        &trans         &trans        &trans         &kp TAB       &kp LS(TAB)      &trans         &trans             &trans         &trans       &kp PG_UP       &kp HOME      &mt_doc_start LC(HOME) UP            &kp END            &trans
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────────┼──────────────────────────┼──────────────────────┼──────────────┤
+        &trans        &sk LGUI      &sk LALT       &sk LSHFT      &sk LCTRL        &trans         &trans             &trans         &trans       &kp PG_DN   &mt_home HOME LEFT &mt_doc_end LC(END) DOWN  &mt_end END RIGHT            &kp RET
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────────┼──────────────────────────┼──────────────────────┼──────────────┤
+        &trans         &trans        &trans         &trans        &trans           &trans                                           &trans         &kp INS        &kp TAB      &mt_word_bspc LC(BSPC) BSPC &mt_word_del LC(DEL) DEL    &trans
+// ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────────┼──────────────────────────┴──────────────────────┴──────────────╯
                                                      &trans         &trans         &trans                                           &trans          &trans         &trans
-//                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
+//                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────────╯
             >;
         };
 
@@ -554,7 +568,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
       &kp TAB       &kp LS(N1)     &kp RA(Q)     &kp LS(RBKT)     &kp RA(Q)      &kp GRAVE      &kp C_MUTE         &kp C_PP        &trans         &trans       &ue_umlaut     &oe_umlaut       &trans         &kp BSPC
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-      &kp LSHFT     &kp RA(RBKT)   &kp LS(EQUAL)  &kp LS(N4)    &kp NON_US_HASH   &eszett        &kp LALT           &kp RALT        &trans       &lpar_lt       &rpar_gt     &minus_under    &plus_equal    &ae_umlaut
+      &kp LSHFT     &eszett        &kp LS(EQUAL)  &kp LS(N4)    &kp NON_US_HASH  &kp RA(RBKT)    &kp LALT           &kp RALT        &trans       &lpar_lt       &rpar_gt     &minus_under    &plus_equal    &ae_umlaut
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
       &kp LCTRL     &kp LS(N5)     &kp RA(N7)    &kp RA(MINUS)   &kp LS(N0)      &kp RBKT                                          &trans       &lbkt_lbrc     &rbkt_rbrc      &sqt_dqt        &trans         &kp ESC
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
@@ -573,13 +587,13 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     Lock screen: Cmd+Ctrl+Q on macOS                          */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-      &trans      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_CLR       &trans             &trans         &trans         &trans         &trans         &trans         &trans         &trans
+        &trans      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &bt BT_CLR           &trans         &trans         &trans         &trans         &trans         &trans         &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-      &trans         &trans         &trans         &trans         &trans      &bootloader        &trans             &trans      &bootloader       &trans         &trans         &trans         &trans         &trans
+        &trans         &trans         &trans         &trans         &trans      &bootloader        &trans            &trans        &bootloader     &trans         &trans         &trans         &trans         &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-      &trans         &trans         &trans         &trans         &trans       &sys_reset                                      &sys_reset  &kp LG(LC(Q))      &trans         &trans         &trans         &trans
+        &trans         &trans         &trans         &trans         &trans       &sys_reset                                        &sys_reset   &kp LG(LC(Q))     &trans         &trans         &trans         &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
-                                                    &trans         &trans         &trans                                           &trans          &trans         &trans
+                                                     &trans         &trans         &trans                                           &trans         &trans         &trans
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
             >;
         };
