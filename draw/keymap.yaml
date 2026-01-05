@@ -202,12 +202,12 @@ layers:
     - $$mdi:play-pause$$
     - {type: trans}
     - {type: trans}
-    - {t: '&de_ue', s: '&de_ue_cap'}
-    - {t: '&de_oe', s: '&de_oe_cap'}
+    - {t: ü, s: Ü}
+    - {t: ö, s: Ö}
     - {type: trans}
     - Bspc
     - Shift
-    - '&eszett'
+    - ß
     - '`'
     - $
     - '#'
@@ -219,7 +219,7 @@ layers:
     - {t: ), s: '>'}
     - {t: '-', s: _}
     - {t: +, s: '='}
-    - {t: '&de_ae', s: '&de_ae_cap'}
+    - {t: ä, s: Ä}
     - Ctrl
     - '%'
     - '{'
