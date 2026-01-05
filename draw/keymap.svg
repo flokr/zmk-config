@@ -583,8 +583,8 @@ g.combo:not(:has(text.shifted)) text.tap {
 <text x="240" y="34" class="combo tap">Redo</text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="612" y="51" width="36" height="32" class="combo"/>
-<text x="630" y="67" class="combo tap">|</text>
+<rect rx="6" ry="6" x="762" y="89" width="36" height="32" class="combo"/>
+<text x="780" y="105" class="combo tap">|</text>
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="162" y="138" width="36" height="32" class="combo"/>
@@ -641,10 +641,18 @@ g.combo:not(:has(text.shifted)) text.tap {
 <text x="720" y="140" class="combo shifted">}</text>
 </g>
 <g class="combo combopos-16">
+<rect rx="6" ry="6" x="612" y="51" width="36" height="32" class="combo"/>
+<text x="630" y="67" class="combo tap">+</text>
+</g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="672" y="44" width="36" height="32" class="combo"/>
+<text x="690" y="60" class="combo tap">*</text>
+</g>
+<g class="combo combopos-18">
 <rect rx="6" ry="6" x="672" y="104" width="36" height="32" class="combo"/>
 <text x="690" y="120" class="combo tap">/</text>
 </g>
-<g class="combo combopos-17">
+<g class="combo combopos-19">
 <rect rx="6" ry="6" x="612" y="111" width="36" height="32" class="combo"/>
 <text x="630" y="127" class="combo tap">-</text>
 </g>
