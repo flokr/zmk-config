@@ -483,9 +483,9 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
        &kp ESC         &kp V          &kp M          &kp L          &kp C          &kp P        &kp C_MUTE          &kp C_PP        &kp Q          &mag           &kp U          &kp O          &kp J         &kp BSPC
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-      &kp LSHFT     &hml LSHFT S   &hml LCTRL T   &hml LALT R     &hml LGUI D      &kp Z         &kp LALT           &kp RALT        &kp F       &hmr LGUI N    &hmr LALT E    &hmr LCTRL I   &hmr RSHFT A     &kp RSHFT
+       &kp TAB      &hml LSHFT S   &hml LCTRL T   &hml LALT R     &hml LGUI D      &kp Z         &kp LALT           &kp RALT        &kp F       &hmr LGUI N    &hmr LALT E    &hmr LCTRL I   &hmr RSHFT A    &kp LS(TAB)
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-      &kp LCTRL        &kp Y          &kp K          &kp X          &kp G          &kp W                                            &kp B          &kp H       &comma_semi     &dot_colon    &quest_excla     &kp ESC
+      &kp LSHFT        &kp Y          &kp K          &kp X          &kp G          &kp W                                            &kp B          &kp H       &comma_semi     &dot_colon    &quest_excla     &kp RSHFT
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
                                                     &mo 4      &lt_spc 2 SPACE  &key_repeat                                       &bspc_del    &lt_ent 3 RET  &smart_num 1 0
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
