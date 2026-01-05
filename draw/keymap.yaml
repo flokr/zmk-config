@@ -295,6 +295,9 @@ combos:
   - p: [3, 4]
     k: Redo
     l: [Combos]
+  - p: [9, 23]
+    k: '|'
+    l: [Combos]
   - p: [30, 31]
     k: Copy
     l: [Combos]
@@ -323,6 +326,9 @@ combos:
     l: [Combos]
   - p: [24, 25]
     k: {t: ), s: '>'}
+    l: [Combos]
+  - p: [24, 25]
+    k: '~'
     l: [Combos]
   - p: [35, 36]
     k: {t: '[', s: '{'}
