@@ -17,7 +17,7 @@ layers:
     - O
     - J
     - Bspc
-    - Shift
+    - Tab
     - {t: S, h: Shift}
     - {t: T, h: Ctrl}
     - {t: R, h: Alt}
@@ -30,8 +30,8 @@ layers:
     - {t: E, h: Alt}
     - {t: I, h: Ctrl}
     - {t: A, h: Shift}
+    - Sft+Tab
     - Shift
-    - Ctrl
     - Y
     - K
     - X
@@ -42,7 +42,7 @@ layers:
     - {t: ',', s: ;}
     - {t: ., s: ':'}
     - {t: '?', s: '!'}
-    - Esc
+    - Shift
     - SYMBOL
     - {t: Spc, h: NAV}
     - '&key_repeat'
@@ -286,14 +286,14 @@ layers:
     - {type: held}
     - {type: trans}
 combos:
-  - p: [2, 3]
-    k: Undo
-    l: [Combos]
-  - p: [3, 4]
-    k: Redo
-    l: [Combos]
   - p: [15, 16]
     k: '|'
+    l: [Combos]
+  - p: [16, 17]
+    k: Undo
+    l: [Combos]
+  - p: [17, 18]
+    k: Redo
     l: [Combos]
   - p: [30, 31]
     k: Copy
