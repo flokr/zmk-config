@@ -286,6 +286,9 @@ layers:
     - {type: held}
     - {type: trans}
 combos:
+  - p: [1, 2]
+    k: {t: '''', s: '"'}
+    l: [Combos]
   - p: [2, 3]
     k: Undo
     l: [Combos]
@@ -306,6 +309,12 @@ combos:
   - p: [2, 16]
     k: '@'
     l: [Combos]
+  - p: [4, 18]
+    k: '#'
+    l: [Combos]
+  - p: [18, 31]
+    k: \
+    l: [Combos]
   - p: [23, 24]
     k: {t: (, s: <}
     l: [Combos]
@@ -320,4 +329,7 @@ combos:
     l: [Combos]
   - p: [37, 38]
     k: {t: '-', s: _}
+    l: [Combos]
+  - p: [23, 36]
+    k: /
     l: [Combos]

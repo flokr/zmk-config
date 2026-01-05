@@ -168,9 +168,10 @@ rect.combo, rect.combo-separate {
   opacity: 0.8;
 }
 
-/* Layer activator styling - red accent */
+/* Layer activator styling - pastel orange */
 rect.held, rect.combo.held {
-  fill: #d73a49 !important;  /* GitHub red */
+  fill: #ffb366 !important;  /* Pastel orange */
+  opacity: 0.7;
 }
 
 /* Ghost keys more subtle */
@@ -569,55 +570,72 @@ g.combo:not(:has(text.shifted)) text.tap {
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 </g>
 <g class="combo combopos-0">
+<rect rx="6" ry="6" x="102" y="29" width="36" height="32" class="combo"/>
+<text x="120" y="45" class="combo tap">&#x27;</text>
+<text x="120" y="31" class="combo shifted">&quot;</text>
+</g>
+<g class="combo combopos-1">
 <rect rx="6" ry="6" x="162" y="18" width="36" height="32" class="combo"/>
 <text x="180" y="34" class="combo tap">Undo</text>
 </g>
-<g class="combo combopos-1">
+<g class="combo combopos-2">
 <rect rx="6" ry="6" x="222" y="18" width="36" height="32" class="combo"/>
 <text x="240" y="34" class="combo tap">Redo</text>
 </g>
-<g class="combo combopos-2">
+<g class="combo combopos-3">
 <rect rx="6" ry="6" x="162" y="138" width="36" height="32" class="combo"/>
 <text x="180" y="154" class="combo tap">Copy</text>
 </g>
-<g class="combo combopos-3">
+<g class="combo combopos-4">
 <path d="M210,197 h-54 a6.0,6.0 0 0 1 -6.0,-6.0 v-14" class="combo"/>
 <path d="M210,197 h54 a6.0,6.0 0 0 0 6.0,-6.0 v-14" class="combo"/>
 <rect rx="6" ry="6" x="192" y="181" width="36" height="32" class="combo"/>
 <text x="210" y="197" class="combo tap">Cut</text>
 </g>
-<g class="combo combopos-4">
+<g class="combo combopos-5">
 <rect rx="6" ry="6" x="222" y="138" width="36" height="32" class="combo"/>
 <text x="240" y="154" class="combo tap">Paste</text>
 </g>
-<g class="combo combopos-5">
+<g class="combo combopos-6">
 <rect rx="6" ry="6" x="132" y="51" width="36" height="32" class="combo"/>
 <text x="150" y="67" class="combo tap">@</text>
 </g>
-<g class="combo combopos-6">
+<g class="combo combopos-7">
+<rect rx="6" ry="6" x="252" y="51" width="36" height="32" class="combo"/>
+<text x="270" y="67" class="combo tap">#</text>
+</g>
+<g class="combo combopos-8">
+<rect rx="6" ry="6" x="222" y="108" width="36" height="32" class="combo"/>
+<text x="240" y="124" class="combo tap">\</text>
+</g>
+<g class="combo combopos-9">
 <rect rx="6" ry="6" x="642" y="78" width="36" height="32" class="combo"/>
 <text x="660" y="94" class="combo tap">(</text>
 <text x="660" y="80" class="combo shifted">&lt;</text>
 </g>
-<g class="combo combopos-7">
+<g class="combo combopos-10">
 <rect rx="6" ry="6" x="702" y="78" width="36" height="32" class="combo"/>
 <text x="720" y="94" class="combo tap">)</text>
 <text x="720" y="80" class="combo shifted">&gt;</text>
 </g>
-<g class="combo combopos-8">
+<g class="combo combopos-11">
 <rect rx="6" ry="6" x="642" y="138" width="36" height="32" class="combo"/>
 <text x="660" y="154" class="combo tap">[</text>
 <text x="660" y="140" class="combo shifted">{</text>
 </g>
-<g class="combo combopos-9">
+<g class="combo combopos-12">
 <rect rx="6" ry="6" x="702" y="138" width="36" height="32" class="combo"/>
 <text x="720" y="154" class="combo tap">]</text>
 <text x="720" y="140" class="combo shifted">}</text>
 </g>
-<g class="combo combopos-10">
+<g class="combo combopos-13">
 <rect rx="6" ry="6" x="762" y="149" width="36" height="32" class="combo"/>
 <text x="780" y="165" class="combo tap">-</text>
 <text x="780" y="151" class="combo shifted">_</text>
+</g>
+<g class="combo combopos-14">
+<rect rx="6" ry="6" x="642" y="108" width="36" height="32" class="combo"/>
+<text x="660" y="124" class="combo tap">/</text>
 </g>
 </g>
 </g>
