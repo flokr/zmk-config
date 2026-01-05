@@ -55,7 +55,7 @@ ZMK_COMBO(rpar,  &rpar_gt,     RM3 RM4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FA
 // Bottom row combos - brackets/braces
 ZMK_COMBO(lbkt,  &lbkt_lbrc,   RB1 RB2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(rbkt,  &rbkt_rbrc,   RB2 RB3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-
+ZMK_COMBO(dash,  &minus_under, RB3 RB4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 // Bottom row combos - quotes
 //ZMK_COMBO(quote, &sqt_dqt,     RB2 RB3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
