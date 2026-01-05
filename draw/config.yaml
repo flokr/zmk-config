@@ -233,9 +233,10 @@ draw_config:
       opacity: 0.8;
     }
     
-    /* Layer activator styling - red accent */
+    /* Layer activator styling - pastel orange */
     rect.held, rect.combo.held {
-      fill: #d73a49 !important;  /* GitHub red */
+      fill: #ffb366 !important;  /* Pastel orange */
+      opacity: 0.7;
     }
     
     /* Ghost keys more subtle */

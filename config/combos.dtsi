@@ -20,6 +20,7 @@
 
 // Top row combos (QWERTZ: @ = AltGr+Q)
 //ZMK_COMBO(at,    &kp RA(Q),    LT5 LT4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(quote, &sqt_dqt,     LT5 LT4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(undo,  &kp LG(Z),    LT4 LT3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(redo,  &kp LG(LS(Z)),LT3 LT2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
@@ -33,7 +34,9 @@ ZMK_COMBO(paste, &kp LG(V),    LB2 LB1,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FA
    │  Special symbols                                                         │
    ╰──────────────────────────────────────────────────────────────────────────╯ */
 
-ZMK_COMBO(at,    &kp RA(Q),    LT4 LM4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(at,    &kp RA(Q),        LT4 LM4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(hash,  &kp NON_US_HASH,  LT2 LM2,     BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(bslh,  &kp RA(MINUS),    LM2 LB2,     BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 
 /* ╭──────────────────────────────────────────────────────────────────────────╮
@@ -57,11 +60,13 @@ ZMK_COMBO(lbkt,  &lbkt_lbrc,   RB1 RB2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FA
 ZMK_COMBO(rbkt,  &rbkt_rbrc,   RB2 RB3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(dash,  &minus_under, RB3 RB4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 // Bottom row combos - quotes
-//ZMK_COMBO(quote, &sqt_dqt,     RB2 RB3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* ╭──────────────────────────────────────────────────────────────────────────╮
    │                   VERTICAL COMBOS - RIGHT HAND (Austrian QWERTZ)         │
    │  Special symbols                                                         │
    ╰──────────────────────────────────────────────────────────────────────────╯ */
+
+ZMK_COMBO(fslh,  &kp LS(N7),   RM2 RB2,     BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+
 //ZMK_COMBO(pipe,  &kp RA(NUBS), RT2 RM2,     BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 //ZMK_COMBO(hash,  &kp NON_US_HASH, RT3 RM3,  BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
