@@ -28,6 +28,15 @@ parse_config:
     "&kp LG(V)": Paste
     "&kp LG(Z)": Undo
     "&kp LG(LS(Z))": Redo
+
+    # German umlauts and eszett
+    "&eszett": ß
+    "&de_ae": ä
+    "&de_oe": ö
+    "&de_ue": ü
+    "&de_ae_cap": Ä
+    "&de_oe_cap": Ö
+    "&de_ue_cap": Ü
     
     # Navigation hold-taps - hide the '0' parameter
     "&mt_home 0 LEFT": {t: "←", h: "Home"}
