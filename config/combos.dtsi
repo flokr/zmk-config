@@ -23,8 +23,10 @@ ZMK_COMBO(quote, &sqt_dqt,     LT5 LT4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FA
 ZMK_COMBO(undo,  &kp LG(Z),    LT4 LT3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(redo,  &kp LG(LS(Z)),LT3 LT2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
+// Home row combos
+ZMK_COMBO(pipe,  &kp RA(NUBS), RM5 RM4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+
 // Bottom row combos
-ZMK_COMBO(pipe,  &kp RA(NUBS), RT2 RM2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(copy,  &kp LG(C),    LB3 LB2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(cut,   &kp LG(X),    LB3 LB1,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(paste, &kp LG(V),    LB2 LB1,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
@@ -46,7 +48,6 @@ ZMK_COMBO(underscore,   &kp LS(FSLH),     LM2 LB1,     BASE, COMBO_TERM_SLOW, CO
 
 // Top row combos
 //ZMK_COMBO(slash, &fslh_bslh,   RT1 RT2,     BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-//ZMK_COMBO(star,  &astrk_caret, RT2 RT3,     BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 //ZMK_COMBO(amp,   &kp LS(N6),   RT3 RT4,     BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 
@@ -66,6 +67,8 @@ ZMK_COMBO(rbkt,  &rbkt_rbrc,   RB2 RB3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FA
    │  Special symbols                                                         │
    ╰──────────────────────────────────────────────────────────────────────────╯ */
 
+ZMK_COMBO(plus,    &kp RBKT,        RT2 RM2,     BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(star,    &kp LS(RBKT),    RT3 RM3,     BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(fslash,  &kp LS(N7),      RM3 RB2,     BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(dash,    &kp FSLH,        RM2 RB1,     BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 //ZMK_COMBO(hash,  &kp NON_US_HASH,   RT3 RM3,     BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
