@@ -53,7 +53,7 @@ ZMK_COMBO(underscore,   &kp LS(FSLH),     LM2 LB1,     BASE, COMBO_TERM_SLOW, CO
 // Home row combos
 ZMK_COMBO(lpar,  &lpar_lt,     RM2 RM3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(rpar,  &rpar_gt,     RM3 RM4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(tilde, &kp RA(RBKT), RM3 RM4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(tilde, &kp RA(RBKT), RM4 RM5,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 // Bottom row combos - brackets/braces
 ZMK_COMBO(lbkt,  &lbkt_lbrc,   RB1 RB2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
