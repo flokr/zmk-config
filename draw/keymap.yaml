@@ -295,7 +295,7 @@ combos:
   - p: [3, 4]
     k: Redo
     l: [Combos]
-  - p: [26, 25]
+  - p: [15, 16]
     k: '|'
     l: [Combos]
   - p: [30, 31]

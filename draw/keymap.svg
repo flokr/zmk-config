@@ -583,8 +583,8 @@ g.combo:not(:has(text.shifted)) text.tap {
 <text x="240" y="34" class="combo tap">Redo</text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="762" y="89" width="36" height="32" class="combo"/>
-<text x="780" y="105" class="combo tap">|</text>
+<rect rx="6" ry="6" x="102" y="89" width="36" height="32" class="combo"/>
+<text x="120" y="105" class="combo tap">|</text>
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="162" y="138" width="36" height="32" class="combo"/>
