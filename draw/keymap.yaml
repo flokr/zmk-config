@@ -186,10 +186,10 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
     - $$mdi:volume-off$$
-    - {t: '$$mdi:play-pause$$', type: held}
+    - $$mdi:play-pause$$
+    - {type: trans}
+    - {type: held}
     - {type: trans}
   SYMBOL:
     - Tab
@@ -317,4 +317,7 @@ combos:
     l: [Combos]
   - p: [36, 37]
     k: {t: ']', s: '}'}
+    l: [Combos]
+  - p: [37, 38]
+    k: {t: '-', s: _}
     l: [Combos]
