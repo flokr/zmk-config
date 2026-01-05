@@ -235,7 +235,7 @@ draw_config:
     
     /* Layer activator styling - pastel orange */
     rect.held, rect.combo.held {
-      fill: #ffb366 !important;  /* Pastel orange */
+      fill: #FFB347 !important;  /* Pastel orange */
       opacity: 0.7;
     }
     
