@@ -38,6 +38,10 @@ parse_config:
     "&de_oe_cap": Ö
     "&de_ue_cap": Ü
     
+    # Combo mod-morphs with correct symbols
+    "&circ_deg": {t: "^", s: "°"}
+    "&tick_acu": {t: "`", s: "´"}
+    
     # Navigation hold-taps - hide the '0' parameter
     "&mt_home 0 LEFT": {t: "←", h: "Home"}
     "&mt_end 0 RIGHT": {t: "→", h: "End"}
