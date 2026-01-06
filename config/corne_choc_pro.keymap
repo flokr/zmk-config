@@ -219,11 +219,11 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Combo: tap forward slash, shift backslash (QWERTZ: / = Shift+7, \ = AltGr+ß)
-        fslh_bslh: fslash_bslash {
+        // Combo: tap dollar, shift percent (QWERTZ: $ = Shift+4, % = Shift+5)
+        doll_perc: dollar_percent {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LS(N7)>, <&kp RA(MINUS)>;
+            bindings = <&kp LS(N4)>, <&kp LS(N5)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
