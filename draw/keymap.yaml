@@ -227,8 +227,8 @@ layers:
     - '='
     - +
     - {type: trans}
-    - {t: '[', s: '{'}
-    - {t: ']', s: '}'}
+    - {t: '[', s: '&lbrc_macro'}
+    - {t: ']', s: '&rbrc_macro'}
     - {t: '"', s: ''''}
     - {type: trans}
     - Esc
@@ -346,10 +346,10 @@ combos:
     k: '~'
     l: [Combos]
   - p: [35, 36]
-    k: {t: '[', s: '{'}
+    k: {t: '[', s: '&lbrc_macro'}
     l: [Combos]
   - p: [36, 37]
-    k: {t: ']', s: '}'}
+    k: {t: ']', s: '&rbrc_macro'}
     l: [Combos]
   - p: [9, 23]
     k: +
