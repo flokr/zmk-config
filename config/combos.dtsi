@@ -21,11 +21,13 @@
 // Top row combos (QWERTZ: @ = AltGr+Q)
 ZMK_COMBO(at,        &kp RA(Q),    LT5 LT4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(quote,     &sqt_dqt,     LT4 LT3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(doll_perc, &doll_perc,   LT3 LT2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(amper,     &kp LS(N6),   LT3 LT2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+
 // Home row combos
 ZMK_COMBO(pipe,      &kp RA(NUBS), LM5 LM4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(undo,      &kp LG(Z),    LM4 LM3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(redo,      &kp LG(LS(Z)),LM3 LM2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+
 // Bottom row combos
 ZMK_COMBO(copy,      &kp LG(C),    LB3 LB2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(cut,       &kp LG(X),    LB3 LB1,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
@@ -37,6 +39,7 @@ ZMK_COMBO(paste,     &kp LG(V),    LB2 LB1,     BASE, COMBO_TERM_FAST, COMBO_IDL
    ╰──────────────────────────────────────────────────────────────────────────╯ */
 
 ZMK_COMBO(hash,         &kp NON_US_HASH,  LT3 LM3,     BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(doll_perc,    &doll_perc,       LT2 LM2,     BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(bslh,         &kp RA(MINUS),    LM3 LB2,     BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(underscore,   &kp LS(FSLH),     LM2 LB1,     BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
