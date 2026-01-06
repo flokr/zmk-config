@@ -286,6 +286,12 @@ layers:
     - {type: held}
     - {type: trans}
 combos:
+  - p: [1, 2]
+    k: '@'
+    l: [Combos]
+  - p: [2, 3]
+    k: {t: '''', s: '"'}
+    l: [Combos]
   - p: [15, 16]
     k: '|'
     l: [Combos]
@@ -306,14 +312,8 @@ combos:
   - p: [31, 32]
     k: Paste
     l: [Combos]
-  - p: [2, 16]
-    k: '@'
-    l: [Combos]
   - p: [3, 17]
     k: '#'
-    l: [Combos]
-  - p: [4, 18]
-    k: {t: '''', s: '"'}
     l: [Combos]
   - p: [17, 31]
     k: \
