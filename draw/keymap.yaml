@@ -292,6 +292,9 @@ combos:
   - p: [2, 3]
     k: {t: '''', s: '"'}
     l: [Combos]
+  - p: [3, 4]
+    k: {t: $, s: '%'}
+    l: [Combos]
   - p: [15, 16]
     k: '|'
     l: [Combos]
