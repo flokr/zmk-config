@@ -105,19 +105,19 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 
         /* ================== MOD-MORPHS ================== */
         
-        // Base layer punctuation: tap comma, shift semicolon
+        // Base layer punctuation: tap comma, shift semicolon (macOS QWERTZ: , = COMMA, ; = Shift+COMMA)
         comma_semi: comma_semicolon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
+            bindings = <&kp COMMA>, <&kp LS(COMMA)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Base layer punctuation: tap dot, shift colon
+        // Base layer punctuation: tap dot, shift colon (macOS QWERTZ: . = DOT, : = Shift+DOT)
         dot_colon: dot_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COLON>;
+            bindings = <&kp DOT>, <&kp LS(DOT)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -163,7 +163,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 
         /* ================== COMBO MOD-MORPHS (Austrian QWERTZ) ================== */
         
-        // Combo: tap left paren, shift less-than (QWERTZ: ( = Shift+8, < = NUBS key)
+        // Combo: tap left paren, shift less-than (macOS QWERTZ: ( = Shift+8, < = NUBS key)
         lpar_lt: lpar_lessthan {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -171,7 +171,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Combo: tap right paren, shift greater-than (QWERTZ: ) = Shift+9, > = Shift+NUBS)
+        // Combo: tap right paren, shift greater-than (macOS QWERTZ: ) = Shift+9, > = Shift+NUBS)
         rpar_gt: rpar_greaterthan {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -179,19 +179,19 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Combo: tap left bracket, shift left brace (QWERTZ: [ = AltGr+8, { = AltGr+7)
+        // Combo: tap left bracket, shift left brace (macOS QWERTZ: [ = AltGr+5, { = AltGr+8)
         lbkt_lbrc: lbkt_lbrace {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RA(N8)>, <&lbrc_macro>;
+            bindings = <&kp RA(N5)>, <&kp RA(N8)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Combo: tap right bracket, shift right brace (QWERTZ: ] = AltGr+9, } = AltGr+0)
+        // Combo: tap right bracket, shift right brace (macOS QWERTZ: ] = AltGr+6, } = AltGr+9)
         rbkt_rbrc: rbkt_rbrace {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RA(N9)>, <&rbrc_macro>;
+            bindings = <&kp RA(N6)>, <&kp RA(N9)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -220,7 +220,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Combo: tap circumflex, shift degree symbol (QWERTZ: ^ = GRAVE, ° = Shift+GRAVE)
+        // Combo: tap circumflex dead key, shift degree symbol (macOS QWERTZ: ^ = GRAVE, ° = Shift+GRAVE)
         circ_deg: circumflex_degree {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -600,10 +600,10 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     │  Right hand: Brackets (same as combos) & German umlauts      │
     ╰──────────────────────────────────────────────────────────────╯
     
-    Austrian QWERTZ symbol mappings:
-    ! = Shift+1, @ = AltGr+Q, * = Shift++, ^ = dead key
-    ~ = AltGr+N1, ` = Shift+^ (dead key), $ = Shift+4, # = \
-    % = Shift+5, | = AltGr+7, \ = AltGr+ß, = = Shift+0, + = +
+    Austrian QWERTZ symbol mappings (macOS):
+    ! = Shift+1, @ = AltGr+L, * = Shift++, ^ = GRAVE (dead key)
+    ~ = AltGr+N, ` = Shift+GRAVE (dead key), $ = Shift+4, # = NON_US_HASH
+    % = Shift+5, | = AltGr+7, \ = Shift+AltGr+7, = = Shift+0, + = RBKT
     
     German Umlauts (Option-key method, works on AT layout):
     - ä/Ä at A position (RM5) - tap lowercase, shift uppercase
@@ -617,11 +617,11 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     - '/" at RB3 (same finger as RB2+RB3 combo)               */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-      &kp TAB       &kp LS(N1)     &kp RA(Q)     &kp LS(RBKT)     &kp RA(Q)      &kp GRAVE      &kp C_MUTE         &kp C_PP        &trans         &trans       &ue_umlaut     &oe_umlaut       &trans         &kp BSPC
+      &kp TAB       &kp LS(N1)     &kp RA(L)     &kp LS(RBKT)     &kp RA(L)      &kp GRAVE      &kp C_MUTE         &kp C_PP        &trans         &trans       &ue_umlaut     &oe_umlaut       &trans         &kp BSPC
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-      &kp LSHFT     &eszett        &kp LS(EQUAL)  &kp LS(N4)    &kp NON_US_HASH  &kp RA(RBKT)    &kp LALT           &kp RALT        &trans       &lpar_lt       &rpar_gt       &trans          &trans        &ae_umlaut
+      &kp LSHFT     &eszett        &kp LS(EQUAL)  &kp LS(N4)    &kp NON_US_HASH &kp RA(N)       &kp LALT           &kp RALT        &trans       &lpar_lt       &rpar_gt       &trans          &trans        &ae_umlaut
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-      &kp LCTRL     &kp LS(N5)     &kp RA(N7)    &kp RA(MINUS)   &kp LS(N0)      &kp RBKT                                          &trans       &lbkt_lbrc     &rbkt_rbrc      &dqt_sqt        &trans         &kp ESC
+      &kp LCTRL     &kp LS(N5)     &kp RA(N7)    &kp LS(RA(N7))  &kp LS(N0)      &kp RBKT                                          &trans       &lbkt_lbrc     &rbkt_rbrc      &dqt_sqt        &trans         &kp ESC
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
                                                     &trans         &trans         &trans                                           &trans          &trans         &trans
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
