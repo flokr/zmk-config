@@ -49,8 +49,8 @@ ZMK_COMBO(underscore,   &kp LS(FSLH),     LM2 LB1,     BASE, COMBO_TERM_SLOW, CO
    ╰──────────────────────────────────────────────────────────────────────────╯ */
 
 // Top row combos
-//ZMK_COMBO(slash, &fslh_bslh,   RT1 RT2,     BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-//ZMK_COMBO(amp,   &kp LS(N6),   RT3 RT4,     BASE, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+//ZMK_COMBO(slash,   &fslh_bslh,   RT1 RT2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(equal_tick,  &equal_tick,   RT3 RT4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 
 // Home row combos

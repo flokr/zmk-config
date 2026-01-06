@@ -212,10 +212,10 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         };
 
         // Combo: tap equals, shift backtick (QWERTZ: = = Shift+0, ´ = Shift+=)
-        plus_equal: plus_equals {
+        equal_tick: equals_backtick {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <LS(N0)>, <&kp LS(EQUAL)>;
+            bindings = <&kp LS(N0)>, <&kp LS(EQUAL)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
