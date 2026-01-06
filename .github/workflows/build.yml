@@ -4,3 +4,130 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+
+  draw:
+    needs: build
+    if: always() && (needs.build.result == 'success' || needs.build.result == 'skipped')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Check for keymap changes
+        id: check
+        run: |
+          # Always run on manual dispatch
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          # For push/PR, check if keymap files changed
+          if git diff --name-only HEAD~1 HEAD | grep -qE '^config/.*\.(keymap|dtsi)$|^draw/config\.yaml$'; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Cache west modules
+        if: steps.check.outputs.changed == 'true'
+        uses: actions/cache@v4
+        with:
+          path: |
+            modules/
+            .west/
+            zephyr/
+          key: west-modules-${{ hashFiles('config/west.yml') }}
+          restore-keys: |
+            west-modules-
+
+      - name: Install west
+        if: steps.check.outputs.changed == 'true'
+        run: pip install west
+
+      - name: West init and update
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          # Remove .west if cache was restored but modules are incomplete
+          if [ -d .west ] && [ ! -d modules/zmk ]; then
+            echo "Cache restored but modules incomplete, re-initializing..."
+            rm -rf .west modules zephyr
+          fi
+          # Initialize if needed
+          if [ ! -d .west ]; then
+            west init -l config
+          fi
+          west update
+
+      - name: Save west modules cache
+        if: steps.check.outputs.changed == 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            modules/
+            .west/
+            zephyr/
+          key: west-modules-${{ hashFiles('config/west.yml') }}
+
+      - name: Set up Python
+        if: steps.check.outputs.changed == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install keymap-drawer
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          pip install keymap-drawer
+          sudo apt-get update
+          sudo apt-get install -y librsvg2-bin
+
+      - name: Generate keymap visualization
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          # Install yq for YAML processing
+          sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+          sudo chmod +x /usr/local/bin/yq
+          
+          # Parse keymap with virtual Combos layer (urob's approach)
+          keymap -c draw/config.yaml parse -z config/corne_choc_pro.keymap --virtual-layers Combos > draw/keymap.yaml
+          
+          # Move all combos to the Combos layer (updated yq v4 syntax)
+          yq eval '.combos.[].l = ["Combos"]' -i draw/keymap.yaml
+          
+          # Reorder layers: move Combos layer to 2nd position (after MagicSturdy)
+          yq eval '
+            .layers as $layers |
+            .layers = {
+              "MagicSturdy": $layers.MagicSturdy,
+              "Combos": $layers.Combos,
+              "NAV": $layers.NAV,
+              "NUM": $layers.NUM,
+              "FUN": $layers.FUN,
+              "SYMBOL": $layers.SYMBOL,
+              "SYS": $layers.SYS
+            }
+          ' -i draw/keymap.yaml
+          
+          # Fix layout reference
+          sed -i 's/layout: {zmk_keyboard: corne_choc_pro, layout_name: default_layout}/layout:\n  qmk_info_json: config\/corne_choc_pro.json\n  layout_name: default_layout/' draw/keymap.yaml
+          
+          # Generate SVG and PNG
+          keymap -c draw/config.yaml draw draw/keymap.yaml > draw/keymap.svg
+          rsvg-convert draw/keymap.svg -o draw/keymap.png -w 1400
+
+      - name: Commit and push if changed
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add draw/keymap.svg draw/keymap.yaml draw/keymap.png
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "docs: update keymap visualization [skip ci]"
+            # Pull with rebase to handle any changes pushed in the meantime
+            git pull --rebase origin ${{ github.ref_name }}
+            git push
+          fi

@@ -1,0 +1,298 @@
+parse_config:
+  zmk_additional_includes:
+    - "modules/zmk/helpers/include"
+    - "modules/zmk/auto-layer/dts"
+
+  zmk_preamble: |
+    #include <corne_choc_pro.h>
+    #define CONFIG_WIRELESS
+
+  raw_binding_map:
+    "&sys_reset": Reset
+    "&bootloader": Boot
+    "&caps_word": Caps Word
+
+    "&bt BT_SEL 0": BT 1
+    "&bt BT_SEL 1": BT 2
+    "&bt BT_SEL 2": BT 3
+    "&bt BT_SEL 3": BT 4
+    "&bt BT_SEL 4": BT 5
+    "&bt BT_CLR": BT Clear
+
+    "&kp LC(C)": Copy
+    "&kp LC(X)": Cut
+    "&kp LC(V)": Paste
+    
+    "&kp LG(C)": Copy
+    "&kp LG(X)": Cut
+    "&kp LG(V)": Paste
+    "&kp LG(Z)": Undo
+    "&kp LG(LS(Z))": Redo
+
+    # German umlauts and eszett
+    "&eszett": ß
+    "&de_ae": ä
+    "&de_oe": ö
+    "&de_ue": ü
+    "&de_ae_cap": Ä
+    "&de_oe_cap": Ö
+    "&de_ue_cap": Ü
+    
+    # Combo mod-morphs with correct symbols
+    "&circ_deg": {t: "^", s: "°"}
+    "&tick_acu": {t: "`", s: "´"}
+    
+    # Navigation hold-taps - hide the '0' parameter
+    "&mt_home 0 LEFT": {t: "←", h: "Home"}
+    "&mt_end 0 RIGHT": {t: "→", h: "End"}
+    "&mt_doc_start 0 UP": {t: "↑", h: "^Home"}
+    "&mt_doc_end 0 DOWN": {t: "↓", h: "^End"}
+    "&mt_word_bspc 0 BSPC": {t: "Bspc", h: "^Bspc"}
+    "&mt_word_del 0 DEL": {t: "Del", h: "^Del"}
+    
+    # SMART_NUM - label the tap-dance behavior
+    "&num_dance": {t: "Numword", s: "Sticky NUM"}
+
+    "&mag": ⭐
+    "&studio_unlock": Studio 🔓
+
+  trans_legend: { "t": "", "type": "trans" }
+
+  zmk_combos:
+    combo_cut: { align: bottom, o: 0.15 }
+
+  zmk_keycode_map:
+    # modifiers
+    LALT: Alt
+    RALT: Alt
+    LCTRL: Ctrl
+    RCTRL: Ctrl
+    LGUI: Gui
+    RGUI: Gui
+    LSHFT: Shift
+    RSHFT: Shift
+
+    # editing
+    BSPC: Bspc
+    DEL: Del
+    ESC: Esc
+    RET: Enter
+    SPACE: Spc
+    TAB: Tab
+
+    # navigation
+    PG_UP: PgUp
+    PG_DN: PgDn
+    INS: Ins
+    HOME: Home
+    END: End
+
+    UP: ↑
+    DOWN: ↓
+    LEFT: ←
+    RIGHT: →
+    LEFT_ARROW: ←
+    RIGHT_ARROW: →
+    UP_ARROW: ↑
+    DOWN_ARROW: ↓
+
+    # media
+    C_MUTE: $$mdi:volume-off$$
+    C_PP: $$mdi:play-pause$$
+    C_VOL_UP: $$mdi:volume-high$$
+    C_VOL_DN: $$mdi:volume-medium$$
+    C_NEXT: $$mdi:skip-forward$$
+    C_PREV: $$mdi:skip-backward$$
+
+    # symbols
+    AMPERSAND: "&"
+    AMPS: "&"
+    APOS: "'"
+    APOSTROPHE: "'"
+    ASTERISK: "*"
+    ASTRK: "*"
+    AT: "@"
+    AT_SIGN: "@"
+    BACKSLASH: \
+    BSLH: \
+    CARET: ^
+    COLON: ":"
+    COMMA: ","
+    DLLR: $
+    DOLLAR: $
+    DOT: .
+    DOUBLE_QUOTES: '"'
+    DQT: '"'
+    EQUAL: "="
+    EXCL: "!"
+    EXCLAMATION: "!"
+    FSLH: "-"          # Austrian: / key = minus
+    GRAVE: "^"         # Austrian: dead key = caret
+    GREATER_THAN: ">"
+    GT: ">"
+    HASH: "#"
+    LBKT: "["
+    LBRC: "{"
+    LEFT_BRACE: "{"
+    LEFT_BRACKET: "["
+    LEFT_PARENTHESIS: (
+    LESS_THAN: <
+    LPAR: (
+    LT: <
+    MINUS: "-"
+    NON_US_BACKSLASH: \
+    NON_US_BSLH: "|"
+    NON_US_HASH: "#"   # Austrian: # key position
+    NUHS: "#"
+    PERCENT: "%"
+    PERIOD: .
+    PIPE: "|"
+    PIPE2: "|"
+    PLUS: +
+    POUND: "#"
+    PRCNT: "%"
+    QMARK: "?"
+    QUESTION: "?"
+    RBKT: +            # Austrian: + key = plus
+    RBRC: "}"
+    RIGHT_BRACE: "}"
+    RIGHT_BRACKET: "]"
+    RIGHT_PARENTHESIS: )
+    RPAR: )
+    SEMI: ;
+    SEMICOLON: ;
+    SINGLE_QUOTE: "'"
+    SLASH: /
+    SQT: "'"
+    STAR: "*"
+    TILDE: "~"
+    TILDE2: "~"
+    UNDER: _
+    UNDERSCORE: _
+    
+    # Austrian QWERTZ layout - Shift+Number combinations
+    "LS(MINUS)": "?"   # Shift+ß = question mark
+    "LS(N1)": "!"      # Shift+1 = exclamation
+    "LS(N2)": '"'      # Shift+2 = double quote
+    "LS(N4)": $        # Shift+4 = dollar
+    "LS(N5)": "%"      # Shift+5 = percent
+    "LS(N6)": "&"      # Shift+6 = ampersand
+    "LS(N7)": /        # Shift+7 = forward slash
+    "LS(N8)": (        # Shift+8 = left paren
+    "LS(N9)": )        # Shift+9 = right paren
+    "LS(N0)": "="      # Shift+0 = equals
+    
+    # Austrian QWERTZ layout - AltGr combinations
+    "RA(Q)": "@"       # AltGr+Q = at sign
+    "RA(N7)": "{"      # AltGr+7 = left brace
+    "RA(N8)": "["      # AltGr+8 = left bracket
+    "RA(N9)": "]"      # AltGr+9 = right bracket
+    "RA(N0)": "}"      # AltGr+0 = right brace
+    "RA(MINUS)": \     # AltGr+ß = backslash
+    "RA(RBKT)": "~"    # AltGr++ = tilde
+    "RA(NUBS)": "|"    # AltGr+< = pipe
+    
+    # Austrian QWERTZ layout - Special keys
+    "NUBS": <          # NUBS key = less than
+    "LS(NUBS)": ">"    # Shift+NUBS = greater than
+    "LS(NON_US_HASH)": "'"  # Shift+# = single quote
+    "LS(RBKT)": "*"    # Shift++ = asterisk
+    "LS(FSLH)": _      # Shift+/ = underscore
+    "LS(EQUAL)": "`"   # Shift+dead = backtick
+
+draw_config:
+  append_colon_to_layer_header: false
+  dark_mode: false  # Light mode with Solarized theme
+  footer_text: "flokr/zmk-config"
+  use_local_cache: true  # Avoid SSL issues with QMK API
+  
+  # Layer order - Combos is virtual layer created via --virtual-layers flag
+  layer_order: ["MagicSturdy", "Combos", "NAV", "NUM", "FUN", "SYMBOL", "SYS"]
+  
+  # Layer activation info for tri-layers
+  layer_names:
+    SYS: "NAV + FUN"
+  
+  # Styling
+  key_h: 60
+  key_w: 60
+  split_gap: 40
+  combo_w: 36  # Increase combo box width
+  combo_h: 32  # Increase combo box height
+  
+  # Custom CSS with GitHub Light color scheme
+  svg_extra_style: |
+    /* GitHub Light colors */
+    svg.keymap {
+      font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+      font-size: 14px;
+      fill: #24292e !important;  /* dark gray text */
+      background: #ffffff;  /* pure white background */
+    }
+    
+    /* Light key background */
+    rect.key {
+      fill: #f6f8fa !important;  /* ghost white */
+    }
+    
+    rect.key, rect.combo {
+      stroke: #d1d5da !important;  /* light gray border */
+      stroke-width: 1;
+    }
+    
+    /* Combo styling - light blue accent */
+    rect.combo, rect.combo-separate {
+      fill: #c8e1ff !important;  /* Light blue */
+      opacity: 0.8;
+    }
+    
+    /* Layer activator styling - pastel orange */
+    rect.held, rect.combo.held {
+      fill: #FFB347 !important;  /* Pastel orange */
+      opacity: 0.7;
+    }
+    
+    /* Ghost keys more subtle */
+    rect.ghost, rect.combo.ghost {
+      opacity: 0.25 !important;
+    }
+    
+    /* Combo text styling - make tap/shift labels more balanced */
+    text.combo {
+      font-size: 10px;
+    }
+    
+    /* Single symbol combos - center aligned (when there's no shifted variant) */
+    text.combo.tap:only-child {
+      transform: translateY(0) !important;
+      font-size: 11px !important;
+    }
+    
+    /* Top symbol (shifted) - positioned at top, closer to tap */
+    text.shifted {
+      font-size: 10px !important;
+      font-weight: 400;
+    }
+    
+    /* Bottom symbol (tap) - positioned at bottom */
+    text.tap {
+      font-size: 11px !important;
+      font-weight: 500;
+    }
+    
+    /* Adjust vertical spacing for mod-morph symbols - minimal gap, tap lower */
+    /* Only apply to keys/combos that HAVE a shifted sibling */
+    g.key:has(text.shifted) text.shifted,
+    g.combo:has(text.shifted) text.shifted {
+      transform: translateY(2px);
+    }
+    
+    g.key:has(text.shifted) text.tap,
+    g.combo:has(text.shifted) text.tap {
+      transform: translateY(9px);
+    }
+    
+    /* Override for single-symbol combos - center them */
+    g.combo:not(:has(text.shifted)) text.tap {
+      transform: translateY(0) !important;
+    }
