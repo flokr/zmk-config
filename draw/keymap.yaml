@@ -282,12 +282,11 @@ layers:
     - {type: trans}
     - {type: held}
     - {type: trans}
-    - {type: trans}
     - {type: held}
     - {type: trans}
 combos:
   - p: [0, 1]
-    k: {t: ^, s: Sft+^}
+    k: {t: ^, s: "\xB0"}
     l: [Combos]
   - p: [1, 2]
     k: '@'
@@ -334,7 +333,7 @@ combos:
     k: '='
     l: [Combos]
   - p: [11, 12]
-    k: {t: '`', s: '='}
+    k: {t: '`', s: "\xB4"}
     l: [Combos]
   - p: [23, 24]
     k: {t: (, s: <}
