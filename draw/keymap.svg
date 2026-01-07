@@ -377,12 +377,12 @@ g.combo:not(:has(text.shifted)) text.tap {
 <g transform="translate(690, 150)" class="key keypos-36">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">,</text>
-<text x="0" y="-26" class="key shifted">;</text>
+<text x="0" y="-26" class="key shifted">Sft+,</text>
 </g>
 <g transform="translate(750, 157)" class="key keypos-37">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">.</text>
-<text x="0" y="-26" class="key shifted">:</text>
+<text x="0" y="-26" class="key shifted">Sft+.</text>
 </g>
 <g transform="translate(810, 172)" class="key keypos-38">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -576,7 +576,7 @@ g.combo:not(:has(text.shifted)) text.tap {
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="102" y="29" width="36" height="32" class="combo"/>
-<text x="120" y="45" class="combo tap">@</text>
+<text x="120" y="45" class="combo tap">AltGr+L</text>
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="162" y="18" width="36" height="32" class="combo"/>
@@ -589,7 +589,7 @@ g.combo:not(:has(text.shifted)) text.tap {
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="102" y="89" width="36" height="32" class="combo"/>
-<text x="120" y="105" class="combo tap">|</text>
+<text x="120" y="105" class="combo tap">{</text>
 </g>
 <g class="combo combopos-5">
 <rect rx="6" ry="6" x="162" y="78" width="36" height="32" class="combo"/>
@@ -624,7 +624,9 @@ g.combo:not(:has(text.shifted)) text.tap {
 </g>
 <g class="combo combopos-12">
 <rect rx="6" ry="6" x="192" y="104" width="36" height="32" class="combo"/>
-<text x="210" y="120" class="combo tap">\</text>
+<text x="210" y="120" class="combo tap">
+<tspan x="210" dy="-0.6em">Sft+</tspan><tspan x="210" dy="1.2em">AltGr+7</tspan>
+</text>
 </g>
 <g class="combo combopos-13">
 <rect rx="6" ry="6" x="252" y="111" width="36" height="32" class="combo"/>
@@ -651,17 +653,17 @@ g.combo:not(:has(text.shifted)) text.tap {
 </g>
 <g class="combo combopos-18">
 <rect rx="6" ry="6" x="762" y="89" width="36" height="32" class="combo"/>
-<text x="780" y="105" class="combo tap">~</text>
+<text x="780" y="105" class="combo tap">AltGr+N</text>
 </g>
 <g class="combo combopos-19">
 <rect rx="6" ry="6" x="642" y="138" width="36" height="32" class="combo"/>
-<text x="660" y="154" class="combo tap">[</text>
-<text x="660" y="140" class="combo shifted"><tspan style="font-size: 64%">&amp;lbrc_macro</tspan></text>
+<text x="660" y="154" class="combo tap">AltGr+5</text>
+<text x="660" y="140" class="combo shifted">[</text>
 </g>
 <g class="combo combopos-20">
 <rect rx="6" ry="6" x="702" y="138" width="36" height="32" class="combo"/>
-<text x="720" y="154" class="combo tap">]</text>
-<text x="720" y="140" class="combo shifted"><tspan style="font-size: 64%">&amp;rbrc_macro</tspan></text>
+<text x="720" y="154" class="combo tap">AltGr+6</text>
+<text x="720" y="140" class="combo shifted">]</text>
 </g>
 <g class="combo combopos-21">
 <rect rx="6" ry="6" x="612" y="51" width="36" height="32" class="combo"/>
@@ -1191,7 +1193,7 @@ g.combo:not(:has(text.shifted)) text.tap {
 </g>
 <g transform="translate(150, 37)" class="key keypos-2">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">@</text>
+<text x="0" y="0" class="key tap">AltGr+L</text>
 </g>
 <g transform="translate(210, 30)" class="key keypos-3">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -1199,7 +1201,7 @@ g.combo:not(:has(text.shifted)) text.tap {
 </g>
 <g transform="translate(270, 37)" class="key keypos-4">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">@</text>
+<text x="0" y="0" class="key tap">AltGr+L</text>
 </g>
 <g transform="translate(330, 44)" class="key keypos-5">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -1258,7 +1260,7 @@ g.combo:not(:has(text.shifted)) text.tap {
 </g>
 <g transform="translate(330, 104)" class="key keypos-19">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">~</text>
+<text x="0" y="0" class="key tap">AltGr+N</text>
 </g>
 <g transform="translate(390, 134)" class="key keypos-20">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -1306,7 +1308,9 @@ g.combo:not(:has(text.shifted)) text.tap {
 </g>
 <g transform="translate(210, 150)" class="key keypos-31">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">\</text>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">Sft+</tspan><tspan x="0" dy="1.2em">AltGr+7</tspan>
+</text>
 </g>
 <g transform="translate(270, 157)" class="key keypos-32">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -1321,13 +1325,13 @@ g.combo:not(:has(text.shifted)) text.tap {
 </g>
 <g transform="translate(630, 157)" class="key keypos-35">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">[</text>
-<text x="0" y="-26" class="key shifted"><tspan style="font-size: 64%">&amp;lbrc_macro</tspan></text>
+<text x="0" y="0" class="key tap">AltGr+5</text>
+<text x="0" y="-26" class="key shifted">[</text>
 </g>
 <g transform="translate(690, 150)" class="key keypos-36">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">]</text>
-<text x="0" y="-26" class="key shifted"><tspan style="font-size: 64%">&amp;rbrc_macro</tspan></text>
+<text x="0" y="0" class="key tap">AltGr+6</text>
+<text x="0" y="-26" class="key shifted">]</text>
 </g>
 <g transform="translate(750, 157)" class="key keypos-37">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
