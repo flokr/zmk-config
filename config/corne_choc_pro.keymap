@@ -161,7 +161,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        /* ================== COMBO MOD-MORPHS (Austrian QWERTZ) ================== */
+        /* ================== COMBO MOD-MORPHS (German QWERTZ) ================== */
         
         // Combo: tap left paren, shift less-than (macOS QWERTZ: ( = Shift+8, < = NUBS key)
         lpar_lt: lpar_lessthan {
@@ -594,18 +594,18 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-/*  SYMBOL LAYER - Programming Symbols & German Umlauts (Austrian QWERTZ)
+/*  SYMBOL LAYER - Programming Symbols & German Umlauts (German QWERTZ)
     ╭──────────────────────────────────────────────────────────────╮
     │  Left hand: Common programming symbols                       │
     │  Right hand: Brackets (same as combos) & German umlauts      │
     ╰──────────────────────────────────────────────────────────────╯
     
-    Austrian QWERTZ symbol mappings (macOS):
-    ! = Shift+1, @ = AltGr+L, * = Shift++, ^ = GRAVE (dead key)
+    German QWERTZ symbol mappings (macOS German - Standard):
+    ! = Shift+1, @ = AltGr+Q, * = Shift++, ^ = GRAVE (dead key)
     ~ = AltGr+N, ` = Shift+GRAVE (dead key), $ = Shift+4, # = NON_US_HASH
     % = Shift+5, | = AltGr+7, \ = Shift+AltGr+7, = = Shift+0, + = RBKT
     
-    German Umlauts (Option-key method, works on AT layout):
+    German Umlauts (Option-key method, works on German - Standard):
     - ä/Ä at A position (RM5) - tap lowercase, shift uppercase
     - ö/Ö at O position (RT4) - tap lowercase, shift uppercase  
     - ü/Ü at U position (RT3) - tap lowercase, shift uppercase
