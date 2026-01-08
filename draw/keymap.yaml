@@ -60,9 +60,9 @@ layers:
     - {type: trans}
     - {type: trans}
     - PgUp
-    - Home
-    - {t: ↑, h: Ctl+Home}
-    - End
+    - '&mac_home'
+    - {t: '&tap_up', h: '&mac_doc_start'}
+    - '&mac_end'
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -74,9 +74,9 @@ layers:
     - {type: trans}
     - {type: trans}
     - PgDn
-    - {t: ←, h: Home}
-    - {t: ↓, h: Ctl+End}
-    - {t: →, h: End}
+    - {t: '&tap_left', h: '&mac_home'}
+    - {t: '&tap_down', h: '&mac_doc_end'}
+    - {t: '&tap_right', h: '&mac_end'}
     - Enter
     - {type: trans}
     - {type: trans}
@@ -88,8 +88,8 @@ layers:
     - {type: trans}
     - Ins
     - Tab
-    - {t: Bspc, h: Ctl+Bspc}
-    - {t: Del, h: Ctl+Del}
+    - {t: '&tap_bspc', h: '&mac_word_bspc'}
+    - {t: '&tap_del', h: '&mac_word_del'}
     - {type: trans}
     - {type: trans}
     - {type: held}
