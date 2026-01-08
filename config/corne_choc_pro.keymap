@@ -231,27 +231,27 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 
         /* ================== GERMAN UMLAUT MOD-MORPHS ================== */
         
-        // ä/Ä: tap lowercase, shift uppercase
+        // ä/Ä: tap lowercase, shift uppercase (macOS German: SQT key)
         ae_umlaut: ae_umlaut {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&de_ae>, <&de_ae_cap>;
+            bindings = <&kp SQT>, <&kp LS(SQT)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // ö/Ö: tap lowercase, shift uppercase
+        // ö/Ö: tap lowercase, shift uppercase (macOS German: SEMI key)
         oe_umlaut: oe_umlaut {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&de_oe>, <&de_oe_cap>;
+            bindings = <&kp SEMI>, <&kp LS(SEMI)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // ü/Ü: tap lowercase, shift uppercase
+        // ü/Ü: tap lowercase, shift uppercase (macOS German: LBKT key)
         ue_umlaut: ue_umlaut {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&de_ue>, <&de_ue_cap>;
+            bindings = <&kp LBKT>, <&kp LS(LBKT)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -618,15 +618,15 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     ╰──────────────────────────────────────────────────────────────╯
     
     German QWERTZ symbol mappings (macOS German - Standard):
-    ! = Shift+1, @ = AltGr+Q, * = Shift++, ^ = GRAVE (dead key)
-    ~ = AltGr+N, ` = Shift+GRAVE (dead key), $ = Shift+4, # = NON_US_HASH
+    ! = Shift+1, @ = AltGr+Q, * = Shift++, < = GRAVE, > = Shift+GRAVE
+    ~ = AltGr+N, ` = Shift+EQUAL, $ = Shift+4, # = NON_US_HASH
     % = Shift+5, | = AltGr+7, \ = Shift+AltGr+7, = = Shift+0, + = RBKT
     
-    German Umlauts (Option-key method, works on German - Standard):
-    - ä/Ä at A position (RM5) - tap lowercase, shift uppercase
-    - ö/Ö at O position (RT4) - tap lowercase, shift uppercase  
-    - ü/Ü at U position (RT3) - tap lowercase, shift uppercase
-    - ß at S position (LM5) - eszett, no uppercase variant
+    German Umlauts (direct keycodes for German layout):
+    - ä/Ä = SQT / Shift+SQT (single quote key position)
+    - ö/Ö = SEMI / Shift+SEMI (semicolon key position)
+    - ü/Ü = LBKT / Shift+LBKT (left bracket key position)
+    - ß = MINUS (minus key position)
     
     Brackets mirror combo positions:
     - ()/<> at RM1/RM2 (same fingers as RM1+RM2 combo)
@@ -636,7 +636,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
       &kp TAB       &kp LS(N1)     &kp RA(L)     &kp LS(RBKT)     &kp RA(L)      &kp GRAVE      &kp C_MUTE         &kp C_PP        &kp NUBS      &kp LS(NUBS)  &ue_umlaut     &oe_umlaut       &trans         &kp BSPC
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-      &kp LSHFT     &eszett        &kp LS(EQUAL)  &kp LS(N4)    &kp NON_US_HASH &kp RA(N)       &kp LALT           &kp RALT        &trans       &lpar_lt       &rpar_gt       &trans          &trans        &ae_umlaut
+      &kp LSHFT     &kp MINUS      &kp LS(EQUAL)  &kp LS(N4)    &kp NON_US_HASH &kp RA(N)       &kp LALT           &kp RALT        &trans       &lpar_lt       &rpar_gt       &trans          &trans        &ae_umlaut
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
       &kp LCTRL     &kp LS(N5)     &kp RA(N7)    &kp LS(RA(N7))  &kp LS(N0)      &kp RBKT                                          &trans       &lbkt_lbrc     &rbkt_rbrc      &dqt_sqt        &trans         &kp ESC
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
