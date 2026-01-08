@@ -589,7 +589,7 @@ g.combo:not(:has(text.shifted)) text.tap {
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="102" y="89" width="36" height="32" class="combo"/>
-<text x="120" y="105" class="combo tap">|</text>
+<text x="120" y="105" class="combo tap">AltGr+|</text>
 </g>
 <g class="combo combopos-5">
 <rect rx="6" ry="6" x="162" y="78" width="36" height="32" class="combo"/>
@@ -1233,8 +1233,9 @@ g.combo:not(:has(text.shifted)) text.tap {
 <text x="0" y="0" class="key tap">ö</text>
 <text x="0" y="-26" class="key shifted">Ö</text>
 </g>
-<g transform="translate(810, 52)" class="key trans keypos-12">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(810, 52)" class="key keypos-12">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<text x="0" y="0" class="key tap">|</text>
 </g>
 <g transform="translate(870, 52)" class="key keypos-13">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -1272,8 +1273,9 @@ g.combo:not(:has(text.shifted)) text.tap {
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">Alt</text>
 </g>
-<g transform="translate(570, 104)" class="key trans keypos-22">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(570, 104)" class="key keypos-22">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<text x="0" y="0" class="key tap">AltGr+|</text>
 </g>
 <g transform="translate(630, 97)" class="key keypos-23">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -1285,16 +1287,18 @@ g.combo:not(:has(text.shifted)) text.tap {
 <text x="0" y="0" class="key tap">)</text>
 <text x="0" y="-26" class="key shifted">&gt;</text>
 </g>
-<g transform="translate(750, 97)" class="key trans keypos-25">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(750, 97)" class="key keypos-25">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<text x="0" y="0" class="key tap">|</text>
 </g>
-<g transform="translate(810, 112)" class="key trans keypos-26">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
-</g>
-<g transform="translate(870, 112)" class="key keypos-27">
+<g transform="translate(810, 112)" class="key keypos-26">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">ä</text>
 <text x="0" y="-26" class="key shifted">Ä</text>
+</g>
+<g transform="translate(870, 112)" class="key keypos-27">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<text x="0" y="0" class="key tap">AltGr+#</text>
 </g>
 <g transform="translate(30, 172)" class="key keypos-28">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -1322,8 +1326,9 @@ g.combo:not(:has(text.shifted)) text.tap {
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">+</text>
 </g>
-<g transform="translate(570, 164)" class="key trans keypos-34">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(570, 164)" class="key keypos-34">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<text x="0" y="0" class="key tap">|</text>
 </g>
 <g transform="translate(630, 157)" class="key keypos-35">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -1340,8 +1345,11 @@ g.combo:not(:has(text.shifted)) text.tap {
 <text x="0" y="0" class="key tap">&quot;</text>
 <text x="0" y="-26" class="key shifted">&#x27;</text>
 </g>
-<g transform="translate(810, 172)" class="key trans keypos-38">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(810, 172)" class="key keypos-38">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">AltGr+</tspan><tspan x="0" dy="1.2em">Sft+&lt;</tspan>
+</text>
 </g>
 <g transform="translate(870, 172)" class="key keypos-39">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
