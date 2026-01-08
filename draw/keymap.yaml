@@ -215,8 +215,8 @@ layers:
     - Alt
     - Alt
     - {type: trans}
-    - {t: (, s: <}
-    - {t: ), s: <}
+    - {t: (, s: ^}
+    - {t: ), s: Sft+^}
     - {type: trans}
     - {type: trans}
     - {t: ä, s: Ä}
@@ -337,10 +337,10 @@ combos:
     k: {t: '`', s: ´}
     l: [Combos]
   - p: [23, 24]
-    k: {t: (, s: <}
+    k: {t: (, s: ^}
     l: [Combos]
   - p: [24, 25]
-    k: {t: ), s: <}
+    k: {t: ), s: Sft+^}
     l: [Combos]
   - p: [25, 26]
     k: AltGr+N
