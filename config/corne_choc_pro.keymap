@@ -286,7 +286,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&mac_home>, <&kp LEFT>;
+            bindings = <&mac_home>, <&tap_left>;
         };
 
         mt_end: hold_tap_end {
@@ -295,7 +295,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&mac_end>, <&kp RIGHT>;
+            bindings = <&mac_end>, <&tap_right>;
         };
 
         mt_doc_start: hold_tap_doc_start {
@@ -304,7 +304,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&mac_doc_start>, <&kp UP>;
+            bindings = <&mac_doc_start>, <&tap_up>;
         };
 
         mt_doc_end: hold_tap_doc_end {
@@ -313,7 +313,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&mac_doc_end>, <&kp DOWN>;
+            bindings = <&mac_doc_end>, <&tap_down>;
         };
 
         mt_word_bspc: hold_tap_word_bspc {
@@ -322,7 +322,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&mac_word_bspc>, <&kp BSPC>;
+            bindings = <&mac_word_bspc>, <&tap_bspc>;
         };
 
         mt_word_del: hold_tap_word_del {
@@ -331,7 +331,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&mac_word_del>, <&kp DEL>;
+            bindings = <&mac_word_del>, <&tap_del>;
         };
 
         /* ================== SMART_NUM ================== */
@@ -469,6 +469,43 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             bindings = <&macro_press &kp LALT>
                      , <&macro_tap &kp DEL>
                      , <&macro_release &kp LALT>;
+        };
+
+        // Simple arrow and key macros for hold-tap tap actions
+        tap_left: tap_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT>;
+        };
+
+        tap_right: tap_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>;
+        };
+
+        tap_up: tap_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UP>;
+        };
+
+        tap_down: tap_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN>;
+        };
+
+        tap_bspc: tap_bspc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC>;
+        };
+
+        tap_del: tap_del {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DEL>;
         };
 
         // Ä: Option+u, Shift+a
@@ -629,7 +666,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬─────────────┬──────────────┬─────────────┬──────────────╮
         &trans         &trans        &trans         &kp TAB       &kp LS(TAB)      &trans         &trans             &trans        &kp PG_UP     &mac_home     &mt_doc_start   &mac_end        &trans          &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼─────────────┼──────────────┼─────────────┼──────────────┤
-        &trans        &sk LGUI      &sk LALT       &sk LSHFT       &sk LCTRL       &trans         &trans             &trans        &kp PG_DN      &mt_home    &mt_doc_end      &mt_end        &kp RET         &trans
+        &trans        &sk LGUI      &sk LALT       &sk LSHFT       &sk LCTRL       &trans         &trans             &trans        &kp PG_DN      &mt_home     &mt_doc_end      &mt_end        &kp RET         &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼─────────────┼──────────────┼─────────────┼──────────────┤
         &trans         &trans        &trans         &trans          &trans         &trans                                           &trans         &kp INS       &kp TAB      &mt_word_bspc &mt_word_del    &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼────────────────────┼───────────────────────┼──────────────────────────┴──────────────────────┴──────────────╯
