@@ -26,8 +26,8 @@ parse_config:
     "&kp LG(C)": Copy
     "&kp LG(X)": Cut
     "&kp LG(V)": Paste
-    "&kp LG(Z)": Undo
-    "&kp LG(LS(Z))": Redo
+    "&kp LG(Y)": Undo
+    "&kp LG(LS(Y))": Redo
 
     # Pipe symbol
     "&kp RA(GRAVE)": "|"
