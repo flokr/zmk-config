@@ -68,6 +68,10 @@ parse_config:
     "&mac_word_bspc": "⌥⌫"
     "&mac_word_del": "⌥⌦"
     
+    # Home/End navigation macros
+    "&mac_home": Home
+    "&mac_end": End
+    
     # SMART_NUM - label the tap-dance behavior
     "&num_dance": {t: "Numword", s: "Sticky NUM"}
 
