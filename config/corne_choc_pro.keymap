@@ -282,7 +282,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         // Enhanced arrows: hold for special navigation (macOS style)
         mt_home: hold_tap_home {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
@@ -291,7 +291,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 
         mt_end: hold_tap_end {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
@@ -300,7 +300,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 
         mt_doc_start: hold_tap_doc_start {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
@@ -309,7 +309,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 
         mt_doc_end: hold_tap_doc_end {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
@@ -318,7 +318,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 
         mt_word_bspc: hold_tap_word_bspc {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
@@ -327,7 +327,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 
         mt_word_del: hold_tap_word_del {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
@@ -664,11 +664,11 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
                       DEL:   tap Del,  hold Opt+Del (word fwd)     */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬─────────────┬──────────────┬─────────────┬──────────────╮
-        &trans         &trans        &trans         &kp TAB       &kp LS(TAB)      &trans         &trans             &trans        &kp PG_UP     &mac_home     &mt_doc_start   &mac_end        &trans          &trans
+        &trans         &trans        &trans         &kp TAB       &kp LS(TAB)      &trans         &trans             &trans        &kp PG_UP     &mac_home   &mt_doc_start 0 0   &mac_end        &trans          &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼─────────────┼──────────────┼─────────────┼──────────────┤
-        &trans        &sk LGUI      &sk LALT       &sk LSHFT       &sk LCTRL       &trans         &trans             &trans        &kp PG_DN      &mt_home     &mt_doc_end      &mt_end        &kp RET         &trans
+        &trans        &sk LGUI      &sk LALT       &sk LSHFT       &sk LCTRL       &trans         &trans             &trans        &kp PG_DN   &mt_home 0 0  &mt_doc_end 0 0  &mt_end 0 0    &kp RET         &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼─────────────┼──────────────┼─────────────┼──────────────┤
-        &trans         &trans        &trans         &trans          &trans         &trans                                           &trans         &kp INS       &kp TAB      &mt_word_bspc &mt_word_del    &trans
+        &trans         &trans        &trans         &trans          &trans         &trans                                           &trans         &kp INS       &kp TAB   &mt_word_bspc 0 0 &mt_word_del 0 0    &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼────────────────────┼───────────────────────┼──────────────────────────┴──────────────────────┴──────────────╯
                                                      &trans         &trans         &trans                                           &trans          &trans            &trans
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴────────────────────┴───────────────────────╯
