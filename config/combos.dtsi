@@ -54,12 +54,12 @@ ZMK_COMBO(underscore,   &kp LS(FSLH),     LM2 LB1,     BASE, COMBO_TERM_SLOW, CO
 ZMK_COMBO(equals,    &kp LS(N0),   RT2 RT3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(tick_acu,  &tick_acu,    RT3 RT4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
-// Home row combos
+// Home row combos - with ignore-mods to allow Shift+combo
 ZMK_COMBO(lpar,  &lpar_lt,     RM2 RM3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(rpar,  &rpar_gt,     RM3 RM4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(tilde, &kp RA(N),    RM4 RM5,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)  // macOS: AltGr+N for ~
 
-// Bottom row combos - brackets/braces
+// Bottom row combos - brackets/braces with ignore-mods
 ZMK_COMBO(lbkt,  &lbkt_lbrc,   RB1 RB2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(rbkt,  &rbkt_rbrc,   RB2 RB3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 //ZMK_COMBO(dash,  &minus_under, RB3 RB4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
