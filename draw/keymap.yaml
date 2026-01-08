@@ -192,46 +192,46 @@ layers:
     - {type: held}
     - {type: trans}
   SYMBOL:
-    - Tab
-    - '!'
-    - AltGr+L
-    - '*'
-    - AltGr+L
-    - <
-    - $$mdi:volume-off$$
-    - $$mdi:play-pause$$
-    - '{'
-    - '~'
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
     - {t: ü, s: Ü}
     - {t: ö, s: Ö}
-    - AltGr+Sft+7
-    - Bspc
-    - Shift
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
     - ß
-    - '`'
-    - $
-    - '#'
-    - '~'
-    - Alt
-    - Alt
-    - AltGr+Sft+8
-    - {t: (, s: <}
-    - {t: ), s: '>'}
-    - Sft+AltGr+<
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
     - {t: ä, s: Ä}
-    - \
-    - Ctrl
-    - '%'
-    - '{'
-    - Sft+AltGr+7
-    - '='
-    - +
-    - '|'
-    - {t: '[', s: '{'}
-    - {t: ']', s: '}'}
-    - {t: '"', s: ''''}
-    - AltGr+Sft+|
-    - Esc
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
     - {type: held}
     - {type: trans}
     - {type: trans}
@@ -299,7 +299,7 @@ combos:
     k: '&'
     l: [Combos]
   - p: [15, 16]
-    k: AltGr+|
+    k: AltGr+<
     l: [Combos]
   - p: [16, 17]
     k: Undo
