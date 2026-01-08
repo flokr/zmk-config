@@ -179,19 +179,19 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Combo: tap left bracket, shift left brace (macOS QWERTZ: [ = AltGr+5, { = AltGr+8)
+        // Combo: tap left bracket, shift left brace (macOS German: [ = AltGr+8, { = AltGr+7)
         lbkt_lbrc: lbkt_lbrace {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RA(N5)>, <&kp RA(N8)>;
+            bindings = <&kp RA(N8)>, <&kp RA(N7)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Combo: tap right bracket, shift right brace (macOS QWERTZ: ] = AltGr+6, } = AltGr+9)
+        // Combo: tap right bracket, shift right brace (macOS German: ] = AltGr+9, } = AltGr+0)
         rbkt_rbrc: rbkt_rbrace {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RA(N6)>, <&kp RA(N9)>;
+            bindings = <&kp RA(N9)>, <&kp RA(N0)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -220,11 +220,11 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Combo: tap circumflex dead key, shift degree symbol (macOS QWERTZ: ^ = GRAVE, ° = Shift+GRAVE)
+        // Combo: tap circumflex dead key, shift degree symbol (macOS German: ^ = NUBS, ° = Shift+NUBS)
         circ_deg: circumflex_degree {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE>, <&kp LS(GRAVE)>;
+            bindings = <&kp NUBS>, <&kp LS(NUBS)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 

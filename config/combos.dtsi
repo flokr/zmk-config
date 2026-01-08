@@ -18,8 +18,8 @@
    │  Editing operations: cut, copy, paste, undo, redo                       │
    ╰──────────────────────────────────────────────────────────────────────────╯ */
 
-// Top row combos (macOS with Austrian QWERTZ layout)
-ZMK_COMBO(circ_deg,  &circ_deg,    LT6 LT5,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+// Top row combos (macOS with German QWERTZ layout)
+ZMK_COMBO(circ_deg,  &circ_deg,    LT6 LT5,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)  // ^ and ° with shift
 ZMK_COMBO(at,        &kp RA(Q),    LT5 LT4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)  // macOS German - Standard: AltGr+Q for @
 ZMK_COMBO(quote,     &dqt_sqt,     LT4 LT3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(amper,     &kp LS(N6),   LT3 LT2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
