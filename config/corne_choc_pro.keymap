@@ -163,19 +163,19 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 
         /* ================== COMBO MOD-MORPHS (German QWERTZ) ================== */
         
-        // Combo: tap left paren, shift less-than (macOS QWERTZ: ( = Shift+8, < = NUBS key)
+        // Combo: tap left paren, shift less-than (macOS QWERTZ: ( = Shift+8, < = macro)
         lpar_lt: lpar_lessthan {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LS(N8)>, <&kp NUBS>;
+            bindings = <&kp LS(N8)>, <&less_than_macro>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Combo: tap right paren, shift greater-than (macOS QWERTZ: ) = Shift+9, > = Shift+NUBS)
+        // Combo: tap right paren, shift greater-than (macOS QWERTZ: ) = Shift+9, > = macro)
         rpar_gt: rpar_greaterthan {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LS(N9)>, <&kp LS(NUBS)>;
+            bindings = <&kp LS(N9)>, <&greater_than_macro>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -354,9 +354,26 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         };
     };
 
-    /* ================== MACROS FOR GERMAN UMLAUTS ================== */
+    /* ================== MACROS FOR GERMAN UMLAUTS AND SYMBOLS ================== */
     
     macros {
+        // < : press and release NUBS (scan code 0x64)
+        less_than_macro: less_than_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp NUBS>;
+        };
+
+        // > : press and release Shift+NUBS
+        greater_than_macro: greater_than_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp NUBS>, <&macro_release &kp LSHFT>;
+        };
         // ä: Option+u, then a (works on macOS and Windows with US-International)
         de_ae: de_ae {
             compatible = "zmk,behavior-macro";
