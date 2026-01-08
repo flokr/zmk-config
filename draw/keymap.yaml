@@ -39,8 +39,8 @@ layers:
     - W
     - B
     - H
-    - {t: ',', s: ';'}
-    - {t: '.', s: ':'}
+    - {t: ',', s: ;}
+    - {t: ., s: ':'}
     - {t: '?', s: '!'}
     - Shift
     - SYMBOL
@@ -60,9 +60,9 @@ layers:
     - {type: trans}
     - {type: trans}
     - PgUp
-    - {t: '⌥←', h: '←'}
-    - {t: '↑', h: 'Cmd+↑'}
-    - {t: '⌥→', h: '→'}
+    - '&mac_home'
+    - {t: ↑, h: Cmd+↑}
+    - '&mac_end'
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -74,9 +74,9 @@ layers:
     - {type: trans}
     - {type: trans}
     - PgDn
-    - {t: '←', h: '⌥←'}
-    - {t: '↓', h: 'Cmd+↓'}
-    - {t: '→', h: '⌥→'}
+    - {t: ←, h: ⌥←}
+    - {t: ↓, h: Cmd+↓}
+    - {t: →, h: ⌥→}
     - Enter
     - {type: trans}
     - {type: trans}
@@ -88,8 +88,8 @@ layers:
     - {type: trans}
     - Ins
     - Tab
-    - {t: '⌫', h: '⌥⌫'}
-    - {t: '⌦', h: '⌥⌦'}
+    - {t: ⌫, h: ⌥⌫}
+    - {t: ⌦, h: ⌥⌦}
     - {type: trans}
     - {type: trans}
     - {type: held}
@@ -325,7 +325,7 @@ combos:
     k: {t: $, s: '%'}
     l: [Combos]
   - p: [17, 31]
-    k: '\'
+    k: \
     l: [Combos]
   - p: [18, 32]
     k: _
