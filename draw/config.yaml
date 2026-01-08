@@ -63,8 +63,10 @@ parse_config:
     "&mt_end 0 0": {t: "→", h: "⌥→"}
     "&mt_doc_start 0 0": {t: "↑", h: "Cmd+↑"}
     "&mt_doc_end 0 0": {t: "↓", h: "Cmd+↓"}
-    "&mt_word_bspc 0 0": {t: "⌫", h: "⌥⌫"}
-    "&mt_word_del 0 0": {t: "⌦", h: "⌥⌦"}
+    
+    # Word deletion macros
+    "&mac_word_bspc": "⌥⌫"
+    "&mac_word_del": "⌥⌦"
     
     # SMART_NUM - label the tap-dance behavior
     "&num_dance": {t: "Numword", s: "Sticky NUM"}

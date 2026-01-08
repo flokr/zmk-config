@@ -575,20 +575,20 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     │  Right: Enhanced navigation with hold behaviors              │
     ╰──────────────────────────────────────────────────────────────╯
     
-    Enhanced arrows:  LEFT:  tap ←, hold Home (Cmd+Left = line start)
-                      RIGHT: tap →, hold End (Cmd+Right = line end)
+    Enhanced arrows:  LEFT:  tap ←, hold Opt+Left (word left)
+                      RIGHT: tap →, hold Opt+Right (word right)
                       UP:    tap ↑, hold Cmd+Up (doc start)
                       DOWN:  tap ↓, hold Cmd+Down (doc end)
     
-    Word deletion:    BSPC:  tap Bspc, hold Opt+Bspc (word back)
-                      DEL:   tap Del,  hold Opt+Del (word fwd)     */
+    Word deletion:    Opt+Bspc (word back)
+                      Opt+Del (word fwd)                          */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬─────────────┬──────────────┬─────────────┬──────────────╮
         &trans         &trans        &trans         &kp TAB       &kp LS(TAB)      &trans         &trans             &trans        &kp PG_UP     &mac_home   &mt_doc_start 0 0   &mac_end        &trans          &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼─────────────┼──────────────┼─────────────┼──────────────┤
         &trans        &sk LGUI      &sk LALT       &sk LSHFT       &sk LCTRL       &trans         &trans             &trans        &kp PG_DN   &mt_home 0 0  &mt_doc_end 0 0  &mt_end 0 0    &kp RET         &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼─────────────┼──────────────┼─────────────┼──────────────┤
-        &trans         &trans        &trans         &trans          &trans         &trans                                           &trans         &kp INS       &kp TAB   &mt_word_bspc 0 0 &mt_word_del 0 0    &trans
+        &trans         &trans        &trans         &trans          &trans         &trans                                           &trans         &kp INS       &kp TAB     &mac_word_bspc   &mac_word_del      &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼────────────────────┼───────────────────────┼──────────────────────────┴──────────────────────┴──────────────╯
                                                      &trans         &trans         &trans                                           &trans          &trans            &trans
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴────────────────────┴───────────────────────╯
