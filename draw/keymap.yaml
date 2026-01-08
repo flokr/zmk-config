@@ -60,9 +60,9 @@ layers:
     - {type: trans}
     - {type: trans}
     - PgUp
-    - '&mac_home'
+    - Home
     - {t: ↑, h: Cmd+↑}
-    - '&mac_end'
+    - End
     - {type: trans}
     - {type: trans}
     - {type: trans}
