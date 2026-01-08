@@ -124,7 +124,7 @@ layers:
     - {t: '4', h: Alt}
     - {t: '5', h: Shift}
     - {t: '6', h: Ctrl}
-    - {t: +, s: '-'}
+    - {t: +, s: /}
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -197,17 +197,17 @@ layers:
     - AltGr+L
     - '*'
     - AltGr+L
-    - ^
+    - <
     - $$mdi:volume-off$$
     - $$mdi:play-pause$$
     - '|'
     - '~'
-    - {t: '[', s: 'Sft+['}
-    - {t: ;, s: Sft+;}
+    - {t: ü, s: Ü}
+    - {t: ö, s: Ö}
     - {type: trans}
     - Bspc
     - Shift
-    - '-'
+    - ß
     - '`'
     - $
     - '#'
@@ -215,11 +215,11 @@ layers:
     - Alt
     - Alt
     - {type: trans}
-    - {t: (, s: ^}
-    - {t: ), s: Sft+^}
+    - {t: (, s: <}
+    - {t: ), s: '>'}
     - {type: trans}
     - {type: trans}
-    - {t: '''', s: Sft+'}
+    - {t: ä, s: Ä}
     - Ctrl
     - '%'
     - '{'
@@ -337,10 +337,10 @@ combos:
     k: {t: '`', s: ´}
     l: [Combos]
   - p: [23, 24]
-    k: {t: (, s: ^}
+    k: {t: (, s: <}
     l: [Combos]
   - p: [24, 25]
-    k: {t: ), s: Sft+^}
+    k: {t: ), s: '>'}
     l: [Combos]
   - p: [25, 26]
     k: '~'
@@ -361,5 +361,5 @@ combos:
     k: /
     l: [Combos]
   - p: [23, 35]
-    k: '-'
+    k: /
     l: [Combos]
