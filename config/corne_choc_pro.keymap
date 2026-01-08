@@ -163,20 +163,19 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 
         /* ================== COMBO MOD-MORPHS (German QWERTZ) ================== */
         
-        // Combo: tap left paren, shift less-than (macOS QWERTZ: ( = Shift+8, < = NUBS unshifted)
+        // Combo: tap left paren, shift less-than (macOS QWERTZ: ( = Shift+8, < = GRAVE unshifted)
         lpar_lt: lpar_lessthan {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LS(N8)>, <&kp NUBS>;
+            bindings = <&kp LS(N8)>, <&kp GRAVE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Combo: tap right paren, shift greater-than (macOS QWERTZ: ) = Shift+9, > = NUBS shifted)
+        // Combo: tap right paren, shift greater-than (macOS QWERTZ: ) = Shift+9, > = GRAVE shifted)
         rpar_gt: rpar_greaterthan {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LS(N9)>, <&kp NUBS>;
+            bindings = <&kp LS(N9)>, <&kp LS(GRAVE)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
