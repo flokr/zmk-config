@@ -227,8 +227,8 @@ layers:
     - '='
     - +
     - {type: trans}
-    - {t: AltGr+5, s: '['}
-    - {t: AltGr+6, s: ']'}
+    - {t: '[', s: '{'}
+    - {t: ']', s: '}'}
     - {t: '"', s: ''''}
     - {type: trans}
     - Esc
@@ -346,10 +346,10 @@ combos:
     k: AltGr+N
     l: [Combos]
   - p: [35, 36]
-    k: {t: AltGr+5, s: '['}
+    k: {t: '[', s: '{'}
     l: [Combos]
   - p: [36, 37]
-    k: {t: AltGr+6, s: ']'}
+    k: {t: ']', s: '}'}
     l: [Combos]
   - p: [9, 23]
     k: +
