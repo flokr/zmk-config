@@ -25,9 +25,9 @@ ZMK_COMBO(quote,     &dqt_sqt,     LT4 LT3,     BASE, COMBO_TERM_FAST, COMBO_IDL
 ZMK_COMBO(amper,     &kp LS(N6),   LT3 LT2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 // Home row combos
-ZMK_COMBO(pipe,      &kp RA(N7),   LM5 LM4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)  // macOS: AltGr+7 for |
-ZMK_COMBO(undo,      &kp LG(Z),    LM4 LM3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(redo,      &kp LG(LS(Z)),LM3 LM2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(pipe,      &kp RA(NUBS),  LM5 LM4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)  // macOS German: AltGr+< for |
+ZMK_COMBO(undo,      &kp LG(Z),     LM4 LM3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(redo,      &kp LG(LS(Z)), LM3 LM2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 // Bottom row combos
 ZMK_COMBO(copy,      &kp LG(C),    LB3 LB2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
@@ -57,7 +57,7 @@ ZMK_COMBO(tick_acu,  &tick_acu,    RT3 RT4,     BASE, COMBO_TERM_FAST, COMBO_IDL
 // Home row combos - using mod-morphs with slow-release
 ZMK_COMBO(lpar,  &lpar_lt,     RM2 RM3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST, slow-release;)
 ZMK_COMBO(rpar,  &rpar_gt,     RM3 RM4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST, slow-release;)
-ZMK_COMBO(tilde, &kp RA(N),    RM4 RM5,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)  // macOS: AltGr+N for ~
+ZMK_COMBO(tilde, &kp RA(RBKT), RM4 RM5,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)  // macOS German: AltGr++ for ~
 
 // Bottom row combos - brackets/braces with ignore-mods
 ZMK_COMBO(lbkt,  &lbkt_lbrc,   RB1 RB2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)

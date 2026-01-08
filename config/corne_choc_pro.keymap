@@ -231,11 +231,11 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 
         /* ================== GERMAN UMLAUT MOD-MORPHS ================== */
         
-        // ä/Ä: tap lowercase, shift uppercase (macOS German: RBKT key)
+        // ä/Ä: tap lowercase, shift uppercase (macOS German: SQOT key)
         ae_umlaut: ae_umlaut {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RBKT>, <&kp LS(RBKT)>;
+            bindings = <&kp SQOT>, <&kp LS(SQOT)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -634,9 +634,9 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     - '/" at RB3 (same finger as RB2+RB3 combo)               */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-      &kp TAB       &kp LS(N1)     &kp RA(L)     &kp LS(RBKT)     &kp RA(L)      &kp GRAVE      &kp C_MUTE         &kp C_PP        &kp NUBS      &kp LS(NUBS)  &ue_umlaut     &oe_umlaut       &trans         &kp BSPC
+      &kp TAB       &kp LS(N1)     &kp RA(L)     &kp LS(RBKT)     &kp RA(L)      &kp GRAVE      &kp C_MUTE         &kp C_PP     &kp RA(NUBS)   &kp RA(RBKT)  &ue_umlaut     &oe_umlaut       &trans         &kp BSPC
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-      &kp LSHFT     &kp MINUS      &kp LS(EQUAL)  &kp LS(N4)    &kp NON_US_HASH &kp RA(N)       &kp LALT           &kp RALT        &trans       &lpar_lt       &rpar_gt       &trans          &trans        &ae_umlaut
+      &kp LSHFT     &kp MINUS      &kp LS(EQUAL)  &kp LS(N4)    &kp NON_US_HASH &kp RA(RBKT)     &kp LALT           &kp RALT        &trans       &lpar_lt       &rpar_gt       &trans          &trans        &ae_umlaut
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
       &kp LCTRL     &kp LS(N5)     &kp RA(N7)    &kp LS(RA(N7))  &kp LS(N0)      &kp RBKT                                          &trans       &lbkt_lbrc     &rbkt_rbrc      &dqt_sqt        &trans         &kp ESC
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
