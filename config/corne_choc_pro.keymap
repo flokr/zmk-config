@@ -279,59 +279,59 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 
         /* ================== ENHANCED NAVIGATION ================== */
         
-        // Enhanced arrows: hold for special navigation
+        // Enhanced arrows: hold for special navigation (macOS style)
         mt_home: hold_tap_home {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&mac_home>, <&kp LEFT>;
         };
 
         mt_end: hold_tap_end {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&mac_end>, <&kp RIGHT>;
         };
 
         mt_doc_start: hold_tap_doc_start {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&mac_doc_start>, <&kp UP>;
         };
 
         mt_doc_end: hold_tap_doc_end {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&mac_doc_end>, <&kp DOWN>;
         };
 
         mt_word_bspc: hold_tap_word_bspc {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&mac_word_bspc>, <&kp BSPC>;
         };
 
         mt_word_del: hold_tap_word_del {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&mac_word_del>, <&kp DEL>;
         };
 
         /* ================== SMART_NUM ================== */
@@ -408,6 +408,69 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
                      , <&macro_tap &kp U>
                      , <&macro_release &kp LALT>
                      , <&macro_tap &kp U>;
+        };
+
+        // Macros for macOS navigation (Cmd/Option combinations)
+        mac_home: mac_home {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_press &kp LGUI>
+                     , <&macro_tap &kp LEFT>
+                     , <&macro_release &kp LGUI>;
+        };
+
+        mac_end: mac_end {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_press &kp LGUI>
+                     , <&macro_tap &kp RIGHT>
+                     , <&macro_release &kp LGUI>;
+        };
+
+        mac_doc_start: mac_doc_start {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_press &kp LGUI>
+                     , <&macro_tap &kp UP>
+                     , <&macro_release &kp LGUI>;
+        };
+
+        mac_doc_end: mac_doc_end {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_press &kp LGUI>
+                     , <&macro_tap &kp DOWN>
+                     , <&macro_release &kp LGUI>;
+        };
+
+        mac_word_bspc: mac_word_bspc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_press &kp LALT>
+                     , <&macro_tap &kp BSPC>
+                     , <&macro_release &kp LALT>;
+        };
+
+        mac_word_del: mac_word_del {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_press &kp LALT>
+                     , <&macro_press &kp FN>
+                     , <&macro_tap &kp BSPC>
+                     , <&macro_release &kp FN>
+                     , <&macro_release &kp LALT>;
         };
 
         // Ä: Option+u, Shift+a
@@ -557,20 +620,20 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     │  Right: Enhanced navigation with hold behaviors              │
     ╰──────────────────────────────────────────────────────────────╯
     
-    Enhanced arrows:  LEFT:  tap ←, hold Home (line start)
-                      RIGHT: tap →, hold End (line end)
-                      UP:    tap ↑, hold Ctrl+Home (doc start)
-                      DOWN:  tap ↓, hold Ctrl+End (doc end)
+    Enhanced arrows:  LEFT:  tap ←, hold Home (Cmd+Left = line start)
+                      RIGHT: tap →, hold End (Cmd+Right = line end)
+                      UP:    tap ↑, hold Cmd+Up (doc start)
+                      DOWN:  tap ↓, hold Cmd+Down (doc end)
     
-    Word deletion:    BSPC:  tap Bspc, hold Ctrl+Bspc (word back)
-                      DEL:   tap Del,  hold Ctrl+Del (word fwd)     */
+    Word deletion:    BSPC:  tap Bspc, hold Opt+Bspc (word back)
+                      DEL:   tap Del,  hold Opt+Fn+Bspc (word fwd)     */
 
-// ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬────────────────────┬───────────────────────┬──────────────────────────┬──────────────────────┬──────────────╮
-        &trans         &trans        &trans         &kp TAB       &kp LS(TAB)      &trans         &trans             &trans        &kp PG_UP        &kp HOME       &mt_doc_start LC(HOME) UP          &kp END            &trans                  &trans
-// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼────────────────────┼───────────────────────┼──────────────────────────┼──────────────────────┼──────────────┤
-        &trans        &sk LGUI      &sk LALT       &sk LSHFT       &sk LCTRL       &trans         &trans             &trans        &kp PG_DN    &mt_home HOME LEFT &mt_doc_end LC(END) DOWN     &mt_end END RIGHT       &kp RET                  &trans
-// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼────────────────────┼───────────────────────┼──────────────────────────┼──────────────────────┼──────────────┤
-        &trans         &trans        &trans         &trans          &trans         &trans                                           &trans          &kp INS                &kp TAB         &mt_word_bspc LC(BSPC) BSPC &mt_word_del LC(DEL) DEL    &trans
+// ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬─────────────┬──────────────┬─────────────┬──────────────╮
+        &trans         &trans        &trans         &kp TAB       &kp LS(TAB)      &trans         &trans             &trans        &kp PG_UP     &mac_home     &mt_doc_start   &mac_end        &trans          &trans
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼─────────────┼──────────────┼─────────────┼──────────────┤
+        &trans        &sk LGUI      &sk LALT       &sk LSHFT       &sk LCTRL       &trans         &trans             &trans        &kp PG_DN      &mt_home    &mt_doc_end      &mt_end        &kp RET         &trans
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼─────────────┼──────────────┼─────────────┼──────────────┤
+        &trans         &trans        &trans         &trans          &trans         &trans                                           &trans         &kp INS       &kp TAB      &mt_word_bspc &mt_word_del    &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼────────────────────┼───────────────────────┼──────────────────────────┴──────────────────────┴──────────────╯
                                                      &trans         &trans         &trans                                           &trans          &trans            &trans
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴────────────────────┴───────────────────────╯
