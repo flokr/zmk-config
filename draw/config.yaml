@@ -55,14 +55,16 @@ parse_config:
     "&rbkt_rbrc": {t: "]", s: "}"}
     "&dqt_sqt": {t: '"', s: "'"}
     "&doll_perc": {t: "$", s: "%"}
+    "&comma_semi": {t: ",", s: ";"}
+    "&dot_colon": {t: ".", s: ":"}
     
     # Navigation hold-taps - hide the '0' parameter
-    "&mt_home 0 LEFT": {t: "←", h: "Home"}
-    "&mt_end 0 RIGHT": {t: "→", h: "End"}
-    "&mt_doc_start 0 UP": {t: "↑", h: "^Home"}
-    "&mt_doc_end 0 DOWN": {t: "↓", h: "^End"}
-    "&mt_word_bspc 0 BSPC": {t: "Bspc", h: "^Bspc"}
-    "&mt_word_del 0 DEL": {t: "Del", h: "^Del"}
+    "&mt_home 0 0": {t: "←", h: "⌥←"}
+    "&mt_end 0 0": {t: "→", h: "⌥→"}
+    "&mt_doc_start 0 0": {t: "↑", h: "Cmd+↑"}
+    "&mt_doc_end 0 0": {t: "↓", h: "Cmd+↓"}
+    "&mt_word_bspc 0 0": {t: "⌫", h: "⌥⌫"}
+    "&mt_word_del 0 0": {t: "⌦", h: "⌥⌦"}
     
     # SMART_NUM - label the tap-dance behavior
     "&num_dance": {t: "Numword", s: "Sticky NUM"}
@@ -205,6 +207,7 @@ parse_config:
     "RA(MINUS)": \     # AltGr+ß = backslash
     "RA(RBKT)": "~"    # AltGr++ = tilde
     "RA(NUBS)": "|"    # AltGr+< = pipe
+    "LS(RA(N7))": \    # Shift+AltGr+7 = backslash (macOS)
     
     # German QWERTZ layout - Special keys
     "NUBS": <          # NUBS key = less than

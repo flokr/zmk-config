@@ -286,7 +286,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&mac_home>, <&tap_left>;
+            bindings = <&mac_word_left>, <&tap_left>;
         };
 
         mt_end: hold_tap_end {
@@ -295,7 +295,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&mac_end>, <&tap_right>;
+            bindings = <&mac_word_right>, <&tap_right>;
         };
 
         mt_doc_start: hold_tap_doc_start {
@@ -468,6 +468,26 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             tap-ms = <0>;
             bindings = <&macro_press &kp LALT>
                      , <&macro_tap &kp DEL>
+                     , <&macro_release &kp LALT>;
+        };
+
+        mac_word_left: mac_word_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_press &kp LALT>
+                     , <&macro_tap &kp LEFT>
+                     , <&macro_release &kp LALT>;
+        };
+
+        mac_word_right: mac_word_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_press &kp LALT>
+                     , <&macro_tap &kp RIGHT>
                      , <&macro_release &kp LALT>;
         };
 
