@@ -634,11 +634,11 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     - '/" at RB3 (same finger as RB2+RB3 combo)               */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-      &kp TAB       &kp LS(N1)     &kp RA(L)     &kp LS(RBKT)     &kp RA(L)      &kp GRAVE      &kp C_MUTE         &kp C_PP     &kp RA(NUBS)   &kp RA(RBKT)  &ue_umlaut     &oe_umlaut     &kp PIPE        &kp BSPC
+      &kp TAB       &kp LS(N1)     &kp RA(L)     &kp LS(RBKT)     &kp RA(L)      &kp GRAVE      &kp C_MUTE         &kp C_PP     &kp RA(N7)     &kp RA(RBKT)  &ue_umlaut     &oe_umlaut     &kp RA(LS(N7))  &kp BSPC
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-      &kp LSHFT     &kp MINUS      &kp LS(EQUAL)  &kp LS(N4)    &kp NON_US_HASH &kp RA(RBKT)     &kp LALT           &kp RALT &kp RA(NON_US_BSLH) &lpar_lt    &rpar_gt  &kp NON_US_BSLH &ae_umlaut  &kp RA(NON_US_HASH)
+      &kp LSHFT     &kp MINUS      &kp LS(EQUAL)  &kp LS(N4)    &kp NON_US_HASH &kp RA(RBKT)     &kp LALT           &kp RALT     &kp RA(LS(N8)) &lpar_lt      &rpar_gt    &kp LS(RA(NUBS)) &ae_umlaut    &kp BSLH
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-      &kp LCTRL     &kp LS(N5)     &kp RA(N7)    &kp LS(RA(N7))  &kp LS(N0)      &kp RBKT                                      &kp PIPE2        &lbkt_lbrc     &rbkt_rbrc      &dqt_sqt   &kp RA(LS(NUBS))   &kp ESC
+      &kp LCTRL     &kp LS(N5)     &kp RA(N7)    &kp LS(RA(N7))  &kp LS(N0)      &kp RBKT                                      &kp NON_US_BSLH  &lbkt_lbrc     &rbkt_rbrc      &dqt_sqt   &kp RA(LS(NON_US_BSLH)) &kp ESC
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
                                                     &trans         &trans         &trans                                            &trans          &trans         &trans
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
