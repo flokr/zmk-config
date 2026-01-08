@@ -26,8 +26,8 @@ ZMK_COMBO(amper,     &kp LS(N6),   LT3 LT2,     BASE, COMBO_TERM_FAST, COMBO_IDL
 
 // Home row combos
 ZMK_COMBO(pipe,      &kp RA(GRAVE), LM5 LM4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)  // macOS German: AltGr+GRAVE for |
-ZMK_COMBO(undo,      &kp LG(Z),     LM4 LM3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(redo,      &kp LG(LS(Z)), LM3 LM2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(undo,      &kp LG(Z),     LM3 LM4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(redo,      &kp LG(LS(Z)), LM2 LM3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 // Bottom row combos
 ZMK_COMBO(copy,      &kp LG(C),    LB3 LB2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)

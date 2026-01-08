@@ -29,6 +29,9 @@ parse_config:
     "&kp LG(Z)": Undo
     "&kp LG(LS(Z))": Redo
 
+    # Pipe symbol
+    "&kp RA(GRAVE)": "|"
+
     # German umlauts and eszett
     "&eszett": ß
     "&de_ae": ä
@@ -214,6 +217,7 @@ parse_config:
     "LS(SQT)": Ä       # Shift+SQT = capital a-umlaut
     "LS(SEMI)": Ö      # Shift+SEMI = capital o-umlaut
     "LS(LBKT)": Ü      # Shift+LBKT = capital u-umlaut
+    "RA(GRAVE)": "|"   # AltGr+GRAVE = pipe (for German layout)
 
 draw_config:
   append_colon_to_layer_header: false
