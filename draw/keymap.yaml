@@ -202,12 +202,12 @@ layers:
     - $$mdi:play-pause$$
     - <
     - '>'
-    - {t: ü, s: Ü}
-    - {t: ö, s: Ö}
+    - {t: '[', s: 'Sft+['}
+    - {t: ;, s: Sft+;}
     - {type: trans}
     - Bspc
     - Shift
-    - ß
+    - '-'
     - '`'
     - $
     - '#'
@@ -219,7 +219,7 @@ layers:
     - {t: ), s: Sft+^}
     - {type: trans}
     - {type: trans}
-    - {t: ä, s: Ä}
+    - {t: +, s: '*'}
     - Ctrl
     - '%'
     - '{'
