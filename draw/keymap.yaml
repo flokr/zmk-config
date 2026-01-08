@@ -200,8 +200,8 @@ layers:
     - ^
     - $$mdi:volume-off$$
     - $$mdi:play-pause$$
-    - {type: trans}
-    - {type: trans}
+    - <
+    - '>'
     - {t: ü, s: Ü}
     - {t: ö, s: Ö}
     - {type: trans}
