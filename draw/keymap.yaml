@@ -59,11 +59,11 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
     - PgUp
     - Home
     - {t: ↑, h: Ctl+Home}
     - End
+    - {type: trans}
     - {type: trans}
     - {type: trans}
     - {t: Gui, h: sticky}
@@ -73,12 +73,12 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
     - PgDn
     - {t: ←, h: Home}
     - {t: ↓, h: Ctl+End}
     - {t: →, h: End}
     - Enter
+    - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -299,12 +299,12 @@ combos:
     k: '&'
     l: [Combos]
   - p: [15, 16]
-    k: AltGr+<
+    k: '|'
     l: [Combos]
-  - p: [16, 17]
+  - p: [17, 16]
     k: Undo
     l: [Combos]
-  - p: [17, 18]
+  - p: [18, 17]
     k: Redo
     l: [Combos]
   - p: [30, 31]
