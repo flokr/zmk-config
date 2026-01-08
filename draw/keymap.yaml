@@ -200,11 +200,11 @@ layers:
     - <
     - $$mdi:volume-off$$
     - $$mdi:play-pause$$
-    - '|'
+    - '{'
     - '~'
     - {t: ü, s: Ü}
     - {t: ö, s: Ö}
-    - '|'
+    - AltGr+Sft+7
     - Bspc
     - Shift
     - ß
@@ -214,12 +214,12 @@ layers:
     - '~'
     - Alt
     - Alt
-    - AltGr+|
+    - AltGr+Sft+8
     - {t: (, s: <}
     - {t: ), s: '>'}
-    - '|'
+    - Sft+AltGr+<
     - {t: ä, s: Ä}
-    - AltGr+#
+    - \
     - Ctrl
     - '%'
     - '{'
@@ -230,7 +230,7 @@ layers:
     - {t: '[', s: '{'}
     - {t: ']', s: '}'}
     - {t: '"', s: ''''}
-    - AltGr+Sft+<
+    - AltGr+Sft+|
     - Esc
     - {type: held}
     - {type: trans}
