@@ -86,10 +86,10 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - Ins
-    - Tab
     - ⌥⌫
+    - Ins
     - ⌥⌦
+    - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: held}
