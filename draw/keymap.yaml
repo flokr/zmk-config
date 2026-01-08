@@ -88,8 +88,8 @@ layers:
     - {type: trans}
     - Ins
     - Tab
-    - {t: ⌫, h: ⌥⌫}
-    - {t: ⌦, h: ⌥⌦}
+    - ⌥⌫
+    - ⌥⌦
     - {type: trans}
     - {type: trans}
     - {type: held}
