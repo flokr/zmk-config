@@ -354,62 +354,9 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         };
     };
 
-    /* ================== MACROS FOR GERMAN UMLAUTS AND SYMBOLS ================== */
+    /* ================== MACROS FOR MACOS NAVIGATION ================== */
     
     macros {
-        // < : press and release NUBS (scan code 0x64)
-        less_than_macro: less_than_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&macro_tap &kp NUBS>;
-        };
-
-        // > : press and release Shift+NUBS
-        greater_than_macro: greater_than_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp NUBS>, <&macro_release &kp LSHFT>;
-        };
-        // ä: Option+u, then a (works on macOS and Windows with US-International)
-        de_ae: de_ae {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>
-                     , <&macro_tap &kp U>
-                     , <&macro_release &kp LALT>
-                     , <&macro_tap &kp A>;
-        };
-
-        // ö: Option+u, then o
-        de_oe: de_oe {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>
-                     , <&macro_tap &kp U>
-                     , <&macro_release &kp LALT>
-                     , <&macro_tap &kp O>;
-        };
-
-        // ü: Option+u, then u
-        de_ue: de_ue {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>
-                     , <&macro_tap &kp U>
-                     , <&macro_release &kp LALT>
-                     , <&macro_tap &kp U>;
-        };
-
         // Macros for macOS navigation (Cmd/Option combinations)
         mac_home: mac_home {
             compatible = "zmk,behavior-macro";
@@ -526,53 +473,6 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp DEL>;
-        };
-
-        // Ä: Option+u, Shift+a
-        de_ae_cap: de_ae_cap {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>
-                     , <&macro_tap &kp U>
-                     , <&macro_release &kp LALT>
-                     , <&macro_tap &kp LS(A)>;
-        };
-
-        // Ö: Option+u, Shift+o
-        de_oe_cap: de_oe_cap {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>
-                     , <&macro_tap &kp U>
-                     , <&macro_release &kp LALT>
-                     , <&macro_tap &kp LS(O)>;
-        };
-
-        // Ü: Option+u, Shift+u
-        de_ue_cap: de_ue_cap {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>
-                     , <&macro_tap &kp U>
-                     , <&macro_release &kp LALT>
-                     , <&macro_tap &kp LS(U)>;
-        };
-
-        // ß: Option+s (no uppercase variant)
-        eszett: eszett {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>
-                     , <&macro_tap &kp S>
-                     , <&macro_release &kp LALT>;
         };
 
         // { = AltGr+7 (for lbkt_lbrc combo with shift)
