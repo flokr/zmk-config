@@ -231,11 +231,11 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 
         /* ================== GERMAN UMLAUT MOD-MORPHS ================== */
         
-        // ä/Ä: tap lowercase, shift uppercase (macOS German: SQOT key)
+        // ä/Ä: tap lowercase, shift uppercase (macOS German: SQT key)
         ae_umlaut: ae_umlaut {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SQOT>, <&kp LS(SQOT)>;
+            bindings = <&kp SQT>, <&kp LS(SQT)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
