@@ -31,7 +31,7 @@ layers:
     - {t: I, h: Ctrl}
     - {t: A, h: Shift}
     - Sft+Tab
-    - Shift
+    - {t: ⭐ Shift, h: Shift}
     - Y
     - K
     - X
@@ -42,7 +42,7 @@ layers:
     - {t: ',', s: ;}
     - {t: ., s: ':'}
     - {t: '?', s: '!'}
-    - Shift
+    - {t: ⭐ Shift, h: Shift}
     - SYMBOL
     - {t: Spc, h: NAV}
     - '&key_repeat'
