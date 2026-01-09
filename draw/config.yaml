@@ -152,7 +152,7 @@ parse_config:
     EQUAL: "="
     EXCL: "!"
     EXCLAMATION: "!"
-    FSLH: /
+    FSLH: "-"          # German: FSLH key = minus/dash
     GRAVE: <           # German: GRAVE key = less than
     GREATER_THAN: ">"
     GT: ">"
