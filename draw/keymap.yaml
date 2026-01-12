@@ -44,10 +44,10 @@ layers:
     - {t: '?', s: '!'}
     - {t: ⭐ Shift, h: Shift}
     - SYMBOL
-    - {t: Spc, h: NAV}
     - '&key_repeat'
-    - {t: Bspc, s: Del}
+    - {t: Spc, h: NAV}
     - {t: Enter, h: FUN}
+    - {t: Bspc, s: Del}
     - {t: Numword, h: NUM, s: Sticky NUM}
   Combos: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
   NAV:
@@ -92,8 +92,8 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: held}
     - {type: trans}
+    - {type: held}
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -188,8 +188,8 @@ layers:
     - {type: trans}
     - $$mdi:volume-off$$
     - $$mdi:play-pause$$
-    - {type: trans}
     - {type: held}
+    - {type: trans}
     - {type: trans}
   SYMBOL:
     - {type: trans}
@@ -280,10 +280,10 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: held}
-    - {type: trans}
     - {type: trans}
     - {type: held}
+    - {type: held}
+    - {type: trans}
     - {type: trans}
 combos:
   - p: [0, 1]
