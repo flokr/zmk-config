@@ -44,8 +44,8 @@ layers:
     - {t: '?', s: '!'}
     - {t: ⭐ Shift, h: Shift}
     - SYMBOL
-    - '&key_repeat'
     - {t: Spc, h: NAV}
+    - '&key_repeat'
     - {t: Enter, h: FUN}
     - {t: Bspc, s: Del}
     - {t: Numword, h: NUM, s: Sticky NUM}
@@ -92,8 +92,8 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
     - {type: held}
+    - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -280,8 +280,8 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
     - {type: held}
+    - {type: trans}
     - {type: held}
     - {type: trans}
     - {type: trans}
