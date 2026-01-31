@@ -71,7 +71,10 @@ parse_config:
     # Home/End navigation macros
     "&mac_home": Home
     "&mac_end": End
-    
+
+    # Screenshot macro
+    "&mac_screenshot": 📷4
+
     # SMART_NUM - label the tap-dance behavior
     "&num_dance": {t: "Numword", s: "Sticky NUM"}
 

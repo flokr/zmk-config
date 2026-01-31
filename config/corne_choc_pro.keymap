@@ -499,6 +499,17 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             bindings = <&kp DEL>;
         };
 
+        // macOS screenshot selection: Ctrl+Shift+Cmd+4
+        mac_screenshot: mac_screenshot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_press &kp LCTRL &kp LSHFT &kp LGUI>
+                     , <&macro_tap &kp N4>
+                     , <&macro_release &kp LCTRL &kp LSHFT &kp LGUI>;
+        };
+
         // { = AltGr+7 (for lbkt_lbrc combo with shift)
         lbrc_macro: left_brace_macro {
             compatible = "zmk,behavior-macro";
@@ -558,7 +569,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
                   ╰────────────┴────────────╯                                    ╰─────────────┴─────────────╯              */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-       &kp ESC         &kp V          &kp M          &kp L          &kp C          &kp P        &kp C_MUTE          &kp C_PP        &kp Q          &mag           &kp U          &kp O          &kp J         &kp BSPC
+       &kp ESC         &kp V          &kp M          &kp L          &kp C          &kp P        &kp C_MUTE          &kp C_PP        &kp Q          &mag           &kp O          &kp U          &kp J         &kp BSPC
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
        &kp TAB      &hml LSHFT S   &hml LCTRL T   &hml LALT R     &hml LGUI D      &kp Z         &kp LALT           &kp RALT        &kp F       &hmr LGUI N    &hmr LALT E    &hmr LCTRL I   &hmr RSHFT A    &kp LS(TAB)
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
@@ -610,7 +621,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
         &trans         &trans        &trans         &kp TAB       &kp LS(TAB)      &trans         &trans             &trans        &kp PG_UP     &mac_home   &mt_doc_start 0 0   &mac_end       &trans         &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans        &sk LGUI      &sk LALT       &sk LSHFT       &sk LCTRL       &trans         &trans             &trans        &kp PG_DN   &mt_home 0 0  &mt_doc_end 0 0  &mt_end 0 0       &kp RET        &trans
+        &trans        &sk LSHFT     &sk LCTRL      &sk LALT        &sk LGUI        &trans         &trans             &trans        &kp PG_DN   &mt_home 0 0  &mt_doc_end 0 0  &mt_end 0 0       &kp RET        &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────┤
         &trans         &trans        &trans         &trans          &trans         &trans                                           &trans     &mac_word_bspc    &kp INS      &mac_word_del     &trans         &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────╯
@@ -676,7 +687,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     - '/" at RB3 (same finger as RB2+RB3 combo)               */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-      &trans        &trans         &trans         &trans           &trans         &trans         &trans             &trans       &trans         &trans        &ue_umlaut     &oe_umlaut     &trans          &trans
+      &trans        &trans         &trans         &trans           &trans         &trans         &trans             &trans       &trans         &trans          &oe_umlaut     &ue_umlaut     &trans          &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
       &trans        &kp MINUS      &trans         &trans           &trans         &trans         &trans             &trans       &trans         &trans         &trans         &trans         &ae_umlaut     &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤

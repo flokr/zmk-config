@@ -30,6 +30,7 @@ ZMK_COMBO(undo,      &kp LG(Y),     LM3 LM4,     BASE, COMBO_TERM_FAST, COMBO_ID
 ZMK_COMBO(redo,      &kp LG(LS(Y)), LM2 LM3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)  // QWERTZ: Shift+Z key sends Shift+Y scancode
 
 // Bottom row combos
+ZMK_COMBO(screenshot, &mac_screenshot, LB4 LB3,  BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)  // macOS screenshot selection: Ctrl+Shift+Cmd+4
 ZMK_COMBO(copy,      &kp LG(C),    LB3 LB2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(cut,       &kp LG(X),    LB3 LB1,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(paste,     &kp LG(V),    LB2 LB1,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
