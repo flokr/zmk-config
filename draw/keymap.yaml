@@ -13,8 +13,8 @@ layers:
     - $$mdi:play-pause$$
     - Q
     - ⭐
-    - U
     - O
+    - U
     - J
     - Bspc
     - Tab
@@ -66,10 +66,10 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {t: Gui, h: sticky}
-    - {t: Alt, h: sticky}
     - {t: Shift, h: sticky}
     - {t: Ctrl, h: sticky}
+    - {t: Alt, h: sticky}
+    - {t: Gui, h: sticky}
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -202,8 +202,8 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {t: ü, s: Ü}
     - {t: ö, s: Ö}
+    - {t: ü, s: Ü}
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -306,6 +306,9 @@ combos:
     l: [Combos]
   - p: [18, 17]
     k: Redo
+    l: [Combos]
+  - p: [29, 30]
+    k: "\U0001F4F74"
     l: [Combos]
   - p: [30, 31]
     k: Copy
