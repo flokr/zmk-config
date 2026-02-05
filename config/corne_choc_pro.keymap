@@ -746,26 +746,21 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         WMLayer {
             display-name = "WM";
             bindings = <
-/*  Window Manager layer - Amethyst shortcuts
-    Amethyst uses Ctrl+Opt+Cmd combinations for window management
-    Common shortcuts:
-    - H/L: Move window left/right
-    - J/K: Move window down/up or cycle focus
-    - Enter: Swap with main window
-    - Space: Cycle layout
-    - F: Fullscreen toggle
-    - T: Float/tile toggle
+/*  Window Manager layer - Amethyst shortcuts (Ctrl+Opt+Cmd base)
     
-    All commands use: Ctrl+Opt+Cmd modifier combo                 */
+    Matching NAV arrow positions:
+    RM2 = P (Screen ↺)   RM3 = H (Shrink)   RM4 = N (Screen ↻)
+    RB1 = J (Window ↺)   RB3 = K (Window ↻)
+    RT3 = L (Expand)                                                   */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-        &trans         &trans         &trans    &kp LC(LA(LG(L)))  &trans         &trans         &trans              &trans         &trans         &trans         &trans         &trans         &trans         &trans
+        &trans         &trans         &trans         &trans         &trans         &trans         &trans              &trans         &trans    &kp LC(LA(LG(L)))  &trans         &trans         &trans         &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans    &kp LC(LA(LG(T))) &trans     &kp LC(LA(LG(D)))  &trans         &trans               &trans    &kp LC(LA(LG(F))) &kp LC(LA(LG(N))) &trans         &trans         &trans         &trans
+        &trans         &trans         &trans         &trans         &trans         &trans         &trans              &trans    &kp LC(LA(LG(P))) &kp LC(LA(LG(H))) &kp LC(LA(LG(N))) &trans         &trans         &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans    &kp LC(LA(LG(K))) &trans         &trans         &trans                                        &kp LC(LA(LG(H))) &kp LC(LA(LG(J))) &trans         &trans         &trans         &trans
+        &trans         &trans         &trans         &trans         &trans         &trans                                        &kp LC(LA(LG(J))) &trans    &kp LC(LA(LG(K))) &trans         &trans         &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
-                                                     &trans   &kp LC(LA(LG(SPACE))) &trans                                     &kp LC(LA(LG(RET)))  &trans         &trans
+                                                     &trans         &trans         &trans                                           &trans         &trans         &trans
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
             >;
         };
