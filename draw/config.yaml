@@ -30,15 +30,17 @@ parse_config:
     "&kp LG(LS(Y))": Redo
 
     # WM Layer - Amethyst window manager shortcuts
-    "&kp LC(LA(LG(H)))": "◀︎"         # Shrink main pane
-    "&kp LC(LA(LG(J)))": "Win ↻"     # Window counter-clockwise
-    "&kp LC(LA(LG(K)))": "Win ↺"     # Window clockwise
-    "&kp LC(LA(LG(L)))": "▶︎"         # Expand main pane
-    "&kp LC(LA(LG(P)))": "Scr ↻"     # Screen counter-clockwise
-    "&kp LC(LA(LG(N)))": "Scr ↺"     # Screen clockwise
-    "&kp LC(LA(LG(A)))": "Tall"      # Tall layout
-    "&kp LC(LA(LG(D)))": "Full"      # Fullscreen layout
-    "&kp LC(LA(LG(RET)))": "⇄ Main"  # Swap with main
+    "&kp LC(LA(LG(H)))": "◀︎"              # Shrink main pane
+    "&kp LC(LA(LG(J)))": "Win ↻"          # Window counter-clockwise
+    "&kp LC(LA(LG(K)))": "Win ↺"          # Window clockwise
+    "&kp LC(LA(LG(L)))": "▶︎"              # Expand main pane
+    "&kp LC(LA(LG(P)))": "Scr ↻"          # Screen counter-clockwise
+    "&kp LC(LA(LG(N)))": "Scr ↺"          # Screen clockwise
+    "&kp LC(LA(LG(A)))": "Tall"           # Tall layout
+    "&kp LC(LA(LG(D)))": "Full"           # Fullscreen layout
+    "&kp LC(LA(LG(RET)))": "⇄ Main"       # Swap with main
+    "&kp LC(LA(LS(LG(H))))": "⤺ Scr"      # Swap screen CCW (mod2)
+    "&kp LC(LA(LS(LG(L))))": "⤻ Scr"      # Swap screen CW (mod2)
 
     # Pipe symbol
     "&kp RA(GRAVE)": "|"

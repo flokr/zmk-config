@@ -748,15 +748,15 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             bindings = <
 /*  Window Manager layer - Amethyst shortcuts (Ctrl+Opt+Cmd base)
     
-    Right hand (shifted right):
-    RT4 = L (Expand)
+    Right hand:
+    RT2 = mod2+H (Swap screen ↺)  RT3 = L (Expand)  RT4 = mod2+L (Swap screen ↻)
     RM3 = P (Screen ↺)   RM4 = H (Shrink)   RM5 = N (Screen ↻)
     RB2 = J (Window ↺)   RB4 = K (Window ↻)
     
     Thumbs: RH0 = Enter (Swap main)  RH1 = D (Fullscreen)  RH2 = A (Tall)  */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-        &trans         &trans         &trans         &trans         &trans         &trans         &trans              &trans         &trans         &trans    &kp LC(LA(LG(L)))  &trans         &trans         &trans
+        &trans         &trans         &trans         &trans         &trans         &trans         &trans              &trans         &trans &kp LC(LA(LS(LG(H)))) &kp LC(LA(LG(L))) &kp LC(LA(LS(LG(L)))) &trans         &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
         &trans         &trans         &trans         &trans         &trans         &trans         &trans              &trans         &trans    &kp LC(LA(LG(P))) &kp LC(LA(LG(H))) &kp LC(LA(LG(N))) &trans         &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
