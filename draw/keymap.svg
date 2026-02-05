@@ -401,8 +401,9 @@ g.combo:not(:has(text.shifted)) text.tap {
 </g>
 <g transform="translate(240, 217)" class="key keypos-40">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<a href="#SYMBOL">
-<text x="0" y="0" class="key tap layer-activator">SYMBOL</text>
+<text x="0" y="0" class="key tap">Focus</text>
+<a href="#WM">
+<text x="0" y="26" class="key hold layer-activator">WM</text>
 </a></g>
 <g transform="translate(306, 224) rotate(12.0)" class="key keypos-41">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -430,9 +431,8 @@ g.combo:not(:has(text.shifted)) text.tap {
 </g>
 <g transform="translate(660, 217)" class="key keypos-45">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">Sym</text>
-<a href="#WM">
-<text x="0" y="26" class="key hold layer-activator">WM</text>
+<a href="#SYMBOL">
+<text x="0" y="0" class="key tap layer-activator">SYMBOL</text>
 </a></g>
 </g>
 </g>
@@ -1157,8 +1157,8 @@ g.combo:not(:has(text.shifted)) text.tap {
 <g transform="translate(870, 172)" class="key trans keypos-39">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(240, 217)" class="key trans keypos-40">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(240, 217)" class="key held keypos-40">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key held"/>
 </g>
 <g transform="translate(306, 224) rotate(12.0)" class="key keypos-41">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -1174,8 +1174,8 @@ g.combo:not(:has(text.shifted)) text.tap {
 <g transform="translate(594, 224) rotate(-12.0)" class="key trans keypos-44">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(660, 217)" class="key held keypos-45">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key held"/>
+<g transform="translate(660, 217)" class="key trans keypos-45">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
 </g>
 </g>
@@ -1470,8 +1470,8 @@ g.combo:not(:has(text.shifted)) text.tap {
 <g transform="translate(870, 172)" class="key trans keypos-39">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(240, 217)" class="key held keypos-40">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key held"/>
+<g transform="translate(240, 217)" class="key trans keypos-40">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
 <g transform="translate(306, 224) rotate(12.0)" class="key trans keypos-41">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
