@@ -45,10 +45,10 @@ layers:
     - {t: ⭐ Shift, h: Shift}
     - SYMBOL
     - {t: Spc, h: NAV}
-    - '&key_repeat'
+    - {t: Numword, h: NUM}
     - {t: Enter, h: FUN}
     - {t: Bspc, s: Del}
-    - {t: Numword, h: NUM, s: Sticky NUM}
+    - {t: Sym, h: WM}
   Combos: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
   NAV:
     - {type: trans}
@@ -143,7 +143,7 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: held}
+    - {type: trans}
   FUN:
     - {type: trans}
     - F12
