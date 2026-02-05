@@ -745,18 +745,16 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     - F: Fullscreen toggle
     - T: Float/tile toggle
     
-    Base modifier for all Amethyst commands: Ctrl+Opt+Cmd         */
-
-#define WM_MOD LC(LA(LG(  // Ctrl+Opt+Cmd - Amethyst modifier combo
+    All commands use: Ctrl+Opt+Cmd modifier combo                 */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-        &trans         &trans         &trans      &kp WM_MOD L)))  &trans         &trans         &trans            &trans         &trans         &trans         &trans         &trans         &trans         &trans
+        &trans         &trans         &trans    &kp LC(LA(LG(L)))  &trans         &trans         &trans              &trans         &trans         &trans         &trans         &trans         &trans         &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans      &kp WM_MOD T))) &trans       &kp WM_MOD D)))   &trans         &trans            &trans      &kp WM_MOD F))) &kp WM_MOD N))) &trans         &trans         &trans         &trans
+        &trans         &trans    &kp LC(LA(LG(T))) &trans     &kp LC(LA(LG(D)))  &trans         &trans               &trans    &kp LC(LA(LG(F))) &kp LC(LA(LG(N))) &trans         &trans         &trans         &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans      &kp WM_MOD K))) &trans         &trans         &trans                                       &kp WM_MOD H))) &kp WM_MOD J))) &trans         &trans         &trans         &trans
+        &trans         &trans    &kp LC(LA(LG(K))) &trans         &trans         &trans                                        &kp LC(LA(LG(H))) &kp LC(LA(LG(J))) &trans         &trans         &trans         &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
-                                                     &trans      &kp WM_MOD SPACE)))&trans                                     &kp WM_MOD RET))) &trans         &trans
+                                                     &trans   &kp LC(LA(LG(SPACE))) &trans                                     &kp LC(LA(LG(RET)))  &trans         &trans
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
             >;
         };
