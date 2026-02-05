@@ -66,10 +66,10 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {t: Shift, h: sticky}
-    - {t: Ctrl, h: sticky}
-    - {t: Alt, h: sticky}
-    - {t: Gui, h: sticky}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -113,10 +113,10 @@ layers:
     - {t: '*', s: /}
     - '='
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
+    - {t: Shift, h: sticky}
+    - {t: Ctrl, h: sticky}
+    - {t: Alt, h: sticky}
+    - {t: Gui, h: sticky}
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -142,6 +142,53 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  WM:
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - ⌃⌥⌘L
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - ⌃⌥⌘T
+    - {type: trans}
+    - ⌃⌥⌘D
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - ⌃⌥⌘F
+    - ⌃⌥⌘N
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - ⌃⌥⌘K
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - ⌃⌥⌘H
+    - ⌃⌥⌘J
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - ⌃⌥⌘Spc
+    - {type: trans}
+    - ⌃⌥⌘Ent
     - {type: trans}
     - {type: trans}
   FUN:
