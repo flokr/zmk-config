@@ -104,7 +104,7 @@ jobs:
               "Combos": $layers.Combos,
               "NAV": $layers.NAV,
               "NUM": $layers.NUM,
-              "WM": $layers.WM
+              "WM": $layers.WM,
               "FUN": $layers.FUN,
               "SYMBOL": $layers.SYMBOL,
               "SYS": $layers.SYS
