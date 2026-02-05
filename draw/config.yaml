@@ -89,7 +89,7 @@ parse_config:
 
     # SMART_NUM - label the tap-dance behavior
     "&num_dance": {t: "Numword", s: "Sticky NUM"}
-    "&smart_num 1 0": {t: "Numword", h: "NUM"}
+    "&smart_num 1 0": {t: "Numword", h: "NUM", s: "Sticky NUM"}
 
     # SMART_SYM - tap for sticky symbol, hold for window manager
     "&smart_sym WM SYMBOL": {t: "Sym", h: "WM"}
