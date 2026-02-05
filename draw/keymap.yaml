@@ -190,7 +190,7 @@ layers:
     - {type: trans}
     - ⌃⌥⌘Ent
     - {type: trans}
-    - {type: trans}
+    - {type: held}
   FUN:
     - {type: trans}
     - F12
