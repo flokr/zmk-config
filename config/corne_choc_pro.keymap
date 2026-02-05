@@ -23,6 +23,7 @@
 #define FUN    3
 #define SYMBOL 4
 #define SYS    5
+#define WM     6
 
 / {
     chosen { zmk,physical-layout = &default_layout; };
@@ -357,6 +358,18 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             bindings = <&num_word 1>, <&sl 1>;
         };
 
+        /* ================== SMART SYMBOL / WM ================== */
+        
+        // Tap: sticky SYMBOL layer | Hold: Window Manager layer
+        smart_sym: smart_sym {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            bindings = <&mo>, <&sl>;
+        };
+
         /* ================== MAGIC SHIFT ================== */
         
         // Tap: sticky-shift | Double-tap/Shift+tap: caps-word | Hold: shift
@@ -575,7 +588,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
   &magic_shift LSHFT 0  &kp Y          &kp K          &kp X          &kp G          &kp W                                            &kp B          &kp H       &comma_semi     &dot_colon    &quest_excla  &magic_shift RSHFT 0
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
-                                                      &mo 4    &lt_spc 2 SPACE   &key_repeat                                     &lt_ent 3 RET    &bspc_del   &smart_num 1 0
+                                                      &mo 4    &lt_spc 2 SPACE &smart_num 1 0                                     &lt_ent 3 RET    &bspc_del  &smart_sym WM SYMBOL
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
             >;
         };
@@ -715,6 +728,35 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         &trans         &trans         &trans         &trans         &trans       &sys_reset                                        &sys_reset   &kp LG(LC(Q))     &trans         &trans         &trans         &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
                                                      &trans         &trans         &trans                                           &trans         &trans         &trans
+//                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
+            >;
+        };
+
+        WMLayer {
+            display-name = "WM";
+            bindings = <
+/*  Window Manager layer - Amethyst shortcuts
+    Amethyst uses Ctrl+Opt+Cmd combinations for window management
+    Common shortcuts:
+    - H/L: Move window left/right
+    - J/K: Move window down/up or cycle focus
+    - Enter: Swap with main window
+    - Space: Cycle layout
+    - F: Fullscreen toggle
+    - T: Float/tile toggle
+    
+    Base modifier for all Amethyst commands: Ctrl+Opt+Cmd         */
+
+#define WM_MOD LC(LA(LG(  // Ctrl+Opt+Cmd - Amethyst modifier combo
+
+// ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+        &trans         &trans         &trans      &kp WM_MOD L)))  &trans         &trans         &trans            &trans         &trans         &trans         &trans         &trans         &trans         &trans
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+        &trans         &trans      &kp WM_MOD T))) &trans       &kp WM_MOD D)))   &trans         &trans            &trans      &kp WM_MOD F))) &kp WM_MOD N))) &trans         &trans         &trans         &trans
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+        &trans         &trans      &kp WM_MOD K))) &trans         &trans         &trans                                       &kp WM_MOD H))) &kp WM_MOD J))) &trans         &trans         &trans         &trans
+// ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
+                                                     &trans      &kp WM_MOD SPACE)))&trans                                     &kp WM_MOD RET))) &trans         &trans
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
             >;
         };

@@ -1,4 +1,4 @@
-parse_config:
+rparse_config:
   zmk_additional_includes:
     - "modules/zmk/helpers/include"
     - "modules/zmk/auto-layer/dts"
@@ -77,6 +77,10 @@ parse_config:
 
     # SMART_NUM - label the tap-dance behavior
     "&num_dance": {t: "Numword", s: "Sticky NUM"}
+    "&smart_num 1 0": {t: "Numword", h: "NUM"}
+
+    # SMART_SYM - tap for sticky symbol, hold for window manager
+    "&smart_sym WM SYMBOL": {t: "Sym", h: "WM"}
 
     # MAGIC_SHIFT - tap for sticky shift, double-tap for caps-word, hold for shift
     "&magic_shift LSHFT 0": {t: "⭐ Shift", h: "Shift"}
