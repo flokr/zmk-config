@@ -91,8 +91,12 @@ parse_config:
     "&num_dance": {t: "Numword", s: "Sticky NUM"}
     "&smart_num 1 0": {t: "Numword", h: "NUM", s: "Sticky NUM"}
 
-    # SMART_SYM - tap for sticky symbol, hold for window manager
-    "&smart_sym WM SYMBOL": {t: "Sym", h: "WM"}
+    # SMART_WM - tap for Amethyst focus next, hold for window manager
+    "&smart_wm WM 0": {t: "Focus", h: "WM"}
+    "&amethyst_focus_next": Focus
+
+    # SYMBOL layer - simple momentary access
+    "&mo SYMBOL": SYMBOL
 
     # MAGIC_SHIFT - tap for sticky shift, double-tap for caps-word, hold for shift
     "&magic_shift LSHFT 0": {t: "⭐ Shift", h: "Shift"}
