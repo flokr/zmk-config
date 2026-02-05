@@ -140,11 +140,12 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
+    - {type: held}
     - {type: trans}
     - {type: trans}
     - {type: trans}
   WM:
+    - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -184,13 +185,12 @@ layers:
     - Win ↺
     - {type: trans}
     - {type: trans}
-    - {type: trans}
     - {type: held}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
+    - ⇄ Main
+    - Full
+    - Tall
   FUN:
     - {type: trans}
     - F12
