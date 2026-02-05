@@ -148,7 +148,13 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - ⌃⌥⌘L
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - ▶︎
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -161,34 +167,28 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - ⌃⌥⌘T
-    - {type: trans}
-    - ⌃⌥⌘D
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - ⌃⌥⌘F
-    - ⌃⌥⌘N
+    - Scr ↻
+    - ◀︎
+    - Scr ↺
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - ⌃⌥⌘K
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - ⌃⌥⌘H
-    - ⌃⌥⌘J
+    - Win ↻
     - {type: trans}
+    - Win ↺
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: held}
-    - ⌃⌥⌘Spc
     - {type: trans}
-    - ⌃⌥⌘Ent
+    - {type: trans}
+    - {type: trans}
     - {type: trans}
     - {type: trans}
   FUN:

@@ -1038,9 +1038,8 @@ g.combo:not(:has(text.shifted)) text.tap {
 <g transform="translate(150, 37)" class="key trans keypos-2">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(210, 30)" class="key keypos-3">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">⌃⌥⌘L</text>
+<g transform="translate(210, 30)" class="key trans keypos-3">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
 <g transform="translate(270, 37)" class="key trans keypos-4">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
@@ -1057,8 +1056,9 @@ g.combo:not(:has(text.shifted)) text.tap {
 <g transform="translate(570, 44)" class="key trans keypos-8">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(630, 37)" class="key trans keypos-9">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(630, 37)" class="key keypos-9">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<text x="0" y="0" class="key tap">▶︎</text>
 </g>
 <g transform="translate(690, 30)" class="key trans keypos-10">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
@@ -1078,16 +1078,14 @@ g.combo:not(:has(text.shifted)) text.tap {
 <g transform="translate(90, 112)" class="key trans keypos-15">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(150, 97)" class="key keypos-16">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">⌃⌥⌘T</text>
+<g transform="translate(150, 97)" class="key trans keypos-16">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
 <g transform="translate(210, 90)" class="key trans keypos-17">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(270, 97)" class="key keypos-18">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">⌃⌥⌘D</text>
+<g transform="translate(270, 97)" class="key trans keypos-18">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
 <g transform="translate(330, 104)" class="key trans keypos-19">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
@@ -1100,14 +1098,19 @@ g.combo:not(:has(text.shifted)) text.tap {
 </g>
 <g transform="translate(570, 104)" class="key keypos-22">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">⌃⌥⌘F</text>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">Scr</tspan><tspan x="0" dy="1.2em">↻</tspan>
+</text>
 </g>
 <g transform="translate(630, 97)" class="key keypos-23">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">⌃⌥⌘N</text>
+<text x="0" y="0" class="key tap">◀︎</text>
 </g>
-<g transform="translate(690, 90)" class="key trans keypos-24">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(690, 90)" class="key keypos-24">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">Scr</tspan><tspan x="0" dy="1.2em">↺</tspan>
+</text>
 </g>
 <g transform="translate(750, 97)" class="key trans keypos-25">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
@@ -1124,9 +1127,8 @@ g.combo:not(:has(text.shifted)) text.tap {
 <g transform="translate(90, 172)" class="key trans keypos-29">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(150, 157)" class="key keypos-30">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">⌃⌥⌘K</text>
+<g transform="translate(150, 157)" class="key trans keypos-30">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
 <g transform="translate(210, 150)" class="key trans keypos-31">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
@@ -1139,14 +1141,18 @@ g.combo:not(:has(text.shifted)) text.tap {
 </g>
 <g transform="translate(570, 164)" class="key keypos-34">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">⌃⌥⌘H</text>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">Win</tspan><tspan x="0" dy="1.2em">↻</tspan>
+</text>
 </g>
-<g transform="translate(630, 157)" class="key keypos-35">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">⌃⌥⌘J</text>
-</g>
-<g transform="translate(690, 150)" class="key trans keypos-36">
+<g transform="translate(630, 157)" class="key trans keypos-35">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+</g>
+<g transform="translate(690, 150)" class="key keypos-36">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">Win</tspan><tspan x="0" dy="1.2em">↺</tspan>
+</text>
 </g>
 <g transform="translate(750, 157)" class="key trans keypos-37">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
@@ -1160,16 +1166,14 @@ g.combo:not(:has(text.shifted)) text.tap {
 <g transform="translate(240, 217)" class="key held keypos-40">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key held"/>
 </g>
-<g transform="translate(306, 224) rotate(12.0)" class="key keypos-41">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">⌃⌥⌘Spc</text>
+<g transform="translate(306, 224) rotate(12.0)" class="key trans keypos-41">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
 <g transform="translate(375, 231) rotate(24.0)" class="key trans keypos-42">
 <rect rx="6" ry="6" x="-28" y="-43" width="56" height="86" class="key trans"/>
 </g>
-<g transform="translate(525, 231) rotate(-24.0)" class="key keypos-43">
-<rect rx="6" ry="6" x="-28" y="-43" width="56" height="86" class="key"/>
-<text x="0" y="0" class="key tap">⌃⌥⌘Ent</text>
+<g transform="translate(525, 231) rotate(-24.0)" class="key trans keypos-43">
+<rect rx="6" ry="6" x="-28" y="-43" width="56" height="86" class="key trans"/>
 </g>
 <g transform="translate(594, 224) rotate(-12.0)" class="key trans keypos-44">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
