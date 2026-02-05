@@ -748,19 +748,21 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             bindings = <
 /*  Window Manager layer - Amethyst shortcuts (Ctrl+Opt+Cmd base)
     
-    Matching NAV arrow positions:
-    RM2 = P (Screen ↺)   RM3 = H (Shrink)   RM4 = N (Screen ↻)
-    RB1 = J (Window ↺)   RB3 = K (Window ↻)
-    RT3 = L (Expand)                                                   */
+    Right hand (shifted right):
+    RT4 = L (Expand)
+    RM3 = P (Screen ↺)   RM4 = H (Shrink)   RM5 = N (Screen ↻)
+    RB2 = J (Window ↺)   RB4 = K (Window ↻)
+    
+    Thumbs: RH0 = Enter (Swap main)  RH1 = D (Fullscreen)  RH2 = A (Tall)  */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-        &trans         &trans         &trans         &trans         &trans         &trans         &trans              &trans         &trans    &kp LC(LA(LG(L)))  &trans         &trans         &trans         &trans
+        &trans         &trans         &trans         &trans         &trans         &trans         &trans              &trans         &trans         &trans    &kp LC(LA(LG(L)))  &trans         &trans         &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans         &trans         &trans         &trans         &trans         &trans              &trans    &kp LC(LA(LG(P))) &kp LC(LA(LG(H))) &kp LC(LA(LG(N))) &trans         &trans         &trans
+        &trans         &trans         &trans         &trans         &trans         &trans         &trans              &trans         &trans    &kp LC(LA(LG(P))) &kp LC(LA(LG(H))) &kp LC(LA(LG(N))) &trans         &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans         &trans         &trans         &trans         &trans                                        &kp LC(LA(LG(J))) &trans    &kp LC(LA(LG(K))) &trans         &trans         &trans
+        &trans         &trans         &trans         &trans         &trans         &trans                                           &trans    &kp LC(LA(LG(J))) &trans    &kp LC(LA(LG(K))) &trans         &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
-                                                     &trans         &trans         &trans                                           &trans         &trans         &trans
+                                                     &trans         &trans         &trans                                     &kp LC(LA(LG(RET))) &kp LC(LA(LG(D))) &kp LC(LA(LG(A)))
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
             >;
         };
