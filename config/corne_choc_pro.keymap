@@ -598,14 +598,14 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             bindings = <
 /*  NUM LAYER - Right Hand Numpad with HRMs
     ╭──────────────────────────────────────────────────────────────╮
-    │  Left hand: Transparent (pass through base layer)           │
+    │  Left hand: Sticky modifiers                                 │
     │  Right hand: Numpad layout with home row mods                │
     ╰──────────────────────────────────────────────────────────────╯  */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
         &trans         &trans         &trans         &trans         &trans         &trans         &trans             &trans         &trans         &kp N7        &kp N8          &kp N9    &multiply_slash    &kp EQUAL
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans         &trans         &trans         &trans         &trans         &trans             &trans      &hmr LGUI N0   &hmr LALT N4   &hmr LSHFT N5  &hmr LCTRL N6  &plus_minus       &trans
+        &trans        &sk LSHFT     &sk LCTRL      &sk LALT        &sk LGUI        &trans         &trans             &trans      &hmr LGUI N0   &hmr LALT N4   &hmr LSHFT N5  &hmr LCTRL N6  &plus_minus       &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
         &trans         &trans         &trans         &trans         &trans         &trans                                           &trans         &kp N1        &kp N2          &kp N3     &num_comma_dot     &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
@@ -619,7 +619,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             bindings = <
 /*  NAV LAYER - Navigation & System Controls
     ╭──────────────────────────────────────────────────────────────╮
-    │  Left:  Sticky modifiers + Bluetooth controls                │
+    │  Left:  Transparent (allows base layer HRMs)                 │
     │  Right: Enhanced navigation with hold behaviors              │
     ╰──────────────────────────────────────────────────────────────╯
     
@@ -634,7 +634,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
         &trans         &trans        &trans         &kp TAB       &kp LS(TAB)      &trans         &trans             &trans        &kp PG_UP     &mac_home   &mt_doc_start 0 0   &mac_end       &trans         &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans        &sk LSHFT     &sk LCTRL      &sk LALT        &sk LGUI        &trans         &trans             &trans        &kp PG_DN   &mt_home 0 0  &mt_doc_end 0 0  &mt_end 0 0       &kp RET        &trans
+        &trans         &trans        &trans         &trans          &trans         &trans         &trans             &trans        &kp PG_DN   &mt_home 0 0  &mt_doc_end 0 0  &mt_end 0 0       &kp RET        &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────┤
         &trans         &trans        &trans         &trans          &trans         &trans                                           &trans     &mac_word_bspc    &kp INS      &mac_word_del     &trans         &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────╯
