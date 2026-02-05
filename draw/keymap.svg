@@ -415,7 +415,8 @@ g.combo:not(:has(text.shifted)) text.tap {
 <text x="0" y="0" class="key tap">Numword</text>
 <a href="#NUM">
 <text x="0" y="41" class="key hold layer-activator">NUM</text>
-</a></g>
+</a><text x="0" y="-41" class="key shifted"><tspan style="font-size: 70%">Sticky NUM</tspan></text>
+</g>
 <g transform="translate(525, 231) rotate(-24.0)" class="key keypos-43">
 <rect rx="6" ry="6" x="-28" y="-43" width="56" height="86" class="key"/>
 <text x="0" y="0" class="key tap">Enter</text>

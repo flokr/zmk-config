@@ -45,7 +45,7 @@ layers:
     - {t: ⭐ Shift, h: Shift}
     - SYMBOL
     - {t: Spc, h: NAV}
-    - {t: Numword, h: NUM}
+    - {t: Numword, h: NUM, s: Sticky NUM}
     - {t: Enter, h: FUN}
     - {t: Bspc, s: Del}
     - {t: Sym, h: WM}
