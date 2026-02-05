@@ -1,4 +1,4 @@
-rparse_config:
+parse_config:
   zmk_additional_includes:
     - "modules/zmk/helpers/include"
     - "modules/zmk/auto-layer/dts"
