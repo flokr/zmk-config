@@ -43,9 +43,9 @@ layers:
     - {t: ., s: ':'}
     - {t: '?', s: '!'}
     - {t: ⭐ Shift, h: Shift}
-    - {t: Focus, h: WM}
-    - {t: Spc, h: NAV}
     - {t: Numword, h: NUM, s: Sticky NUM}
+    - {t: Spc, h: NAV}
+    - {t: Focus, h: WM}
     - {t: Enter, h: FUN}
     - {t: Bspc, s: Del}
     - SYMBOL
@@ -138,9 +138,9 @@ layers:
     - '3'
     - {t: ',', s: .}
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
     - {type: held}
+    - {type: trans}
+    - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -185,9 +185,9 @@ layers:
     - Win ↺
     - {type: trans}
     - {type: trans}
+    - {type: trans}
+    - {type: trans}
     - {type: held}
-    - {type: trans}
-    - {type: trans}
     - ⇄ Main
     - Full
     - Tall

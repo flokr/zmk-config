@@ -401,10 +401,11 @@ g.combo:not(:has(text.shifted)) text.tap {
 </g>
 <g transform="translate(240, 217)" class="key keypos-40">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
-<text x="0" y="0" class="key tap">Focus</text>
-<a href="#WM">
-<text x="0" y="26" class="key hold layer-activator">WM</text>
-</a></g>
+<text x="0" y="0" class="key tap">Numword</text>
+<a href="#NUM">
+<text x="0" y="26" class="key hold layer-activator">NUM</text>
+</a><text x="0" y="-26" class="key shifted"><tspan style="font-size: 70%">Sticky NUM</tspan></text>
+</g>
 <g transform="translate(306, 224) rotate(12.0)" class="key keypos-41">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">Spc</text>
@@ -413,11 +414,10 @@ g.combo:not(:has(text.shifted)) text.tap {
 </a></g>
 <g transform="translate(375, 231) rotate(24.0)" class="key keypos-42">
 <rect rx="6" ry="6" x="-28" y="-43" width="56" height="86" class="key"/>
-<text x="0" y="0" class="key tap">Numword</text>
-<a href="#NUM">
-<text x="0" y="41" class="key hold layer-activator">NUM</text>
-</a><text x="0" y="-41" class="key shifted"><tspan style="font-size: 70%">Sticky NUM</tspan></text>
-</g>
+<text x="0" y="0" class="key tap">Focus</text>
+<a href="#WM">
+<text x="0" y="41" class="key hold layer-activator">WM</text>
+</a></g>
 <g transform="translate(525, 231) rotate(-24.0)" class="key keypos-43">
 <rect rx="6" ry="6" x="-28" y="-43" width="56" height="86" class="key"/>
 <text x="0" y="0" class="key tap">Enter</text>
@@ -1006,14 +1006,14 @@ g.combo:not(:has(text.shifted)) text.tap {
 <g transform="translate(870, 172)" class="key trans keypos-39">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(240, 217)" class="key trans keypos-40">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(240, 217)" class="key held keypos-40">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key held"/>
 </g>
 <g transform="translate(306, 224) rotate(12.0)" class="key trans keypos-41">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(375, 231) rotate(24.0)" class="key held keypos-42">
-<rect rx="6" ry="6" x="-28" y="-43" width="56" height="86" class="key held"/>
+<g transform="translate(375, 231) rotate(24.0)" class="key trans keypos-42">
+<rect rx="6" ry="6" x="-28" y="-43" width="56" height="86" class="key trans"/>
 </g>
 <g transform="translate(525, 231) rotate(-24.0)" class="key trans keypos-43">
 <rect rx="6" ry="6" x="-28" y="-43" width="56" height="86" class="key trans"/>
@@ -1169,14 +1169,14 @@ g.combo:not(:has(text.shifted)) text.tap {
 <g transform="translate(870, 172)" class="key trans keypos-39">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(240, 217)" class="key held keypos-40">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key held"/>
+<g transform="translate(240, 217)" class="key trans keypos-40">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
 <g transform="translate(306, 224) rotate(12.0)" class="key trans keypos-41">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(375, 231) rotate(24.0)" class="key trans keypos-42">
-<rect rx="6" ry="6" x="-28" y="-43" width="56" height="86" class="key trans"/>
+<g transform="translate(375, 231) rotate(24.0)" class="key held keypos-42">
+<rect rx="6" ry="6" x="-28" y="-43" width="56" height="86" class="key held"/>
 </g>
 <g transform="translate(525, 231) rotate(-24.0)" class="key keypos-43">
 <rect rx="6" ry="6" x="-28" y="-43" width="56" height="86" class="key"/>
