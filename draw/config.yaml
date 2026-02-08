@@ -67,7 +67,7 @@ parse_config:
     # SCR Layer - Resize & Layout (Ctrl+Alt+Cmd + F-keys)
     "&kp LC(LA(LG(F1)))": "$$mdi:swap-horizontal$$"  # Layout orientation toggle
     "&kp LC(LA(LG(F2)))": "⚖"  # Balance sizes
-    "&kp LC(LA(LG(F3)))": "$$mdi:layer-remove$$"  # Flatten workspace tree
+    "&kp LC(LA(LG(F3)))": "⊡"  # Flatten workspace tree
     "&kp LC(LA(LG(F4)))": "$$mdi:reload$$"  # Reload config
     "&kp LC(LA(LG(F5)))": "◀"  # Resize shrink
     "&kp LC(LA(LG(F6)))": "▶"  # Resize grow
