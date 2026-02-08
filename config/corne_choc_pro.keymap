@@ -24,6 +24,7 @@
 #define SYMBOL 4
 #define SYS    5
 #define WM     6
+#define SCR    7
 
 / {
     chosen { zmk,physical-layout = &default_layout; };
@@ -360,14 +361,27 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 
         /* ================== SMART WM ================== */
         
-        // Tap: Amethyst focus next window | Hold: Window Manager layer
+        // Tap: Aerospace workspace-back-and-forth | Hold: Window Manager layer
         smart_wm: smart_wm {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&mo>, <&amethyst_focus_next>;
+            bindings = <&mo>, <&aero_wbf>;
+        };
+
+        /* ================== SCR LAYER TAP ================== */
+        
+        // Hold: SCR layer (resize/layout) | Tap: Aerospace float toggle
+        // Used on RH1 position within the WM layer
+        lt_scr: layer_tap_scr {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            bindings = <&mo>, <&aero_float>;
         };
 
         /* ================== MAGIC SHIFT ================== */
@@ -523,14 +537,27 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
                      , <&macro_release &kp LCTRL &kp LSHFT &kp LGUI>;
         };
 
-        // Amethyst focus next window: Ctrl+Opt+Cmd+J
-        amethyst_focus_next: amethyst_focus_next {
+        // Aerospace: workspace-back-and-forth (Ctrl+Alt+Cmd+R)
+        // Used as smart_wm tap action for quick workspace toggle
+        aero_wbf: aero_workspace_back_and_forth {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
             bindings = <&macro_press &kp LCTRL &kp LALT &kp LGUI>
-                     , <&macro_tap &kp J>
+                     , <&macro_tap &kp R>
+                     , <&macro_release &kp LCTRL &kp LALT &kp LGUI>;
+        };
+
+        // Aerospace: float toggle (Ctrl+Alt+Cmd+Backspace)
+        // Used as SCR layer-tap tap action on RH1
+        aero_float: aero_float_toggle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_press &kp LCTRL &kp LALT &kp LGUI>
+                     , <&macro_tap &kp BSPC>
                      , <&macro_release &kp LCTRL &kp LALT &kp LGUI>;
         };
 
@@ -746,23 +773,59 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         WMLayer {
             display-name = "WM";
             bindings = <
-/*  Window Manager layer - Amethyst shortcuts (Ctrl+Opt+Cmd base)
+/*  Window Manager layer — Aerospace (Ctrl+Alt+Cmd prefix)
     
-    Right hand:
-    RT2 = mod2+H (Swap screen ↺)  RT3 = L (Expand)  RT4 = mod2+L (Swap screen ↻)
-    RM3 = P (Screen ↺)   RM4 = H (Shrink)   RM5 = N (Screen ↻)
-    RB2 = J (Window ↺)   RB4 = K (Window ↻)
+    Left hand: Monitor management
+    LT4 = focus-monitor main (M)    LT3 = focus-monitor secondary (L)    LT2 = focus-monitor 3 (C)
+    LM4 = focus-monitor left (T)    LM3 = workspace-back-and-forth (R)   LM2 = focus-monitor right (D)
+    Shift variants: move-node-to-monitor / move-workspace-to-monitor
+    Bottom row + V/P/S/Z/Y: available for future use
     
-    Thumbs: RH0 = Enter (Swap main)  RH1 = D (Fullscreen)  RH2 = A (Tall)  */
+    Right hand: Window & workspace management
+    RT1 = ws 1 (Q)   RT2 = ws 2 (ß→Y)   RT3 = focus up (O)   RT4 = ws 3 (U)   RT5 = ws 4 (J)
+    RM1 = close (F)   RM2 = focus left (N)   RM3 = focus down (E)   RM4 = focus right (I)   RM5 = balance (A)
+    RB0 = ws 5 (B)   RB1 = ws 6 (H)   RB2 = ws 7 (,)   RB3 = ws 8 (.)
+    Shift + workspace = move-node-to-workspace
+    Shift + ONEI = move window in direction
+    
+    Thumbs: RH0 = fullscreen (ENT)   RH1 = hold SCR / tap float toggle   */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-        &trans         &trans         &trans         &trans         &trans         &trans         &trans              &trans         &trans &kp LC(LA(LS(LG(H)))) &kp LC(LA(LG(L))) &kp LC(LA(LS(LG(L)))) &trans         &trans
+        &trans         &trans   &kp LC(LA(LG(M))) &kp LC(LA(LG(L))) &kp LC(LA(LG(C))) &trans         &trans              &trans   &kp LC(LA(LG(Q))) &kp LC(LA(LG(Y))) &kp LC(LA(LG(O))) &kp LC(LA(LG(U))) &kp LC(LA(LG(J))) &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans         &trans         &trans         &trans         &trans         &trans              &trans         &trans    &kp LC(LA(LG(P))) &kp LC(LA(LG(H))) &kp LC(LA(LG(N))) &trans         &trans
+        &trans         &trans   &kp LC(LA(LG(T))) &kp LC(LA(LG(R))) &kp LC(LA(LG(D))) &trans         &trans              &trans   &kp LC(LA(LG(F))) &kp LC(LA(LG(N))) &kp LC(LA(LG(E))) &kp LC(LA(LG(I))) &kp LC(LA(LG(A))) &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans         &trans         &trans         &trans         &trans                                           &trans    &kp LC(LA(LG(J))) &trans    &kp LC(LA(LG(K))) &trans         &trans
+        &trans         &trans         &trans         &trans         &trans         &trans                                     &kp LC(LA(LG(B))) &kp LC(LA(LG(H))) &kp LC(LA(LG(COMMA))) &kp LC(LA(LG(DOT))) &trans         &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
-                                                     &trans         &trans         &trans                                     &kp LC(LA(LG(RET))) &kp LC(LA(LG(D))) &kp LC(LA(LG(A)))
+                                                      &trans         &trans         &trans                                &kp LC(LA(LG(RET)))  &lt_scr SCR 0    &trans
+//                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
+            >;
+        };
+
+        SCRLayer {
+            display-name = "SCR";
+            bindings = <
+/*  Screen Reshape layer — Aerospace resize & layout (Ctrl+Alt+Cmd + F-keys)
+    Activated by holding RH1 while on WM layer (LH0 + RH1).
+    
+    Left hand (home row):
+    LT3 = reload-config (L pos → F4)
+    LM4 = layout orientation toggle (T pos → F1)
+    LM3 = balance-sizes (R pos → F2)
+    LM2 = flatten-workspace-tree (D pos → F3)
+    
+    Right hand (home row):
+    RM2 = resize shrink (N pos → F5)
+    RM4 = resize grow (I pos → F6)                                 */
+
+// ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+        &trans         &trans         &trans   &kp LC(LA(LG(F4)))  &trans         &trans         &trans              &trans         &trans         &trans         &trans         &trans         &trans         &trans
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+        &trans         &trans   &kp LC(LA(LG(F1))) &kp LC(LA(LG(F2))) &kp LC(LA(LG(F3))) &trans         &trans              &trans         &trans   &kp LC(LA(LG(F5)))    &trans   &kp LC(LA(LG(F6)))    &trans         &trans
+// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+        &trans         &trans         &trans         &trans         &trans         &trans                                           &trans         &trans         &trans         &trans         &trans         &trans
+// ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
+                                                      &trans         &trans         &trans                                           &trans         &trans         &trans
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
             >;
         };

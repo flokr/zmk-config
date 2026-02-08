@@ -29,70 +29,54 @@ parse_config:
     "&kp LG(Y)": Undo
     "&kp LG(LS(Y))": Redo
 
-    # WM Layer - Aerospace window manager shortcuts
-    # Monitor navigation (Left Hand)
-    "&aerospace_mon_left": {t: "$$mdi:monitor$$", s: "←"}
-    "&aerospace_mon_right": {t: "$$mdi:monitor$$", s: "→"}
-    "&aerospace_mon_1": "①"
-    "&aerospace_mon_2": "②"
-    "&aerospace_mon_3": "③"
-    "&aerospace_summon": "⤵"
+    # WM Layer - Aerospace window manager (Ctrl+Alt+Cmd prefix)
+    # Uses inline keycodes: &kp LC(LA(LG(X)))
+    # Shift held on base layer automatically adds Shift to the combo
     
-    # Window focus (Right Hand - OEIA)
-    "&aerospace_focus_up": "↑"
-    "&aerospace_focus_left": "←"
-    "&aerospace_focus_down": "↓"
-    "&aerospace_focus_right": "→"
+    # Left Hand - Monitor Management
+    "&kp LC(LA(LG(M)))": {t: "$$mdi:monitor$$", s: "①"}  # Mon 1 (base/shift=move WS)
+    "&kp LC(LA(LG(L)))": {t: "$$mdi:monitor$$", s: "②"}  # Mon 2 (base/shift=move WS)
+    "&kp LC(LA(LG(C)))": {t: "$$mdi:monitor$$", s: "③"}  # Mon 3 (base/shift=move WS)
+    "&kp LC(LA(LG(T)))": {t: "$$mdi:monitor-arrow-down-variant$$", s: "←"}  # Focus mon left (shift=move win)
+    "&kp LC(LA(LG(R)))": "⇄"  # Workspace back-and-forth
+    "&kp LC(LA(LG(D)))": {t: "$$mdi:monitor-arrow-down-variant$$", s: "→"}  # Focus mon right (shift=move win)
     
-    # Window move (Shift layer)
-    "&aerospace_move_up": {t: "↑", s: "Move"}
-    "&aerospace_move_left": {t: "←", s: "Move"}
-    "&aerospace_move_down": {t: "↓", s: "Move"}
-    "&aerospace_move_right": {t: "→", s: "Move"}
+    # Right Hand - Window & Workspace Management
+    "&kp LC(LA(LG(O)))": {t: "↑", s: "⬆"}  # Focus up (shift=move up)
+    "&kp LC(LA(LG(N)))": {t: "←", s: "⬅"}  # Focus left (shift=move left)
+    "&kp LC(LA(LG(E)))": {t: "↓", s: "⬇"}  # Focus down (shift=move down)
+    "&kp LC(LA(LG(I)))": {t: "→", s: "➡"}  # Focus right (shift=move right)
     
-    # Workspace switching (1-4)
-    "&aerospace_ws_1": "①"
-    "&aerospace_ws_2": "②"
-    "&aerospace_ws_3": "③"
-    "&aerospace_ws_4": "④"
+    # Workspaces 1-4 (top row: Q/Y/U/J)
+    "&kp LC(LA(LG(Q)))": {t: "①", s: "⇒①"}  # WS 1 (shift=move win to ws)
+    "&kp LC(LA(LG(Y)))": {t: "②", s: "⇒②"}  # WS 2 (ß position sends Y)
+    "&kp LC(LA(LG(U)))": {t: "③", s: "⇒③"}  # WS 3
+    "&kp LC(LA(LG(J)))": {t: "④", s: "⇒④"}  # WS 4
     
-    # Workspace switching (5-8, Ctrl layer)
-    "&aerospace_ws_5": "⑤"
-    "&aerospace_ws_6": "⑥"
-    "&aerospace_ws_7": "⑦"
-    "&aerospace_ws_8": "⑧"
+    # Workspaces 5-8 (bottom row: B/H/,/.)
+    "&kp LC(LA(LG(B)))": {t: "⑤", s: "⇒⑤"}  # WS 5
+    "&kp LC(LA(LG(H)))": {t: "⑥", s: "⇒⑥"}  # WS 6
+    "&kp LC(LA(LG(COMMA)))": {t: "⑦", s: "⇒⑦"}  # WS 7
+    "&kp LC(LA(LG(DOT)))": {t: "⑧", s: "⇒⑧"}  # WS 8
     
-    # Layout controls
-    "&aerospace_close": "✕"
-    "&aerospace_ws_next": "→WS"
-    "&aerospace_float_toggle": "$$mdi:window-open$$"
-    "&aerospace_resize_minus": "◀"
-    "&aerospace_resize_plus": "▶"
-    "&aerospace_layout_toggle": "$$mdi:grid$$"
-    "&aerospace_flatten": "$$mdi:resize$$"
+    # Utility
+    "&kp LC(LA(LG(F)))": "✕"  # Close window
+    "&kp LC(LA(LG(A)))": "⚖"  # Balance sizes
+    "&kp LC(LA(LG(RET)))": "$$mdi:fullscreen$$"  # Fullscreen
     
-    # Thumbs
-    "&aerospace_fullscreen": "$$mdi:fullscreen$$"
-    "&aerospace_ws_back_forth": "⇄"
+    # SCR Layer - Resize & Layout (Ctrl+Alt+Cmd + F-keys)
+    "&kp LC(LA(LG(F1)))": "$$mdi:swap-horizontal$$"  # Layout orientation toggle
+    "&kp LC(LA(LG(F2)))": "⚖"  # Balance sizes
+    "&kp LC(LA(LG(F3)))": "$$mdi:layer-remove$$"  # Flatten workspace tree
+    "&kp LC(LA(LG(F4)))": "$$mdi:reload$$"  # Reload config
+    "&kp LC(LA(LG(F5)))": "◀"  # Resize shrink
+    "&kp LC(LA(LG(F6)))": "▶"  # Resize grow
     
-    # Move window to monitor (Shift layer - Left Hand)
-    "&aerospace_move_win_mon_left": {t: "$$mdi:monitor$$", s: "←Win"}
-    "&aerospace_move_win_mon_right": {t: "$$mdi:monitor$$", s: "→Win"}
-    
-    # Move workspace to monitor (Shift layer - Top row)
-    "&aerospace_move_ws_mon_1": {t: "①", s: "WS→"}
-    "&aerospace_move_ws_mon_2": {t: "②", s: "WS→"}
-    "&aerospace_move_ws_mon_3": {t: "③", s: "WS→"}
-    
-    # Move window to workspace (Shift layer - Right Hand)
-    "&aerospace_move_win_ws_1": {t: "①", s: "Win→"}
-    "&aerospace_move_win_ws_2": {t: "②", s: "Win→"}
-    "&aerospace_move_win_ws_3": {t: "③", s: "Win→"}
-    "&aerospace_move_win_ws_4": {t: "④", s: "Win→"}
-    "&aerospace_move_win_ws_5": {t: "⑤", s: "Win→"}
-    "&aerospace_move_win_ws_6": {t: "⑥", s: "Win→"}
-    "&aerospace_move_win_ws_7": {t: "⑦", s: "Win→"}
-    "&aerospace_move_win_ws_8": {t: "⑧", s: "Win→"}
+    # Smart behaviors for WM/SCR layers
+    "&smart_wm WM 0": {t: "⇄", h: "WM"}  # Tap=ws-back-forth, Hold=WM layer
+    "&aero_wbf": "⇄"  # Workspace back-and-forth macro
+    "&aero_float": "$$mdi:window-open$$"  # Float toggle macro
+    "&lt_scr SCR 0": {t: "$$mdi:window-open$$", h: "SCR"}  # Tap=float, Hold=SCR layer
 
     # Pipe symbol
     "&kp RA(GRAVE)": "|"
@@ -144,9 +128,7 @@ parse_config:
     "&num_dance": {t: "Numword", s: "Sticky NUM"}
     "&smart_num 1 0": {t: "Numword", h: "NUM", s: "Sticky NUM"}
 
-    # SMART_WM - tap for Amethyst focus next, hold for window manager
-    "&smart_wm WM 0": {t: "Focus", h: "WM"}
-    "&amethyst_focus_next": Focus
+
 
     # SYMBOL layer - simple momentary access
     "&mo SYMBOL": SYMBOL
@@ -315,11 +297,12 @@ draw_config:
   use_local_cache: true  # Avoid SSL issues with QMK API
   
   # Layer order - Combos is virtual layer created via --virtual-layers flag
-  layer_order: ["MagicSturdy", "Combos", "NAV", "NUM", "FUN", "SYMBOL", "SYS"]
+  layer_order: ["MagicSturdy", "Combos", "NAV", "NUM", "FUN", "SYMBOL", "SYS", "WM", "SCR"]
   
-  # Layer activation info for tri-layers
+  # Layer activation info for tri-layers and hold-taps
   layer_names:
     SYS: "NAV + FUN"
+    SCR: "WM + hold RH1"
   
   # Styling
   key_h: 60
