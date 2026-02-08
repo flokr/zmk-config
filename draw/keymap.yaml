@@ -45,7 +45,7 @@ layers:
     - {t: ⭐ Shift, h: Shift}
     - {t: Numword, h: NUM, s: Sticky NUM}
     - {t: Spc, h: NAV}
-    - {t: Focus, h: WM}
+    - {t: ⇄, h: WM}
     - {t: Enter, h: FUN}
     - {t: Bspc, s: Del}
     - SYMBOL
@@ -147,6 +147,31 @@ layers:
   WM:
     - {type: trans}
     - {type: trans}
+    - {t: '$$mdi:monitor$$', s: ①}
+    - {t: '$$mdi:monitor$$', s: ②}
+    - {t: '$$mdi:monitor$$', s: ③}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {t: ①, s: ⇒①}
+    - {t: ②, s: ⇒②}
+    - {t: ↑, s: ⬆}
+    - {t: ③, s: ⇒③}
+    - {t: ④, s: ⇒④}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {t: '$$mdi:monitor-arrow-down-variant$$', s: ←}
+    - ⇄
+    - {t: '$$mdi:monitor-arrow-down-variant$$', s: →}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - ✕
+    - {t: ←, s: ⬅}
+    - {t: ↓, s: ⬇}
+    - {t: →, s: ➡}
+    - ⚖
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -154,43 +179,18 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - Hyper+H
-    - Ctl+Alt+Gui+L
-    - Hyper+L
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - Ctl+Alt+Gui+P
-    - Ctl+Alt+Gui+H
-    - Ctl+Alt+Gui+N
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - Ctl+Alt+Gui+J
-    - {type: trans}
-    - Ctl+Alt+Gui+K
+    - {t: ⑤, s: ⇒⑤}
+    - {t: ⑥, s: ⇒⑥}
+    - {t: ⑦, s: ⇒⑦}
+    - {t: ⑧, s: ⇒⑧}
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: held}
-    - Ctl+Alt+Gui+Enter
-    - Ctl+Alt+Gui+D
-    - Ctl+Alt+Gui+A
+    - $$mdi:fullscreen$$
+    - {t: '$$mdi:window-open$$', h: SCR}
+    - {type: trans}
   FUN:
     - {type: trans}
     - F12
