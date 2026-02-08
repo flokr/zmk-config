@@ -154,9 +154,9 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - ⤺ Scr
-    - ▶︎
-    - ⤻ Scr
+    - Hyper+H
+    - Ctl+Alt+Gui+L
+    - Hyper+L
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -168,9 +168,9 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - Scr ↻
-    - ◀︎
-    - Scr ↺
+    - Ctl+Alt+Gui+P
+    - Ctl+Alt+Gui+H
+    - Ctl+Alt+Gui+N
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -180,17 +180,17 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - Win ↻
+    - Ctl+Alt+Gui+J
     - {type: trans}
-    - Win ↺
+    - Ctl+Alt+Gui+K
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: held}
-    - ⇄ Main
-    - Full
-    - Tall
+    - Ctl+Alt+Gui+Enter
+    - Ctl+Alt+Gui+D
+    - Ctl+Alt+Gui+A
   FUN:
     - {type: trans}
     - F12
