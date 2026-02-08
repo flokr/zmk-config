@@ -29,18 +29,70 @@ parse_config:
     "&kp LG(Y)": Undo
     "&kp LG(LS(Y))": Redo
 
-    # WM Layer - Amethyst window manager shortcuts
-    "&kp LC(LA(LG(H)))": "◀︎"              # Shrink main pane
-    "&kp LC(LA(LG(J)))": "Win ↻"          # Window counter-clockwise
-    "&kp LC(LA(LG(K)))": "Win ↺"          # Window clockwise
-    "&kp LC(LA(LG(L)))": "▶︎"              # Expand main pane
-    "&kp LC(LA(LG(P)))": "Scr ↻"          # Screen counter-clockwise
-    "&kp LC(LA(LG(N)))": "Scr ↺"          # Screen clockwise
-    "&kp LC(LA(LG(A)))": "Tall"           # Tall layout
-    "&kp LC(LA(LG(D)))": "Full"           # Fullscreen layout
-    "&kp LC(LA(LG(RET)))": "⇄ Main"       # Swap with main
-    "&kp LC(LA(LS(LG(H))))": "⤺ Scr"      # Swap screen CCW (mod2)
-    "&kp LC(LA(LS(LG(L))))": "⤻ Scr"      # Swap screen CW (mod2)
+    # WM Layer - Aerospace window manager shortcuts
+    # Monitor navigation (Left Hand)
+    "&aerospace_mon_left": {t: "$$mdi:monitor$$", s: "←"}
+    "&aerospace_mon_right": {t: "$$mdi:monitor$$", s: "→"}
+    "&aerospace_mon_1": "①"
+    "&aerospace_mon_2": "②"
+    "&aerospace_mon_3": "③"
+    "&aerospace_summon": "⤵"
+    
+    # Window focus (Right Hand - OEIA)
+    "&aerospace_focus_up": "↑"
+    "&aerospace_focus_left": "←"
+    "&aerospace_focus_down": "↓"
+    "&aerospace_focus_right": "→"
+    
+    # Window move (Shift layer)
+    "&aerospace_move_up": {t: "↑", s: "Move"}
+    "&aerospace_move_left": {t: "←", s: "Move"}
+    "&aerospace_move_down": {t: "↓", s: "Move"}
+    "&aerospace_move_right": {t: "→", s: "Move"}
+    
+    # Workspace switching (1-4)
+    "&aerospace_ws_1": "①"
+    "&aerospace_ws_2": "②"
+    "&aerospace_ws_3": "③"
+    "&aerospace_ws_4": "④"
+    
+    # Workspace switching (5-8, Ctrl layer)
+    "&aerospace_ws_5": "⑤"
+    "&aerospace_ws_6": "⑥"
+    "&aerospace_ws_7": "⑦"
+    "&aerospace_ws_8": "⑧"
+    
+    # Layout controls
+    "&aerospace_close": "✕"
+    "&aerospace_ws_next": "→WS"
+    "&aerospace_float_toggle": "$$mdi:window-open$$"
+    "&aerospace_resize_minus": "◀"
+    "&aerospace_resize_plus": "▶"
+    "&aerospace_layout_toggle": "$$mdi:grid$$"
+    "&aerospace_flatten": "$$mdi:resize$$"
+    
+    # Thumbs
+    "&aerospace_fullscreen": "$$mdi:fullscreen$$"
+    "&aerospace_ws_back_forth": "⇄"
+    
+    # Move window to monitor (Shift layer - Left Hand)
+    "&aerospace_move_win_mon_left": {t: "$$mdi:monitor$$", s: "←Win"}
+    "&aerospace_move_win_mon_right": {t: "$$mdi:monitor$$", s: "→Win"}
+    
+    # Move workspace to monitor (Shift layer - Top row)
+    "&aerospace_move_ws_mon_1": {t: "①", s: "WS→"}
+    "&aerospace_move_ws_mon_2": {t: "②", s: "WS→"}
+    "&aerospace_move_ws_mon_3": {t: "③", s: "WS→"}
+    
+    # Move window to workspace (Shift layer - Right Hand)
+    "&aerospace_move_win_ws_1": {t: "①", s: "Win→"}
+    "&aerospace_move_win_ws_2": {t: "②", s: "Win→"}
+    "&aerospace_move_win_ws_3": {t: "③", s: "Win→"}
+    "&aerospace_move_win_ws_4": {t: "④", s: "Win→"}
+    "&aerospace_move_win_ws_5": {t: "⑤", s: "Win→"}
+    "&aerospace_move_win_ws_6": {t: "⑥", s: "Win→"}
+    "&aerospace_move_win_ws_7": {t: "⑦", s: "Win→"}
+    "&aerospace_move_win_ws_8": {t: "⑧", s: "Win→"}
 
     # Pipe symbol
     "&kp RA(GRAVE)": "|"
