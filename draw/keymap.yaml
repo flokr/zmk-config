@@ -191,6 +191,53 @@ layers:
     - $$mdi:fullscreen$$
     - {t: '$$mdi:window-open$$', h: SCR}
     - {type: trans}
+  SCR:
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - $$mdi:reload$$
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - $$mdi:swap-horizontal$$
+    - ⚖
+    - ⊡
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - ◀
+    - {type: trans}
+    - ▶
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: held}
+    - {type: trans}
   FUN:
     - {type: trans}
     - F12
