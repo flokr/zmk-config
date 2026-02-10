@@ -150,7 +150,7 @@ layers:
     - {t: '$$mdi:monitor$$', s: Hyper+M}
     - {t: '$$mdi:monitor$$', s: Hyper+L}
     - {t: '$$mdi:monitor$$', s: Hyper+C}
-    - {type: trans}
+    - {t: Ctl+Alt+Gui+P, s: Hyper+P}
     - {type: trans}
     - {type: trans}
     - {t: ①, s: Hyper+Q}
@@ -183,7 +183,7 @@ layers:
     - {t: ⑥, s: Hyper+H}
     - {t: ⑦, s: 'Hyper+,'}
     - {t: ⑧, s: Hyper+.}
-    - {type: trans}
+    - {t: Ctl+Alt+Gui+ß, s: Hyper+ß}
     - {type: trans}
     - {type: trans}
     - {type: trans}

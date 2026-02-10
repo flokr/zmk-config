@@ -1068,8 +1068,12 @@ g.combo:not(:has(text.shifted)) text.tap {
 <use href="#mdi:monitor" xlink:href="#mdi:monitor" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:monitor"/>
 <text x="0" y="-26" class="key shifted">Hyper+C</text>
 </g>
-<g transform="translate(330, 44)" class="key trans keypos-5">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(330, 44)" class="key keypos-5">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.0em">Ctl+Alt</tspan><tspan x="0" dy="1.2em">+Gui+P</tspan>
+</text>
+<text x="0" y="-26" class="key shifted">Hyper+P</text>
 </g>
 <g transform="translate(390, 74)" class="key trans keypos-6">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
@@ -1198,8 +1202,12 @@ g.combo:not(:has(text.shifted)) text.tap {
 <text x="0" y="0" class="key tap">⑧</text>
 <text x="0" y="-26" class="key shifted">Hyper+.</text>
 </g>
-<g transform="translate(810, 172)" class="key trans keypos-38">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(810, 172)" class="key keypos-38">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.0em">Ctl+Alt</tspan><tspan x="0" dy="1.2em">+Gui+ß</tspan>
+</text>
+<text x="0" y="-26" class="key shifted">Hyper+ß</text>
 </g>
 <g transform="translate(870, 172)" class="key trans keypos-39">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
