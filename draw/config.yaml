@@ -304,6 +304,14 @@ draw_config:
     SYS: "NAV + FUN"
     SCR: "WM + hold RH1"
   
+  # Specify which keys activate each layer (for highlighting)
+  layer_binding:
+    WM:
+      - "&smart_wm WM 0"
+    SCR:
+      - "&smart_wm WM 0"  # LH0 must be held
+      - "&lt_scr SCR 0"    # RH1 activates SCR on top of WM
+  
   # Styling
   key_h: 60
   key_w: 60
