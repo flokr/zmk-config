@@ -306,11 +306,20 @@ draw_config:
   
   # Specify which keys activate each layer (for highlighting)
   layer_binding:
+    NAV:
+      - "&lt_spc 2 SPACE"
+    FUN:
+      - "&lt_ent 3 RET"
+    SYS:
+      - "&lt_spc 2 SPACE"  # LH1 (NAV)
+      - "&lt_ent 3 RET"    # RH0 (FUN)
+    SYMBOL:
+      - "&mo SYMBOL"
     WM:
       - "&smart_wm WM 0"
     SCR:
-      - "&smart_wm WM 0"  # LH0 must be held
-      - "&lt_scr SCR 0"    # RH1 activates SCR on top of WM
+      - "&smart_wm WM 0"  # LH0 must be held first
+      - "&lt_scr SCR 0"    # Then RH1 activates SCR on top of WM
   
   # Styling
   key_h: 60
