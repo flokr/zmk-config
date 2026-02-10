@@ -114,8 +114,14 @@ jobs:
           
           # Mark layer activator keys as held
           yq eval '.layers.NUM[40].type = "held"' -i draw/keymap.yaml   # NUM layer (LH2, position 40)
+          yq eval '.layers.NAV[41].type = "held"' -i draw/keymap.yaml   # NAV layer (LH1, position 41)
           yq eval '.layers.WM[42].type = "held"' -i draw/keymap.yaml    # WM layer (LH0, position 42)
-          yq eval '.layers.SCR[44].type = "held"' -i draw/keymap.yaml   # SCR layer (RH1, position 44)
+          yq eval '.layers.FUN[43].type = "held"' -i draw/keymap.yaml   # FUN layer (RH0, position 43)
+          yq eval '.layers.SYMBOL[45].type = "held"' -i draw/keymap.yaml # SYMBOL layer (RH2, position 45)
+          yq eval '.layers.SYS[41].type = "held"' -i draw/keymap.yaml   # SYS layer (LH1, position 41 - NAV)
+          yq eval '.layers.SYS[43].type = "held"' -i draw/keymap.yaml   # SYS layer (RH0, position 43 - FUN)
+          yq eval '.layers.SCR[42].type = "held"' -i draw/keymap.yaml   # SCR layer (LH0, position 42 - WM)
+          yq eval '.layers.SCR[44].type = "held"' -i draw/keymap.yaml   # SCR layer (RH1, position 44 - on WM layer)
           
           # Fix layout reference
           sed -i 's/layout: {zmk_keyboard: corne_choc_pro, layout_name: default_layout}/layout:\n  qmk_info_json: config\/corne_choc_pro.json\n  layout_name: default_layout/' draw/keymap.yaml
