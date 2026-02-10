@@ -542,6 +542,22 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             bindings = <&kp LC(LA(LG(DOT)))>, <&kp LC(LA(LG(LS(DOT))))>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        // Workspace switch/move - minus/ß (workspace 9)
+        wm_minus: wm_workspace_9 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(MINUS)))>, <&kp LC(LA(LG(LS(MINUS))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Window switcher popup - P
+        wm_p: wm_window_switcher {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(P)))>, <&kp LC(LA(LG(LS(P))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     /* ================== MACROS FOR MACOS NAVIGATION ================== */
@@ -914,27 +930,28 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             bindings = <
 /*  Window Manager layer — Aerospace (Ctrl+Alt+Cmd prefix)
     
-    Left hand: Monitor management
-    LT4 = focus-monitor main (M)    LT3 = focus-monitor secondary (L)    LT2 = focus-monitor 3 (C)
-    LM4 = focus-monitor left (T)    LM3 = workspace-back-and-forth (R)   LM2 = focus-monitor right (D)
-    Shift variants: move-node-to-monitor / move-workspace-to-monitor
-    Bottom row + V/P/S/Z/Y: available for future use
+    Left hand: Monitor & workspace context management
+    LT4 = focus-monitor main (M)    LT3 = focus-monitor secondary (L)    LT2 = focus-monitor 3 (C)    LT1 = window switcher (P)
+    LM4 = available (T)              LM3 = workspace-back-and-forth (R)   LM2 = available (D)
+    Shift variants for M/L/C: move-workspace-to-monitor
+    Bottom row: available for future use
     
     Right hand: Window & workspace management
-    RT1 = ws 1 (Q)   RT2 = ws 2 (ß→Y)   RT3 = focus up (O)   RT4 = ws 3 (U)   RT5 = ws 4 (J)
-    RM1 = close (F)   RM2 = focus left (N)   RM3 = focus down (E)   RM4 = focus right (I)   RM5 = balance (A)
-    RB0 = ws 5 (B)   RB1 = ws 6 (H)   RB2 = ws 7 (,)   RB3 = ws 8 (.)
-    Shift + workspace = move-node-to-workspace
-    Shift + ONEI = move window in direction
+    RT1 = ws 1 (Q)   RT2 = ws 2 (ß→Y)   RT3 = prev workspace (O)   RT4 = ws 3 (U)   RT5 = ws 4 (J)
+    RM1 = close (F)  RM2 = focus left (N)   RM3 = next workspace (E)   RM4 = focus right (I)   RM5 = balance (A)
+    RB0 = ws 5 (B)   RB1 = ws 6 (H)   RB2 = ws 7 (,)   RB3 = ws 8 (.)   RB4 = ws 9 (ß/-)
+    Shift + workspace number = move-node-to-workspace
+    Shift + O/E = move window to prev/next workspace on current monitor
+    Shift + N/I = move window left/right
     
     Thumbs: RH0 = fullscreen (ENT)   RH1 = hold SCR / tap float toggle   */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-        &trans         &trans         &wm_m            &wm_l            &wm_c            &trans         &trans              &trans         &wm_q            &wm_y            &wm_o            &wm_u            &wm_j            &trans
+        &trans         &trans         &wm_m            &wm_l            &wm_c            &wm_p          &trans              &trans         &wm_q            &wm_y            &wm_o            &wm_u            &wm_j            &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
         &trans         &trans         &wm_t            &kp LC(LA(LG(R))) &wm_d            &trans         &trans              &trans   &kp LC(LA(LG(F))) &wm_n            &wm_e            &wm_i      &kp LC(LA(LG(A))) &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans         &trans         &trans         &trans         &trans                                           &wm_b            &wm_h            &wm_comma        &wm_dot          &trans         &trans
+        &trans         &trans         &trans         &trans         &trans         &trans                                           &wm_b            &wm_h            &wm_comma        &wm_dot          &wm_minus        &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
                                                       &trans         &trans         &trans                                &kp LC(LA(LG(RET)))  &lt_scr SCR 0    &trans
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
