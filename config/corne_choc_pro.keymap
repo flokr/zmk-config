@@ -403,6 +403,145 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             bindings = <&sk LSHFT>, <&caps_word>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        /* ================== AEROSPACE WM MOD-MORPHS ================== */
+        /* Shift variants for move operations on WM layer */
+
+        // Monitor focus/move - M (Built-in display)
+        wm_m: wm_monitor_main {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(M)))>, <&kp LC(LA(LG(LS(M))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Monitor focus/move - L (Left external)
+        wm_l: wm_monitor_left_ext {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(L)))>, <&kp LC(LA(LG(LS(L))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Monitor focus/move - C (Center/right external)
+        wm_c: wm_monitor_center {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(C)))>, <&kp LC(LA(LG(LS(C))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Monitor focus/move - T (focus left)
+        wm_t: wm_monitor_dir_left {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(T)))>, <&kp LC(LA(LG(LS(T))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Monitor focus/move - D (focus right)
+        wm_d: wm_monitor_dir_right {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(D)))>, <&kp LC(LA(LG(LS(D))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Window focus/move - O (up)
+        wm_o: wm_focus_up {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(O)))>, <&kp LC(LA(LG(LS(O))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Window focus/move - N (left)
+        wm_n: wm_focus_left {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(N)))>, <&kp LC(LA(LG(LS(N))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Window focus/move - E (down)
+        wm_e: wm_focus_down {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(E)))>, <&kp LC(LA(LG(LS(E))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Window focus/move - I (right)
+        wm_i: wm_focus_right {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(I)))>, <&kp LC(LA(LG(LS(I))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Workspace switch/move - Q (workspace 1)
+        wm_q: wm_workspace_1 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(Q)))>, <&kp LC(LA(LG(LS(Q))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Workspace switch/move - Y (workspace 2, ß sends Y)
+        wm_y: wm_workspace_2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(Y)))>, <&kp LC(LA(LG(LS(Y))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Workspace switch/move - U (workspace 3)
+        wm_u: wm_workspace_3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(U)))>, <&kp LC(LA(LG(LS(U))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Workspace switch/move - J (workspace 4)
+        wm_j: wm_workspace_4 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(J)))>, <&kp LC(LA(LG(LS(J))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Workspace switch/move - B (workspace 5)
+        wm_b: wm_workspace_5 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(B)))>, <&kp LC(LA(LG(LS(B))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Workspace switch/move - H (workspace 6)
+        wm_h: wm_workspace_6 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(H)))>, <&kp LC(LA(LG(LS(H))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Workspace switch/move - comma (workspace 7)
+        wm_comma: wm_workspace_7 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(COMMA)))>, <&kp LC(LA(LG(LS(COMMA))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Workspace switch/move - period (workspace 8)
+        wm_dot: wm_workspace_8 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LG(DOT)))>, <&kp LC(LA(LG(LS(DOT))))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     /* ================== MACROS FOR MACOS NAVIGATION ================== */
@@ -791,11 +930,11 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     Thumbs: RH0 = fullscreen (ENT)   RH1 = hold SCR / tap float toggle   */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-        &trans         &trans   &kp LC(LA(LG(M))) &kp LC(LA(LG(L))) &kp LC(LA(LG(C))) &trans         &trans              &trans   &kp LC(LA(LG(Q))) &kp LC(LA(LG(Y))) &kp LC(LA(LG(O))) &kp LC(LA(LG(U))) &kp LC(LA(LG(J))) &trans
+        &trans         &trans         &wm_m            &wm_l            &wm_c            &trans         &trans              &trans         &wm_q            &wm_y            &wm_o            &wm_u            &wm_j            &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans   &kp LC(LA(LG(T))) &kp LC(LA(LG(R))) &kp LC(LA(LG(D))) &trans         &trans              &trans   &kp LC(LA(LG(F))) &kp LC(LA(LG(N))) &kp LC(LA(LG(E))) &kp LC(LA(LG(I))) &kp LC(LA(LG(A))) &trans
+        &trans         &trans         &wm_t            &kp LC(LA(LG(R))) &wm_d            &trans         &trans              &trans   &kp LC(LA(LG(F))) &wm_n            &wm_e            &wm_i      &kp LC(LA(LG(A))) &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans         &trans         &trans         &trans         &trans                                     &kp LC(LA(LG(B))) &kp LC(LA(LG(H))) &kp LC(LA(LG(COMMA))) &kp LC(LA(LG(DOT))) &trans         &trans
+        &trans         &trans         &trans         &trans         &trans         &trans                                           &wm_b            &wm_h            &wm_comma        &wm_dot          &trans         &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
                                                       &trans         &trans         &trans                                &kp LC(LA(LG(RET)))  &lt_scr SCR 0    &trans
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
