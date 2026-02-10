@@ -234,7 +234,7 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
+    - {type: held}
     - {type: trans}
     - {type: held}
     - {type: trans}
@@ -331,7 +331,7 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
+    - {type: held}
   SYS:
     - {type: trans}
     - BT 1
