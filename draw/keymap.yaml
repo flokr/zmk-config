@@ -147,30 +147,30 @@ layers:
   WM:
     - {type: trans}
     - {type: trans}
-    - {t: '$$mdi:monitor$$', s: ①}
-    - {t: '$$mdi:monitor$$', s: ②}
-    - {t: '$$mdi:monitor$$', s: ③}
+    - {t: '$$mdi:monitor$$', s: Hyper+M}
+    - {t: '$$mdi:monitor$$', s: Hyper+L}
+    - {t: '$$mdi:monitor$$', s: Hyper+C}
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {t: ①, s: ⇒①}
-    - {t: ②, s: ⇒②}
-    - {t: ↑, s: ⬆}
-    - {t: ③, s: ⇒③}
-    - {t: ④, s: ⇒④}
+    - {t: ①, s: Hyper+Q}
+    - {t: ②, s: Hyper+Y}
+    - {t: ↑, s: Hyper+O}
+    - {t: ③, s: Hyper+U}
+    - {t: ④, s: Hyper+J}
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {t: '$$mdi:monitor-arrow-down-variant$$', s: ←}
+    - {t: '$$mdi:monitor-arrow-down-variant$$', s: Hyper+T}
     - ⇄
-    - {t: '$$mdi:monitor-arrow-down-variant$$', s: →}
+    - {t: '$$mdi:monitor-arrow-down-variant$$', s: Hyper+D}
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - ✕
-    - {t: ←, s: ⬅}
-    - {t: ↓, s: ⬇}
-    - {t: →, s: ➡}
+    - {t: ←, s: Hyper+N}
+    - {t: ↓, s: Hyper+E}
+    - {t: →, s: Hyper+I}
     - ⚖
     - {type: trans}
     - {type: trans}
@@ -179,10 +179,10 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {t: ⑤, s: ⇒⑤}
-    - {t: ⑥, s: ⇒⑥}
-    - {t: ⑦, s: ⇒⑦}
-    - {t: ⑧, s: ⇒⑧}
+    - {t: ⑤, s: Hyper+B}
+    - {t: ⑥, s: Hyper+H}
+    - {t: ⑦, s: 'Hyper+,'}
+    - {t: ⑧, s: Hyper+.}
     - {type: trans}
     - {type: trans}
     - {type: trans}
