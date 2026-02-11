@@ -531,7 +531,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         wm_comma: wm_workspace_7 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(LG(COMMA)))>, <&kp LC(LA(LG(LS(COMMA))))>;
+            bindings = <&kp LC(LA(LG(COMMA)))>, <&kp LC(LA(LG(SEMI)))>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -539,7 +539,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         wm_dot: wm_workspace_8 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(LG(DOT)))>, <&kp LC(LA(LG(LS(DOT))))>;
+            bindings = <&kp LC(LA(LG(DOT)))>, <&kp LC(LA(LG(LS(SEMI))))>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
