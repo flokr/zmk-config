@@ -181,8 +181,8 @@ layers:
     - {type: trans}
     - {t: ⑤, s: Hyper+B}
     - {t: ⑥, s: Hyper+H}
-    - {t: ⑦, s: 'Hyper+,'}
-    - {t: ⑧, s: Hyper+.}
+    - {t: ⑦, s: Ctl+Alt+Gui+ö}
+    - {t: ⑧, s: Hyper+ö}
     - {t: Ctl+Alt+Gui+ß, s: Hyper+ß}
     - {type: trans}
     - {type: trans}
