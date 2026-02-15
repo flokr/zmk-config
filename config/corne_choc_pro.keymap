@@ -24,7 +24,6 @@
 #define SYMBOL 4
 #define SYS    5
 #define WM     6
-#define SCR    7
 
 / {
     chosen { zmk,physical-layout = &default_layout; };
@@ -371,19 +370,6 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             bindings = <&mo>, <&aero_wbf>;
         };
 
-        /* ================== SCR LAYER TAP ================== */
-        
-        // Hold: SCR layer (resize/layout) | Tap: Aerospace float toggle
-        // Used on RH1 position within the WM layer
-        lt_scr: layer_tap_scr {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&mo>, <&aero_float>;
-        };
-
         /* ================== MAGIC SHIFT ================== */
         
         // Tap: sticky-shift | Double-tap/Shift+tap: caps-word | Hold: shift
@@ -705,7 +691,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         };
 
         // Aerospace: float toggle (Ctrl+Alt+Cmd+Backspace)
-        // Used as SCR layer-tap tap action on RH1
+        // Used on WM layer RH1 position
         aero_float: aero_float_toggle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -929,22 +915,24 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             display-name = "WM";
             bindings = <
 /*  Window Manager layer — Aerospace (Ctrl+Alt+Cmd prefix)
+    App-centric navigation: right hand focuses apps, left hand manages monitors/resize
     
-    Left hand: Monitor & workspace context management
-    LT4 = focus-monitor main (M)    LT3 = focus-monitor secondary (L)    LT2 = focus-monitor 3 (C)    LT1 = window switcher (P)
-    LM4 = available (T)              LM3 = workspace-back-and-forth (R)   LM2 = available (D)   LM0 = Ctrl+A (tmux prefix)
-    Shift variants for M/L/C: move-workspace-to-monitor
-    Bottom row: available for future use
+    Left hand:
+    LT4 = resize shrink (M)          LT2 = resize grow (C)
+    LM4 = focus monitor Built-in (T)  LM3 = workspace-back-and-forth (R)   LM2 = focus monitor HP(2) (D)   LM0 = Ctrl+A (tmux prefix)
+    Shift + T/D: move-workspace-to-monitor
     
-    Right hand: Window & workspace management
-    RT1 = ws 1 (Q)   RT2 = ws 2 (ß→Y)   RT3 = prev workspace (O)   RT4 = ws 3 (U)   RT5 = ws 4 (J)
-    RM1 = close (F)  RM2 = focus left (N)   RM3 = next workspace (E)   RM4 = focus right (I)   RM5 = balance (A)
-    RB0 = ws 5 (B)   RB1 = ws 6 (H)   RB2 = ws 7 (,)   RB3 = ws 8 (.)   RB4 = ws 9 (ß/-)
-    Shift + workspace number = move-node-to-workspace
-    Shift + O/E = move window to prev/next workspace on current monitor
-    Shift + N/I = move window left/right
+    Right hand - App hotkeys:
+    RT1 = Outlook (Q)   RT2 = Safari (Y, +Shift=new)   RT3 = Window Switcher (O, +Shift=move)
+    RT4 = Teams Chat (U)   RT5 = Teams Call (J)
     
-    Thumbs: RH0 = fullscreen (ENT)   RH1 = hold SCR / tap float toggle   */
+    Right hand - Navigation:
+    RM1 = close (F)   RM2 = next empty WS (N, +Shift=move)   RM3 = next WS (E, +Shift=move)   RM4 = focus right (I, +Shift=move)   RM5 = balance (A)
+    
+    Right hand - Bottom row:
+    RB0 = Music (B)   RB2 = WezTerm (,/+Shift=new)
+    
+    Thumbs: RH0 = fullscreen (ENT)   RH1 = float toggle   */
 
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
         &trans         &trans         &wm_m            &wm_l            &wm_c            &wm_p          &trans              &trans         &wm_q            &wm_y            &wm_o            &wm_u            &wm_j            &trans
@@ -953,35 +941,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
         &trans         &trans         &trans         &trans         &trans         &trans                                           &wm_b            &wm_h            &wm_comma        &wm_dot          &wm_minus        &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
-                                                      &trans         &trans         &trans                                &kp LC(LA(LG(RET)))  &lt_scr SCR 0    &trans
-//                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
-            >;
-        };
-
-        SCRLayer {
-            display-name = "SCR";
-            bindings = <
-/*  Screen Reshape layer — Aerospace resize & layout (Ctrl+Alt+Cmd + F-keys)
-    Activated by holding RH1 while on WM layer (LH0 + RH1).
-    
-    Left hand (home row):
-    LT3 = reload-config (L pos → F4)
-    LM4 = layout orientation toggle (T pos → F1)
-    LM3 = balance-sizes (R pos → F2)
-    LM2 = flatten-workspace-tree (D pos → F3)
-    
-    Right hand (home row):
-    RM2 = resize shrink (N pos → F5)
-    RM4 = resize grow (I pos → F6)                                 */
-
-// ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-        &trans         &trans         &trans   &kp LC(LA(LG(F4)))  &trans         &trans         &trans              &trans         &trans         &trans         &trans         &trans         &trans         &trans
-// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans   &kp LC(LA(LG(F1))) &kp LC(LA(LG(F2))) &kp LC(LA(LG(F3))) &trans         &trans              &trans         &trans   &kp LC(LA(LG(F5)))    &trans   &kp LC(LA(LG(F6)))    &trans         &trans
-// ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans         &trans         &trans         &trans         &trans                                           &trans         &trans         &trans         &trans         &trans         &trans
-// ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
-                                                      &trans         &trans         &trans                                           &trans         &trans         &trans
+                                                      &trans         &trans         &trans                                &kp LC(LA(LG(RET)))  &aero_float      &trans
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
             >;
         };

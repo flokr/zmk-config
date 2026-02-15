@@ -33,50 +33,63 @@ parse_config:
     # Uses inline keycodes: &kp LC(LA(LG(X)))
     # Shift held on base layer automatically adds Shift to the combo
     
-    # Left Hand - Monitor Management
-    "&kp LC(LA(LG(M)))": {t: "$$mdi:monitor$$", s: "①"}  # Mon 1 (base/shift=move WS)
-    "&kp LC(LA(LG(L)))": {t: "$$mdi:monitor$$", s: "②"}  # Mon 2 (base/shift=move WS)
-    "&kp LC(LA(LG(C)))": {t: "$$mdi:monitor$$", s: "③"}  # Mon 3 (base/shift=move WS)
-    "&kp LC(LA(LG(T)))": {t: "$$mdi:monitor-arrow-down-variant$$", s: "←"}  # Focus mon left (shift=move win)
+    # Left Hand - Monitor Management & Resize
+    "&kp LC(LA(LG(M)))": "$$mdi:arrow-collapse$$"  # Resize shrink
+    "&kp LC(LA(LG(LS(M))))": "$$mdi:arrow-collapse$$"  # Resize shrink (shift same)
+    "&kp LC(LA(LG(L)))": ""  # Unbound
+    "&kp LC(LA(LG(LS(L))))": ""  # Unbound
+    "&kp LC(LA(LG(C)))": "$$mdi:arrow-expand$$"  # Resize grow
+    "&kp LC(LA(LG(LS(C))))": "$$mdi:arrow-expand$$"  # Resize grow (shift same)
+    "&kp LC(LA(LG(P)))": ""  # Unbound
+    "&kp LC(LA(LG(LS(P))))": ""  # Unbound
+    "&kp LC(LA(LG(T)))": "$$mdi:monitor$$"  # Focus monitor Built-in
+    "&kp LC(LA(LG(LS(T))))": "⇒$$mdi:monitor$$"  # Move WS to Built-in
     "&kp LC(LA(LG(R)))": "⇄"  # Workspace back-and-forth
-    "&kp LC(LA(LG(D)))": {t: "$$mdi:monitor-arrow-down-variant$$", s: "→"}  # Focus mon right (shift=move win)
+    "&kp LC(LA(LG(D)))": "$$mdi:monitor$$"  # Focus monitor HP(2)
+    "&kp LC(LA(LG(LS(D))))": "⇒$$mdi:monitor$$"  # Move WS to HP(2)
     
-    # Right Hand - Window & Workspace Management
-    "&kp LC(LA(LG(O)))": {t: "↑", s: "⬆"}  # Focus up (shift=move up)
-    "&kp LC(LA(LG(N)))": {t: "←", s: "⬅"}  # Focus left (shift=move left)
-    "&kp LC(LA(LG(E)))": {t: "↓", s: "⬇"}  # Focus down (shift=move down)
-    "&kp LC(LA(LG(I)))": {t: "→", s: "➡"}  # Focus right (shift=move right)
+    # Right Hand - App Hotkeys
+    "&kp LC(LA(LG(Q)))": "$$mdi:email$$"  # Outlook
+    "&kp LC(LA(LG(LS(Q))))": "$$mdi:email$$"  # Outlook (shift - no action)
+    "&kp LC(LA(LG(Y)))": "$$mdi:web$$"  # Safari
+    "&kp LC(LA(LG(LS(Y))))": "+$$mdi:web$$"  # New Safari window
+    "&kp LC(LA(LG(O)))": "$$mdi:text-search$$"  # Window switcher
+    "&kp LC(LA(LG(LS(O))))": "⇒$$mdi:text-search$$"  # Workspace-move switcher
+    "&kp LC(LA(LG(U)))": "$$mdi:chat$$"  # Teams Chat
+    "&kp LC(LA(LG(LS(U))))": "$$mdi:chat$$"  # Teams Chat (shift - no action)
+    "&kp LC(LA(LG(J)))": "$$mdi:phone$$"  # Teams Call
+    "&kp LC(LA(LG(LS(J))))": "$$mdi:phone$$"  # Teams Call (shift - no action)
     
-    # Workspaces 1-4 (top row: Q/Y/U/J)
-    "&kp LC(LA(LG(Q)))": {t: "①", s: "⇒①"}  # WS 1 (shift=move win to ws)
-    "&kp LC(LA(LG(Y)))": {t: "②", s: "⇒②"}  # WS 2 (ß position sends Y)
-    "&kp LC(LA(LG(U)))": {t: "③", s: "⇒③"}  # WS 3
-    "&kp LC(LA(LG(J)))": {t: "④", s: "⇒④"}  # WS 4
+    # Right Hand - Window & Workspace Navigation
+    "&kp LC(LA(LG(F)))": "✕"  # Close window
+    "&kp LC(LA(LG(N)))": "$$mdi:plus-box$$"  # Focus next empty WS
+    "&kp LC(LA(LG(LS(N))))": "⇒$$mdi:plus-box$$"  # Move to next empty WS
+    "&kp LC(LA(LG(E)))": "$$mdi:skip-next$$"  # Next workspace
+    "&kp LC(LA(LG(LS(E))))": "⇒$$mdi:skip-next$$"  # Move to next workspace
+    "&kp LC(LA(LG(I)))": "→"  # Focus right
+    "&kp LC(LA(LG(LS(I))))": "⇒→"  # Move right
+    "&kp LC(LA(LG(A)))": "⚖"  # Balance sizes
     
-    # Workspaces 5-8 (bottom row: B/H/,/.)
-    "&kp LC(LA(LG(B)))": {t: "⑤", s: "⇒⑤"}  # WS 5
-    "&kp LC(LA(LG(H)))": {t: "⑥", s: "⇒⑥"}  # WS 6
-    "&kp LC(LA(LG(COMMA)))": {t: "⑦", s: "⇒⑦"}  # WS 7
-    "&kp LC(LA(LG(DOT)))": {t: "⑧", s: "⇒⑧"}  # WS 8
+    # Right Hand - Bottom Row Apps
+    "&kp LC(LA(LG(B)))": "$$mdi:music$$"  # Music
+    "&kp LC(LA(LG(LS(B))))": "$$mdi:music$$"  # Music (shift - no action)
+    "&kp LC(LA(LG(H)))": ""  # Unbound
+    "&kp LC(LA(LG(LS(H))))": ""  # Unbound
+    "&kp LC(LA(LG(COMMA)))": "$$mdi:console$$"  # WezTerm
+    "&kp LC(LA(LG(SEMI)))": "+$$mdi:console$$"  # New WezTerm (shift sends SEMI on German)
+    "&kp LC(LA(LG(DOT)))": ""  # Unbound
+    "&kp LC(LA(LG(LS(SEMI))))": ""  # Unbound (dot shift)
+    "&kp LC(LA(LG(MINUS)))": ""  # Unbound
+    "&kp LC(LA(LG(LS(MINUS))))": ""  # Unbound
     
     # Utility
-    "&kp LC(LA(LG(F)))": "✕"  # Close window
-    "&kp LC(LA(LG(A)))": "⚖"  # Balance sizes
     "&kp LC(LA(LG(RET)))": "$$mdi:fullscreen$$"  # Fullscreen
+    "&kp LC(A)": "Ctrl+A"  # tmux prefix
     
-    # SCR Layer - Resize & Layout (Ctrl+Alt+Cmd + F-keys)
-    "&kp LC(LA(LG(F1)))": "$$mdi:swap-horizontal$$"  # Layout orientation toggle
-    "&kp LC(LA(LG(F2)))": "⚖"  # Balance sizes
-    "&kp LC(LA(LG(F3)))": "⊡"  # Flatten workspace tree
-    "&kp LC(LA(LG(F4)))": "$$mdi:reload$$"  # Reload config
-    "&kp LC(LA(LG(F5)))": "◀"  # Resize shrink
-    "&kp LC(LA(LG(F6)))": "▶"  # Resize grow
-    
-    # Smart behaviors for WM/SCR layers
+    # Smart behaviors for WM layer
     "&smart_wm WM 0": {t: "⇄", h: "WM"}  # Tap=ws-back-forth, Hold=WM layer
     "&aero_wbf": "⇄"  # Workspace back-and-forth macro
     "&aero_float": "$$mdi:window-open$$"  # Float toggle macro
-    "&lt_scr SCR 0": {t: "$$mdi:window-open$$", h: "SCR"}  # Tap=float, Hold=SCR layer
 
     # Pipe symbol
     "&kp RA(GRAVE)": "|"
@@ -297,12 +310,11 @@ draw_config:
   use_local_cache: true  # Avoid SSL issues with QMK API
   
   # Layer order - Combos is virtual layer created via --virtual-layers flag
-  layer_order: ["MagicSturdy", "Combos", "NAV", "NUM", "FUN", "SYMBOL", "SYS", "WM", "SCR"]
+  layer_order: ["MagicSturdy", "Combos", "NAV", "NUM", "FUN", "SYMBOL", "SYS", "WM"]
   
   # Layer activation info for tri-layers and hold-taps
   layer_names:
     SYS: "NAV + FUN"
-    SCR: "WM + hold RH1"
   
   # Specify which keys activate each layer (for highlighting)
   layer_binding:
@@ -317,9 +329,6 @@ draw_config:
       - "&mo SYMBOL"
     WM:
       - "&smart_wm WM 0"
-    SCR:
-      - "&smart_wm WM 0"  # LH0 must be held first
-      - "&lt_scr SCR 0"    # Then RH1 activates SCR on top of WM
   
   # Styling
   key_h: 60
