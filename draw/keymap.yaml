@@ -165,7 +165,7 @@ layers:
     - ⇄
     - {t: '$$mdi:monitor-arrow-down-variant$$', s: Hyper+D}
     - {type: trans}
-    - {type: trans}
+    - Ctl+A
     - {type: trans}
     - ✕
     - {t: ←, s: Hyper+N}
