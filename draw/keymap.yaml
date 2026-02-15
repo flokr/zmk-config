@@ -165,7 +165,7 @@ layers:
     - ⇄
     - {t: '$$mdi:monitor$$', s: '⇒$$mdi:monitor$$'}
     - {type: trans}
-    - Ctrl+A
+    - $$mdi:console-line$$
     - {type: trans}
     - ✕
     - {t: '$$mdi:plus-box$$', s: '⇒$$mdi:plus-box$$'}
