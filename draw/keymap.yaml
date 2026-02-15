@@ -293,7 +293,7 @@ layers:
     - BT 4
     - BT 5
     - BT Clear
-    - {type: trans}
+    - $$mdi:lightbulb$$
     - {type: trans}
     - {type: trans}
     - {type: trans}

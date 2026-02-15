@@ -21,6 +21,9 @@
 <svg id="mdi:fullscreen">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-fullscreen" viewBox="0 0 24 24"><path d="M5,5H10V7H7V10H5V5M14,5H19V10H17V7H14V5M17,14H19V19H14V17H17V14M10,17V19H5V14H7V17H10Z" /></svg>
 </svg>
+<svg id="mdi:lightbulb">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-lightbulb" viewBox="0 0 24 24"><path d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9V21Z" /></svg>
+</svg>
 <svg id="mdi:monitor">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-monitor" viewBox="0 0 24 24"><path d="M21,16H3V4H21M21,2H3C1.89,2 1,2.89 1,4V16A2,2 0 0,0 3,18H10V20H8V22H16V20H14V18H21A2,2 0 0,0 23,16V4C23,2.89 22.1,2 21,2Z" /></svg>
 </svg>
@@ -1601,8 +1604,9 @@ g.combo:not(:has(text.shifted)) text.tap {
 <tspan x="0" dy="-0.6em">BT</tspan><tspan x="0" dy="1.2em">Clear</tspan>
 </text>
 </g>
-<g transform="translate(510, 74)" class="key trans keypos-7">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(510, 74)" class="key keypos-7">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<use href="#mdi:lightbulb" xlink:href="#mdi:lightbulb" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:lightbulb"/>
 </g>
 <g transform="translate(570, 44)" class="key trans keypos-8">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
