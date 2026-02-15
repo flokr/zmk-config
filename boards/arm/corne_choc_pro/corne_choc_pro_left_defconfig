@@ -46,7 +46,8 @@ CONFIG_ZMK_RGB_UNDERGLOW_SAT_START=96
 CONFIG_BT_GATT_ENFORCE_SUBSCRIPTION=n
 
 # Enable ZMK Studio (alpha)
-CONFIG_ZMK_STUDIO=y
+# DISABLED - may cause connection issues
+# CONFIG_ZMK_STUDIO=y
 
 # Improved connection stability
 CONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y
