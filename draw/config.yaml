@@ -18,6 +18,7 @@ parse_config:
     "&bt BT_SEL 3": BT 4
     "&bt BT_SEL 4": BT 5
     "&bt BT_CLR": BT Clear
+    "&rgb_ug RGB_TOG": "$$mdi:lightbulb$$"
 
     "&kp LC(C)": Copy
     "&kp LC(X)": Cut
