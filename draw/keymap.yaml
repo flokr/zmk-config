@@ -147,30 +147,30 @@ layers:
   WM:
     - {type: trans}
     - {type: trans}
-    - {t: '$$mdi:monitor$$', s: Hyper+M}
-    - {t: '$$mdi:monitor$$', s: Hyper+L}
-    - {t: '$$mdi:monitor$$', s: Hyper+C}
-    - {t: Ctl+Alt+Gui+P, s: Hyper+P}
+    - {t: '$$mdi:arrow-collapse$$', s: '$$mdi:arrow-collapse$$'}
+    - ''
+    - {t: '$$mdi:arrow-expand$$', s: '$$mdi:arrow-expand$$'}
+    - ''
     - {type: trans}
     - {type: trans}
-    - {t: ①, s: Hyper+Q}
-    - {t: ②, s: Hyper+Y}
-    - {t: ↑, s: Hyper+O}
-    - {t: ③, s: Hyper+U}
-    - {t: ④, s: Hyper+J}
+    - {t: '$$mdi:email$$', s: '$$mdi:email$$'}
+    - {t: '$$mdi:web$$', s: '+$$mdi:web$$'}
+    - {t: '$$mdi:text-search$$', s: '⇒$$mdi:text-search$$'}
+    - {t: '$$mdi:chat$$', s: '$$mdi:chat$$'}
+    - {t: '$$mdi:phone$$', s: '$$mdi:phone$$'}
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {t: '$$mdi:monitor-arrow-down-variant$$', s: Hyper+T}
+    - {t: '$$mdi:monitor$$', s: '⇒$$mdi:monitor$$'}
     - ⇄
-    - {t: '$$mdi:monitor-arrow-down-variant$$', s: Hyper+D}
+    - {t: '$$mdi:monitor$$', s: '⇒$$mdi:monitor$$'}
     - {type: trans}
-    - Ctl+A
+    - Ctrl+A
     - {type: trans}
     - ✕
-    - {t: ←, s: Hyper+N}
-    - {t: ↓, s: Hyper+E}
-    - {t: →, s: Hyper+I}
+    - {t: '$$mdi:plus-box$$', s: '⇒$$mdi:plus-box$$'}
+    - {t: '$$mdi:skip-next$$', s: '⇒$$mdi:skip-next$$'}
+    - {t: →, s: ⇒→}
     - ⚖
     - {type: trans}
     - {type: trans}
@@ -179,64 +179,17 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {t: ⑤, s: Hyper+B}
-    - {t: ⑥, s: Hyper+H}
-    - {t: ⑦, s: Ctl+Alt+Gui+ö}
-    - {t: ⑧, s: Hyper+ö}
-    - {t: Ctl+Alt+Gui+ß, s: Hyper+ß}
+    - {t: '$$mdi:music$$', s: '$$mdi:music$$'}
+    - ''
+    - {t: '$$mdi:console$$', s: '+$$mdi:console$$'}
+    - ''
+    - ''
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: held}
     - $$mdi:fullscreen$$
-    - {t: '$$mdi:window-open$$', h: SCR}
-    - {type: trans}
-  SCR:
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - $$mdi:reload$$
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - $$mdi:swap-horizontal$$
-    - ⚖
-    - ⊡
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - ◀
-    - {type: trans}
-    - ▶
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: held}
-    - {type: trans}
-    - {type: held}
+    - $$mdi:window-open$$
     - {type: trans}
   FUN:
     - {type: trans}
