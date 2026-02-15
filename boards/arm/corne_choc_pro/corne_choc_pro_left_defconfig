@@ -54,6 +54,5 @@ CONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y
 # Enable peripheral battery level fetching and proxy to host
 # This allows the central (left half) to read the peripheral (right half)
 # battery level and expose it as a second BLE Battery Service to the host
-# TEMPORARILY DISABLED - causes BLE pairing issues after bond clear
-# CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING=y
-# CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY=y
+CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING=y
+CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY=y
