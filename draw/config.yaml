@@ -84,7 +84,7 @@ parse_config:
     
     # Utility
     "&kp LC(LA(LG(RET)))": "$$mdi:fullscreen$$"  # Fullscreen
-    "&kp LC(A)": "Ctrl+A"  # tmux prefix
+    "&kp LC(RET)": "$$mdi:console-line$$"  # tmux prefix (Ctrl+Enter)
     
     # Smart behaviors for WM layer
     "&smart_wm WM 0": {t: "⇄", h: "WM"}  # Tap=ws-back-forth, Hold=WM layer

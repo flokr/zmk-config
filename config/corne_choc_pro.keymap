@@ -919,7 +919,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     
     Left hand:
     LT4 = resize shrink (M)          LT2 = resize grow (C)
-    LM4 = focus monitor Built-in (T)  LM3 = workspace-back-and-forth (R)   LM2 = focus monitor HP(2) (D)   LM0 = Ctrl+A (tmux prefix)
+    LM4 = focus monitor Built-in (T)  LM3 = workspace-back-and-forth (R)   LM2 = focus monitor HP(2) (D)   LM0 = Ctrl+Enter (tmux prefix)
     Shift + T/D: move-workspace-to-monitor
     
     Right hand - App hotkeys:
@@ -937,7 +937,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
         &trans         &trans         &wm_m            &wm_l            &wm_c            &wm_p          &trans              &trans         &wm_q            &wm_y            &wm_o            &wm_u            &wm_j            &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans         &wm_t            &kp LC(LA(LG(R))) &wm_d            &trans      &kp LC(A)              &trans   &kp LC(LA(LG(F))) &wm_n            &wm_e            &wm_i      &kp LC(LA(LG(A))) &trans
+        &trans         &trans         &wm_t            &kp LC(LA(LG(R))) &wm_d            &trans      &kp LC(RET)              &trans   &kp LC(LA(LG(F))) &wm_n            &wm_e            &wm_i      &kp LC(LA(LG(A))) &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
         &trans         &trans         &trans         &trans         &trans         &trans                                           &wm_b            &wm_h            &wm_comma        &wm_dot          &wm_minus        &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
