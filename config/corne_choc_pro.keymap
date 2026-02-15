@@ -932,7 +932,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     
     Left hand: Monitor & workspace context management
     LT4 = focus-monitor main (M)    LT3 = focus-monitor secondary (L)    LT2 = focus-monitor 3 (C)    LT1 = window switcher (P)
-    LM4 = available (T)              LM3 = workspace-back-and-forth (R)   LM2 = available (D)
+    LM4 = available (T)              LM3 = workspace-back-and-forth (R)   LM2 = available (D)   LM0 = Ctrl+A (tmux prefix)
     Shift variants for M/L/C: move-workspace-to-monitor
     Bottom row: available for future use
     
@@ -949,7 +949,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
         &trans         &trans         &wm_m            &wm_l            &wm_c            &wm_p          &trans              &trans         &wm_q            &wm_y            &wm_o            &wm_u            &wm_j            &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans         &wm_t            &kp LC(LA(LG(R))) &wm_d            &trans         &trans              &trans   &kp LC(LA(LG(F))) &wm_n            &wm_e            &wm_i      &kp LC(LA(LG(A))) &trans
+        &trans         &trans         &wm_t            &kp LC(LA(LG(R))) &wm_d            &trans      &kp LC(A)              &trans   &kp LC(LA(LG(F))) &wm_n            &wm_e            &wm_i      &kp LC(LA(LG(A))) &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
         &trans         &trans         &trans         &trans         &trans         &trans                                           &wm_b            &wm_h            &wm_comma        &wm_dot          &wm_minus        &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
