@@ -2,53 +2,6 @@ layout:
   qmk_info_json: config/corne_choc_pro.json
   layout_name: default_layout
 layers:
-  MagicSturdy:
-    - Esc
-    - V
-    - M
-    - L
-    - C
-    - P
-    - $$mdi:volume-off$$
-    - $$mdi:play-pause$$
-    - Q
-    - ⭐
-    - O
-    - U
-    - J
-    - Bspc
-    - Tab
-    - {t: S, h: Shift}
-    - {t: T, h: Ctrl}
-    - {t: R, h: Alt}
-    - {t: D, h: Gui}
-    - Z
-    - Alt
-    - Alt
-    - F
-    - {t: N, h: Gui}
-    - {t: E, h: Alt}
-    - {t: I, h: Ctrl}
-    - {t: A, h: Shift}
-    - Sft+Tab
-    - {t: ⭐ Shift, h: Shift}
-    - Y
-    - K
-    - X
-    - G
-    - W
-    - B
-    - H
-    - {t: ',', s: ;}
-    - {t: ., s: ':'}
-    - {t: '?', s: '!'}
-    - {t: ⭐ Shift, h: Shift}
-    - {t: Numword, h: NUM, s: Sticky NUM}
-    - {t: Spc, h: NAV}
-    - {t: ⇄, h: WM}
-    - {t: Enter, h: FUN}
-    - {t: Bspc, s: Del}
-    - SYMBOL
   Combos: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
   NAV:
     - {type: trans}
@@ -263,9 +216,9 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
     - {t: ä, s: Ä}
+    - {type: trans}
+    - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
