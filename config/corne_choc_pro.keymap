@@ -83,7 +83,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             #binding-cells = <0>;
             bindings = <&kp H>;
 
-            // === ms_ea_fy optimized 20-rule set ===
+            // === ms_ea_fy optimized 21-rule set ===
             // QWERTZ note: Z keycode → Y char, Y keycode → Z char
 
             // Essential (LOO Δ ≥ 0.013)
@@ -113,6 +113,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             mag_u { trigger-keys = <U>; max-prior-idle-ms = <300>; bindings = <&kp I>; };       // u→i
             mag_x { trigger-keys = <X>; max-prior-idle-ms = <300>; bindings = <&kp L>; };       // x→l
             mag_c { trigger-keys = <C>; max-prior-idle-ms = <300>; bindings = <&kp W>; };       // c→w
+            mag_q { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&kp U>; };       // q→u
         };
 
         /* ================== MOD-MORPHS ================== */
