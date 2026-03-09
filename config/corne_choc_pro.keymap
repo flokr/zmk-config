@@ -83,29 +83,36 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             #binding-cells = <0>;
             bindings = <&kp H>;
 
-            magkt_a {
-                trigger-keys = <A>;
-                max-prior-idle-ms = <300>;
-                bindings = <&kp O>;
-            };
+            // === ms_ea_fy optimized 20-rule set ===
+            // QWERTZ note: Z keycode → Y char, Y keycode → Z char
 
-            magkt_c {
-                trigger-keys = <C>;
-                max-prior-idle-ms = <300>;
-                bindings = <&kp Y>;
-            };
+            // Essential (LOO Δ ≥ 0.013)
+            mag_o { trigger-keys = <O>; max-prior-idle-ms = <300>; bindings = <&kp F>; };       // o→f
+            mag_k { trigger-keys = <K>; max-prior-idle-ms = <300>; bindings = <&kp T>; };       // k→t
+            mag_r { trigger-keys = <R>; max-prior-idle-ms = <300>; bindings = <&kp L>; };       // r→l
 
-            magkt_d {
-                trigger-keys = <D>;
-                max-prior-idle-ms = <300>;
-                bindings = <&kp Y>;
-            };
+            // Valuable (LOO Δ ≥ 0.003)
+            mag_m { trigger-keys = <M>; max-prior-idle-ms = <300>; bindings = <&kp T>; };       // m→t
+            mag_s { trigger-keys = <S>; max-prior-idle-ms = <300>; bindings = <&kp Y>; };       // s→z (Z char = Y keycode)
+            mag_i { trigger-keys = <I>; max-prior-idle-ms = <300>; bindings = <&kp U>; };       // i→u
+            mag_v { trigger-keys = <V>; max-prior-idle-ms = <300>; bindings = <&kp S>; };       // v→s
 
-            magkt_j {
-                trigger-keys = <J>;
-                max-prior-idle-ms = <300>;
-                bindings = <&kp A>;
-            };
+            // Nice-to-have (LOO Δ ≥ 0.001)
+            mag_a { trigger-keys = <A>; max-prior-idle-ms = <300>; bindings = <&kp O>; };       // a→o
+            mag_l { trigger-keys = <L>; max-prior-idle-ms = <300>; bindings = <&kp R>; };       // l→r
+            mag_t { trigger-keys = <T>; max-prior-idle-ms = <300>; bindings = <&kp K>; };       // t→k
+            mag_d { trigger-keys = <D>; max-prior-idle-ms = <300>; bindings = <&kp W>; };       // d→w
+            mag_e { trigger-keys = <E>; max-prior-idle-ms = <300>; bindings = <&kp J>; };       // e→j
+            mag_f { trigger-keys = <F>; max-prior-idle-ms = <300>; bindings = <&kp G>; };       // f→g
+            mag_z { trigger-keys = <Y>; max-prior-idle-ms = <300>; bindings = <&kp S>; };       // z→s (Z char = Y keycode)
+            mag_g { trigger-keys = <G>; max-prior-idle-ms = <300>; bindings = <&kp W>; };       // g→w
+
+            // Marginal (LOO Δ ≈ 0, zero cost)
+            mag_w { trigger-keys = <W>; max-prior-idle-ms = <300>; bindings = <&kp G>; };       // w→g
+            mag_p { trigger-keys = <P>; max-prior-idle-ms = <300>; bindings = <&kp C>; };       // p→c
+            mag_u { trigger-keys = <U>; max-prior-idle-ms = <300>; bindings = <&kp I>; };       // u→i
+            mag_x { trigger-keys = <X>; max-prior-idle-ms = <300>; bindings = <&kp L>; };       // x→l
+            mag_c { trigger-keys = <C>; max-prior-idle-ms = <300>; bindings = <&kp W>; };       // c→w
         };
 
         /* ================== MOD-MORPHS ================== */
@@ -749,7 +756,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
         compatible = "zmk,keymap";
 
         BaseLayer {
-            display-name = "MagicSturdy";
+            display-name = "ms_ea_fy";
             bindings = <
 /*                                      46 KEY MATRIX / LAYOUT MAPPING
 
@@ -763,7 +770,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
        &kp ESC         &kp V          &kp M          &kp L          &kp C          &kp P        &kp C_MUTE          &kp C_PP        &kp Q          &mag           &kp O          &kp U          &kp J         &kp BSPC
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-       &kp TAB      &hml LSHFT S   &hml LCTRL T   &hml LALT R     &hml LGUI D      &kp Z         &kp LALT           &kp RALT        &kp F       &hmr LGUI N    &hmr LALT E    &hmr LCTRL I   &hmr RSHFT A    &kp LS(TAB)
+       &kp TAB      &hml LSHFT S   &hml LCTRL T   &hml LALT R     &hml LGUI D      &kp F         &kp LALT           &kp RALT        &kp Z       &hmr LGUI N    &hmr LALT A    &hmr LCTRL I   &hmr RSHFT E    &kp LS(TAB)
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
   &magic_shift LSHFT 0  &kp Y          &kp K          &kp X          &kp G          &kp W                                            &kp B          &kp H       &comma_semi     &dot_colon    &quest_excla  &magic_shift RSHFT 0
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
@@ -868,9 +875,9 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     % = Shift+5, | = AltGr+7, \ = Shift+AltGr+7, = = Shift+0, + = RBKT
     
     German Umlauts (direct keycodes for German layout):
-    - ä/Ä = SQT / Shift+SQT (single quote key position)
-    - ö/Ö = SEMI / Shift+SEMI (semicolon key position)
-    - ü/Ü = LBKT / Shift+LBKT (left bracket key position)
+    - ä/Ä = SQT / Shift+SQT (at RM3 — same position as A on base)
+    - ö/Ö = SEMI / Shift+SEMI (at RT3 — same position as O on base)
+    - ü/Ü = LBKT / Shift+LBKT (at RT4 — same position as U on base)
     - ß = MINUS (minus key position)
     
     Brackets mirror combo positions:
@@ -881,7 +888,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
       &trans        &trans         &trans         &trans           &trans         &trans         &trans             &trans       &trans         &trans          &oe_umlaut     &ue_umlaut     &trans          &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-      &trans        &kp MINUS      &trans         &trans           &trans         &trans         &trans             &trans       &trans         &trans         &trans         &trans         &ae_umlaut     &trans
+      &trans        &kp MINUS      &trans         &trans           &trans         &trans         &trans             &trans       &trans         &trans         &ae_umlaut     &trans         &trans         &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
       &trans        &trans         &trans         &trans           &trans         &trans                                          &trans         &trans         &trans          &trans         &trans         &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
