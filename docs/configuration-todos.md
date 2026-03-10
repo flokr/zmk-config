@@ -43,7 +43,7 @@ Status: Updated 2026-02-08
 - sessionx with zoxide integration enabled
 
 **Todo:**
-- [ ] Fix hardcoded paths (lines 40, 42): `/Users/omerxx/dotfiles` → `/Users/florian.kren/code/flokr/dotfiles`
+- [ ] Fix hardcoded paths (lines 40, 42): `/Users/omerxx/dotfiles` → `~/code/flokr/dotfiles`
 - [ ] Add custom keybindings for MagicSturdy layout
   - Pane navigation (currently using defaults)
   - Pane splits (currently using default % and ")
