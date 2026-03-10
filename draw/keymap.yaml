@@ -333,6 +333,9 @@ combos:
   - p: [18, 32]
     k: _
     l: [Combos]
+  - p: [8, 9]
+    k: ⟳
+    l: [Combos]
   - p: [9, 10]
     k: '='
     l: [Combos]
