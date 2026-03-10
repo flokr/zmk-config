@@ -152,6 +152,7 @@ parse_config:
     "&magic_shift RSHFT 0": {t: "⭐ Shift", h: "Shift"}
 
     "&mag": ⭐
+    "&key_repeat": ⟳
     "&studio_unlock": Studio 🔓
 
   trans_legend: { "t": "", "type": "trans" }

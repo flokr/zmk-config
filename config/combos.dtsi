@@ -52,6 +52,7 @@ ZMK_COMBO(underscore,   &kp LS(FSLH),     LM2 LB1,     BASE, COMBO_TERM_SLOW, CO
 
 // Top row combos
 //ZMK_COMBO(slash,   &fslh_bslh,   RT1 RT2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(key_repeat, &key_repeat,  RT1 RT2,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)  // magic + O = key repeat
 ZMK_COMBO(equals,    &kp LS(N0),   RT2 RT3,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(tick_acu,  &tick_acu,    RT3 RT4,     BASE, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
