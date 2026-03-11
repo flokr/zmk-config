@@ -83,37 +83,37 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             #binding-cells = <0>;
             bindings = <&kp H>;
 
-            // === ms_ea_fy optimized 21-rule set ===
+            // === ms_ea_fy optimized 21-rule set (LOO-verified on 21 rules, W=0.454) ===
             // QWERTZ note: Z keycode → Y char, Y keycode → Z char
 
-            // Essential (LOO Δ ≥ 0.013)
-            mag_o { trigger-keys = <O>; max-prior-idle-ms = <300>; bindings = <&kp F>; };       // o→f
-            mag_k { trigger-keys = <K>; max-prior-idle-ms = <300>; bindings = <&kp T>; };       // k→t
-            mag_r { trigger-keys = <R>; max-prior-idle-ms = <300>; bindings = <&kp L>; };       // r→l
+            // Essential (LOO ΔW ≥ 0.010)
+            mag_o { trigger-keys = <O>; max-prior-idle-ms = <300>; bindings = <&kp F>; };       // o→f  +0.020
+            mag_k { trigger-keys = <K>; max-prior-idle-ms = <300>; bindings = <&kp T>; };       // k→t  +0.012
+            mag_a { trigger-keys = <A>; max-prior-idle-ms = <300>; bindings = <&kp B>; };       // a→b  +0.011
+            mag_r { trigger-keys = <R>; max-prior-idle-ms = <300>; bindings = <&kp L>; };       // r→l  +0.010
 
-            // Valuable (LOO Δ ≥ 0.003)
-            mag_m { trigger-keys = <M>; max-prior-idle-ms = <300>; bindings = <&kp T>; };       // m→t
-            mag_s { trigger-keys = <S>; max-prior-idle-ms = <300>; bindings = <&kp Y>; };       // s→z (Z char = Y keycode)
-            mag_i { trigger-keys = <I>; max-prior-idle-ms = <300>; bindings = <&kp U>; };       // i→u
-            mag_v { trigger-keys = <V>; max-prior-idle-ms = <300>; bindings = <&kp S>; };       // v→s
+            // Valuable (LOO ΔW ≥ 0.003)
+            mag_m { trigger-keys = <M>; max-prior-idle-ms = <300>; bindings = <&kp T>; };       // m→t  +0.007
+            mag_s { trigger-keys = <S>; max-prior-idle-ms = <300>; bindings = <&kp V>; };       // s→v  +0.006
+            mag_t { trigger-keys = <T>; max-prior-idle-ms = <300>; bindings = <&kp M>; };       // t→m  +0.006
+            mag_i { trigger-keys = <I>; max-prior-idle-ms = <300>; bindings = <&kp U>; };       // i→u  +0.003
+            mag_p { trigger-keys = <P>; max-prior-idle-ms = <300>; bindings = <&kp F>; };       // p→f  +0.003
+            mag_j { trigger-keys = <J>; max-prior-idle-ms = <300>; bindings = <&kp E>; };       // j→e  +0.003
 
-            // Nice-to-have (LOO Δ ≥ 0.001)
-            mag_a { trigger-keys = <A>; max-prior-idle-ms = <300>; bindings = <&kp O>; };       // a→o
-            mag_l { trigger-keys = <L>; max-prior-idle-ms = <300>; bindings = <&kp R>; };       // l→r
-            mag_t { trigger-keys = <T>; max-prior-idle-ms = <300>; bindings = <&kp K>; };       // t→k
-            mag_d { trigger-keys = <D>; max-prior-idle-ms = <300>; bindings = <&kp W>; };       // d→w
-            mag_e { trigger-keys = <E>; max-prior-idle-ms = <300>; bindings = <&kp J>; };       // e→j
-            mag_f { trigger-keys = <F>; max-prior-idle-ms = <300>; bindings = <&kp G>; };       // f→g
-            mag_z { trigger-keys = <Y>; max-prior-idle-ms = <300>; bindings = <&kp S>; };       // z→s (Z char = Y keycode)
-            mag_g { trigger-keys = <G>; max-prior-idle-ms = <300>; bindings = <&kp W>; };       // g→w
+            // Nice-to-have (LOO ΔW ≥ 0.001)
+            mag_v { trigger-keys = <V>; max-prior-idle-ms = <300>; bindings = <&kp S>; };       // v→s  +0.002
+            mag_l { trigger-keys = <L>; max-prior-idle-ms = <300>; bindings = <&kp R>; };       // l→r  +0.002
+            mag_d { trigger-keys = <D>; max-prior-idle-ms = <300>; bindings = <&kp W>; };       // d→w  +0.002
+            mag_f { trigger-keys = <F>; max-prior-idle-ms = <300>; bindings = <&kp G>; };       // f→g  +0.002
+            mag_z { trigger-keys = <Y>; max-prior-idle-ms = <300>; bindings = <&kp S>; };       // z→s  +0.001 (Z char = Y keycode)
+            mag_e { trigger-keys = <E>; max-prior-idle-ms = <300>; bindings = <&kp J>; };       // e→j  +0.001
 
-            // Marginal (LOO Δ ≈ 0, zero cost)
-            mag_w { trigger-keys = <W>; max-prior-idle-ms = <300>; bindings = <&kp G>; };       // w→g
-            mag_p { trigger-keys = <P>; max-prior-idle-ms = <300>; bindings = <&kp C>; };       // p→c
-            mag_u { trigger-keys = <U>; max-prior-idle-ms = <300>; bindings = <&kp I>; };       // u→i
-            mag_x { trigger-keys = <X>; max-prior-idle-ms = <300>; bindings = <&kp L>; };       // x→l
-            mag_c { trigger-keys = <C>; max-prior-idle-ms = <300>; bindings = <&kp W>; };       // c→w
-            mag_q { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&kp U>; };       // q→u
+            // Marginal (LOO ΔW ≈ 0, zero cost)
+            mag_u { trigger-keys = <U>; max-prior-idle-ms = <300>; bindings = <&kp I>; };       // u→i  +0.001
+            mag_g { trigger-keys = <G>; max-prior-idle-ms = <300>; bindings = <&kp W>; };       // g→w  +0.000
+            mag_c { trigger-keys = <C>; max-prior-idle-ms = <300>; bindings = <&kp W>; };       // c→w  +0.000
+            mag_w { trigger-keys = <W>; max-prior-idle-ms = <300>; bindings = <&kp G>; };       // w→g  +0.000
+            mag_x { trigger-keys = <X>; max-prior-idle-ms = <300>; bindings = <&kp L>; };       // x→l  +0.000
         };
 
         /* ================== MOD-MORPHS ================== */
