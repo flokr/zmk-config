@@ -144,8 +144,10 @@ parse_config:
 
 
 
-    # SYMBOL layer - simple momentary access
-    "&mo SYMBOL": SYMBOL
+    # SYMBOL layer - hold-tap: tap Enter, hold SYMBOL
+    "&lt_ent 4 RET": {t: "Enter", h: "SYMBOL"}
+    # FUN layer - simple momentary access
+    "&mo FUN": FUN
 
     # MAGIC_SHIFT - tap for sticky shift, double-tap for caps-word, hold for shift
     "&magic_shift LSHFT 0": {t: "⭐ Shift", h: "Shift"}
@@ -323,12 +325,12 @@ draw_config:
     NAV:
       - "&lt_spc 2 SPACE"
     FUN:
-      - "&lt_ent 3 RET"
+      - "&mo FUN"
     SYS:
       - "&lt_spc 2 SPACE"  # LH1 (NAV)
-      - "&lt_ent 3 RET"    # RH0 (FUN)
+      - "&mo FUN"           # RH2 (FUN)
     SYMBOL:
-      - "&mo SYMBOL"
+      - "&lt_ent 4 RET"
     WM:
       - "&smart_wm WM 0"
   
