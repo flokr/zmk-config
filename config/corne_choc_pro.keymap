@@ -83,38 +83,39 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             #binding-cells = <0>;
             bindings = <&none>;  // dedicated H key exists; no default output needed
 
-            // === ms_ea_fy optimized 21-rule set (LOO-verified on 21 rules, W=0.454) ===
+            // === ms_ea_fy optimized 21-rule set ===
+            // Trigram-conditioned model, weighted 60% EN / 40% DE, W=0.490
             // QWERTZ note: Z keycode → Y char, Y keycode → Z char
             // No max-prior-idle-ms: rules match regardless of timing (dedicated H key exists)
 
             // Essential (LOO ΔW ≥ 0.010)
-            mag_o { trigger-keys = <O>; bindings = <&kp F>; };       // o→f  +0.020
-            mag_k { trigger-keys = <K>; bindings = <&kp T>; };       // k→t  +0.012
-            mag_a { trigger-keys = <A>; bindings = <&kp B>; };       // a→b  +0.011
-            mag_r { trigger-keys = <R>; bindings = <&kp L>; };       // r→l  +0.010
+            mag_j { trigger-keys = <J>; bindings = <&kp E>; };       // j→e  +0.014 RP SFB
+            mag_k { trigger-keys = <K>; bindings = <&kp T>; };       // k→t  +0.011 LR SFB
 
             // Valuable (LOO ΔW ≥ 0.003)
-            mag_m { trigger-keys = <M>; bindings = <&kp T>; };       // m→t  +0.007
-            mag_s { trigger-keys = <S>; bindings = <&kp V>; };       // s→v  +0.006
-            mag_t { trigger-keys = <T>; bindings = <&kp M>; };       // t→m  +0.006
-            mag_i { trigger-keys = <I>; bindings = <&kp U>; };       // i→u  +0.003
-            mag_p { trigger-keys = <P>; bindings = <&kp F>; };       // p→f  +0.003
-            mag_j { trigger-keys = <J>; bindings = <&kp E>; };       // j→e  +0.003
+            mag_r { trigger-keys = <R>; bindings = <&kp L>; };       // r→l  +0.009 LM SFB
+            mag_u { trigger-keys = <U>; bindings = <&kp I>; };       // u→i  +0.008 RR SFB
+            mag_m { trigger-keys = <M>; bindings = <&kp T>; };       // m→t  +0.007 LR SFB
+            mag_o { trigger-keys = <O>; bindings = <&kp A>; };       // o→a  +0.007 RM SFB
+            mag_t { trigger-keys = <T>; bindings = <&kp M>; };       // t→m  +0.006 LR SFB
+            mag_s { trigger-keys = <S>; bindings = <&kp V>; };       // s→v  +0.006 LP SFB
+            mag_i { trigger-keys = <I>; bindings = <&kp U>; };       // i→u  +0.003 RR SFB
 
             // Nice-to-have (LOO ΔW ≥ 0.001)
-            mag_v { trigger-keys = <V>; bindings = <&kp S>; };       // v→s  +0.002
-            mag_l { trigger-keys = <L>; bindings = <&kp R>; };       // l→r  +0.002
-            mag_d { trigger-keys = <D>; bindings = <&kp W>; };       // d→w  +0.002
-            mag_f { trigger-keys = <F>; bindings = <&kp G>; };       // f→g  +0.002
-            mag_z { trigger-keys = <Y>; bindings = <&kp S>; };       // z→s  +0.001 (Z char = Y keycode)
-            mag_e { trigger-keys = <E>; bindings = <&kp J>; };       // e→j  +0.001
+            mag_v { trigger-keys = <V>; bindings = <&kp S>; };       // v→s  +0.003 LP SFB
+            mag_l { trigger-keys = <L>; bindings = <&kp R>; };       // l→r  +0.003 LM SFB
+            mag_a { trigger-keys = <A>; bindings = <&kp O>; };       // a→o  +0.002 RM SFB
+            mag_p { trigger-keys = <P>; bindings = <&kp F>; };       // p→f  +0.002 LI SFB
+            mag_d { trigger-keys = <D>; bindings = <&kp W>; };       // d→w  +0.002 LI SFB
+            mag_z { trigger-keys = <Y>; bindings = <&kp T>; };       // z→t  +0.002 LP→LR fixes "tzt" (Y keycode = Z char)
+            mag_f { trigger-keys = <F>; bindings = <&kp G>; };       // f→g  +0.001 LI SFB
+            mag_e { trigger-keys = <E>; bindings = <&kp J>; };       // e→j  +0.001 RP SFB
+            mag_w { trigger-keys = <W>; bindings = <&kp C>; };       // w→c  +0.001 LI SFB
+            mag_g { trigger-keys = <G>; bindings = <&kp P>; };       // g→p  +0.001 LI SFB
 
             // Marginal (LOO ΔW ≈ 0, zero cost)
-            mag_u { trigger-keys = <U>; bindings = <&kp I>; };       // u→i  +0.001
-            mag_g { trigger-keys = <G>; bindings = <&kp W>; };       // g→w  +0.000
-            mag_c { trigger-keys = <C>; bindings = <&kp W>; };       // c→w  +0.000
-            mag_w { trigger-keys = <W>; bindings = <&kp G>; };       // w→g  +0.000
-            mag_x { trigger-keys = <X>; bindings = <&kp L>; };       // x→l  +0.000
+            mag_c { trigger-keys = <C>; bindings = <&kp D>; };       // c→d  +0.001 LI SFB
+            mag_x { trigger-keys = <X>; bindings = <&kp L>; };       // x→l  +0.000 LM SFB
         };
 
         /* ================== MOD-MORPHS ================== */
