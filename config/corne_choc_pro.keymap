@@ -136,11 +136,29 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Thumb key: tap backspace, shift delete
+        // Thumb key: smart backspace/delete with word-delete on Ctrl
+        // Ctrl+tap → word-delete-back (Opt+Bspc)
+        // Ctrl+Shift+tap → word-delete-forward (Opt+Del)
+        // Shift+tap → Del
+        // tap → Bspc
+        bspc_smart: backspace_smart {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&bspc_del>, <&word_del_morph>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
         bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BSPC>, <&kp DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        word_del_morph: word_delete_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_word_bspc>, <&mac_word_del>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -777,7 +795,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
   &magic_shift LSHFT 0  &kp Y          &kp K          &kp X          &kp G          &kp W                                            &kp B          &kp H       &comma_semi     &dot_colon    &quest_excla  &magic_shift RSHFT 0
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
-                                                 &smart_num 1 0  &lt_spc 2 SPACE  &smart_wm WM 0                                     &lt_ent 4 RET    &bspc_del     &mo FUN
+                                                 &smart_num 1 0  &lt_spc 2 SPACE  &smart_wm WM 0                                     &lt_ent 4 RET    &bspc_smart     &mo FUN
 //                                              ╰──────────────┴──────────────┴──────────────╯                                 ╰──────────────┴──────────────┴──────────────╯
             >;
         };
