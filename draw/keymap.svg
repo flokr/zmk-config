@@ -920,8 +920,9 @@ g.combo:not(:has(text.shifted)) text.tap {
 <g transform="translate(870, 52)" class="key trans keypos-13">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
 </g>
-<g transform="translate(30, 112)" class="key trans keypos-14">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>
+<g transform="translate(30, 112)" class="key keypos-14">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
+<text x="0" y="0" class="key tap">⇄</text>
 </g>
 <g transform="translate(90, 112)" class="key trans keypos-15">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans"/>

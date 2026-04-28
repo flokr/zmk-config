@@ -112,7 +112,7 @@ layers:
     - {t: '$$mdi:chat$$', s: '$$mdi:chat$$'}
     - {t: '$$mdi:phone$$', s: '$$mdi:phone$$'}
     - {type: trans}
-    - {type: trans}
+    - ⇄
     - {type: trans}
     - {t: '$$mdi:monitor$$', s: '⇒$$mdi:monitor$$'}
     - ⇄
