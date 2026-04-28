@@ -706,15 +706,15 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
                      , <&macro_release &kp LCTRL &kp LSHFT &kp LGUI>;
         };
 
-        // Aerospace: workspace-back-and-forth (Ctrl+Alt+Cmd+R)
-        // Used as smart_wm tap action for quick workspace toggle
+        // Aerospace: workspace-back-and-forth (Ctrl+Alt+Cmd+Tab)
+        // Used as smart_wm tap action and WM layer LM6 for quick workspace toggle
         aero_wbf: aero_workspace_back_and_forth {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
             bindings = <&macro_press &kp LCTRL &kp LALT &kp LGUI>
-                     , <&macro_tap &kp R>
+                     , <&macro_tap &kp TAB>
                      , <&macro_release &kp LCTRL &kp LALT &kp LGUI>;
         };
 
@@ -946,9 +946,10 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
     App-centric navigation: right hand focuses apps, left hand manages monitors/resize
     
     Left hand:
+    LM6 = workspace-back-and-forth (Tab)
     LT4 = resize shrink (M)          LT2 = resize grow (C)
-    LM4 = focus monitor Built-in (T)  LM3 = workspace-back-and-forth (R)   LM2 = focus monitor HP(2) (D)   LM0 = Ctrl+Enter (tmux prefix)
-    Shift + T/D: move-workspace-to-monitor
+    LM4 = focus monitor Built-in (T)  LM3 = focus monitor HP(2) (R)   LM2 = focus monitor HP(1) (D)   LM0 = Ctrl+Enter (tmux prefix)
+    Shift + T/R/D: move-workspace-to-monitor
     
     Right hand - App hotkeys:
     RT1 = Outlook (Q)   RT2 = Safari (Y, +Shift=new)   RT3 = Window Switcher (O, +Shift=move)
@@ -965,7 +966,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // Right-hand HRMs
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
         &trans         &trans         &wm_m            &wm_l            &wm_c            &wm_p          &trans              &trans         &wm_q            &wm_y            &wm_o            &wm_u            &wm_j            &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        &trans         &trans         &wm_t            &kp LC(LA(LG(R))) &wm_d            &trans      &kp LC(RET)              &trans   &kp LC(LA(LG(F))) &wm_n            &wm_e            &wm_i      &kp LC(LA(LG(A))) &trans
+      &aero_wbf         &trans         &wm_t            &kp LC(LA(LG(R))) &wm_d            &trans      &kp LC(RET)              &trans   &kp LC(LA(LG(F))) &wm_n            &wm_e            &wm_i      &kp LC(LA(LG(A))) &trans
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────╯   ╰──────────────├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
         &trans         &trans         &trans         &trans         &trans         &trans                                           &wm_b            &wm_h            &wm_comma        &wm_dot          &wm_minus        &trans
 // ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤                                 ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
